@@ -15,7 +15,7 @@ export function middleware(req: NextRequest) {
       req.nextUrl.pathname = '/'
 
       NextResponse.rewrite(req.nextUrl)
-      return NextResponse.redirect('/')
+      return NextResponse.redirect(new URL('/', req.url))
     }
   }
 
