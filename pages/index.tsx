@@ -5,8 +5,6 @@ import styled from 'styled-components'
 import { Footer } from './../components'
 import { footerHeight } from './../themes'
 
-import styles from '../styles/Home.module.css'
-
 const Main = styled.main`
   padding: 4rem 0;
   flex: 1;
@@ -15,7 +13,21 @@ const Main = styled.main`
   justify-content: center;
   align-items: center;
   min-height: calc(100vh - ${footerHeight}px);
-`;
+`
+
+const Title = styled.h1`
+  margin: 0;
+  line-height: 1.15;
+  font-size: 4rem;
+  text-align: center;
+`
+
+const Description = styled.p`
+  margin: 4rem 0;
+  line-height: 1.5;
+  font-size: 1.25rem;
+  text-align: center;
+`
 
 const Home: NextPage = () => {
   return (
@@ -27,13 +39,13 @@ const Home: NextPage = () => {
       </Head>
 
       <Main>
-        <h1 className={styles.title}>
+        <Title>
           Undisclosed
-        </h1>
+        </Title>
 
-        <p className={styles.description}>
+        <Description>
           This page is currently under construction.
-        </p>
+        </Description>
       </Main>
 
       <Footer />
