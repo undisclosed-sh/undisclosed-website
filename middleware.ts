@@ -1,13 +1,15 @@
 import { NextRequest, NextResponse } from 'next/server';
 
+const protectedPagePath = '/protected';
+
 export const config = {
-  matcher: '/protected/:path*',
+  matcher: `${protectedPagePath}/:path*`,
 }
 
 export function middleware(req: NextRequest) {
   const search = req.nextUrl.search
 
-  if (req.nextUrl.pathname === '/style-guide') {
+  if (req.nextUrl.pathname === `${protectedPagePath}/style-guide`) {
     const allowed = typeof search === 'string' && search.includes('allowed=true')
 
     if (!allowed) {
