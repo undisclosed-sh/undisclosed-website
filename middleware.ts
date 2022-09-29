@@ -8,9 +8,10 @@ export const config = {
 
 export function middleware(req: NextRequest) {
   const localStorageExists = localStorageAvailable()
+  const params = req.nextUrl.searchParams
 
   if (req.nextUrl.pathname === '/style-guide') {
-    console.log('localStorageExists', localStorageExists)
+    console.log('localStorageExists', params)
 
     if (localStorageExists) {
       const styleGuideAvailable = localStorage.getItem('style-guide-unblocked');
