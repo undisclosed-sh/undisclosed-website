@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from 'next/server';
 const protectedPagePath = '/protected';
 
 export const config = {
-  matcher: `${protectedPagePath}/:path*`,
+  matcher: protectedPagePath + '/:path*',
 }
 
 export function middleware(req: NextRequest) {
