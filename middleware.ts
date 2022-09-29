@@ -10,6 +10,8 @@ export function middleware(req: NextRequest) {
   const localStorageExists = localStorageAvailable()
 
   if (req.nextUrl.pathname === '/style-guide') {
+    console.log('localStorageExists', localStorageExists)
+
     if (localStorageExists) {
       const styleGuideAvailable = localStorage.getItem('style-guide-unblocked');
 
