@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 
 export const config = {
-  matcher: '/style-guide',
+  matcher: '/protected/:path*',
 }
 
 export function middleware(req: NextRequest) {
@@ -9,7 +9,6 @@ export function middleware(req: NextRequest) {
 
   if (req.nextUrl.pathname === '/style-guide') {
     const allowed = typeof search === 'string' && search.includes('allowed=true')
-    console.log('localStorageExists', search)
 
     if (!allowed) {
       req.nextUrl.pathname = '/'
