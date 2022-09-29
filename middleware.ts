@@ -8,7 +8,7 @@ export const config = {
 
 export function middleware(req: NextRequest) {
   const localStorageExists = localStorageAvailable()
-  const params = req.nextUrl.searchParams
+  const params = req.nextUrl
 
   if (req.nextUrl.pathname === '/style-guide') {
     console.log('localStorageExists', params)
