@@ -1,7 +1,7 @@
 import { NextPage } from 'next'
 import styled from 'styled-components'
 
-import { colors } from './../themes'
+import { colors } from './../../themes'
 
 const Layout = styled.div`
   padding: 26px;

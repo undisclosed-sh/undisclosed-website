@@ -1,23 +1,22 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-import { localStorageAvailable } from './utils'
+const protectedPagePath = '/protected';
 
 export const config = {
-  matcher: '/style-guide',
+  matcher: protectedPagePath + '/:path*',
 }
 
 export function middleware(req: NextRequest) {
-  const localStorageExists = localStorageAvailable()
+  const search = req.nextUrl.search
 
-  if (req.nextUrl.pathname === '/style-guide') {
-    if (localStorageExists) {
-      const styleGuideAvailable = localStorage.getItem('style-guide-unblocked');
+  if (req.nextUrl.pathname === `${protectedPagePath}/style-guide`) {
+    const allowed = typeof search === 'string' && search.includes('allowed=true')
 
-      if (styleGuideAvailable === 'true') {
-        req.nextUrl.pathname = '/'
+    if (!allowed) {
+      req.nextUrl.pathname = '/'
 
-        return NextResponse.rewrite(req.nextUrl)
-      }
+      NextResponse.rewrite(req.nextUrl)
+      return NextResponse.redirect(new URL('/', req.url))
     }
   }
 
