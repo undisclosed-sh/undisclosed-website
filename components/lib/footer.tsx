@@ -1,7 +1,7 @@
 import { memo, useMemo } from 'react'
 import styled from 'styled-components'
 
-import { colors, footerHeight } from './../../themes'
+import { colors, footerHeight } from '@themes'
 
 const FooterComponent = styled.footer`
   height: ${footerHeight}px;
