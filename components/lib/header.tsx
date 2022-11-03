@@ -1,4 +1,5 @@
 import { memo } from 'react'
+import Link from 'next/link'
 
 import {
   Logo,
@@ -10,7 +11,9 @@ export const Header = memo(() => {
   return (
     <StyledHeader>
       <StyledNav>
-        <Logo>U</Logo>
+        <Link href="/">
+          <Logo>U</Logo>
+        </Link>
       </StyledNav>
     </StyledHeader>
   )

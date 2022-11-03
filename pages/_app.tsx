@@ -28,7 +28,9 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
   }
 
-  * {
+  *,
+  *::before,
+  *::after {
     box-sizing: border-box;
   }
 `
