@@ -3,11 +3,11 @@ import { NextPage } from 'next'
 import styled from 'styled-components'
 
 import { PageHead } from '@components';
-import { colors, typographyElements } from '@themes'
+import { colors, getColor, spacing, typographyElements } from '@themes'
 
 export const Layout = styled.div`
-  padding: 26px;
-  background: ${colors.grey[100]};
+  padding: ${spacing(3.25)};
+  background: ${getColor('grey', '100')};
 `;
 
 export const MainWrapper = styled.div`
@@ -19,7 +19,7 @@ export const MainWrapper = styled.div`
 
 export const Column = styled.div`
   width: 50%;
-  padding: 0 26px;
+  padding: 0 ${spacing(3.25)};
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

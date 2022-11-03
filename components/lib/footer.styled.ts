@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { colors, footerHeight, pxToRem } from '@themes'
+import { colors, footerHeight, spacing } from '@themes'
 
 export const FooterComponent = styled.footer`
   height: ${footerHeight}px;
@@ -10,7 +10,7 @@ export const FooterComponent = styled.footer`
 `
 
 export const CopyText = styled.p`
-  font-size: ${pxToRem(12)};
+  font-size: ${spacing(1.5)};
   text-align: center;
   color: ${colors.grey[700]};
 `;

@@ -30,9 +30,11 @@ export type Palette = typeof palette
 
 export const getColor = (
   color: keyof Palette,
-  shade: keyof Palette[keyof Palette]
+  shade: string
 ): string => {
+  // @ts-ignore TODO
   if (!palette[color]?.[shade]) throw new Error(`${color} ${shade} not found`);
 
+  // @ts-ignore TODO
   return palette[color][shade]
 }

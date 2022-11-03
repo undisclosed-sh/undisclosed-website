@@ -1,12 +1,32 @@
 import type { NextPage } from 'next'
+import styled from 'styled-components'
 
-import { PageHead } from '@components'
-import { Layout } from '@components'
-import {
-  Description,
-  Main,
-  Title,
-} from './index.styled'
+import { Layout, PageHead } from '@components'
+import { spacing } from '@themes'
+
+
+export const Main = styled.main`
+  padding: ${spacing(8)} 0;
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`
+
+export const Title = styled.h1`
+  margin: 0;
+  line-height: 1.15;
+  font-size: ${spacing(8)};
+  text-align: center;
+`
+
+export const Description = styled.p`
+  margin: ${spacing(8)} 0;
+  line-height: 1.5;
+  font-size: ${spacing(2.5)};
+  text-align: center;
+`
 
 const Home: NextPage = () => {
   return (
