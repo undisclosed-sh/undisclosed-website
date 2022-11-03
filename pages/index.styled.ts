@@ -1,7 +1,9 @@
 import styled from 'styled-components'
 
+import { pxToRem } from '@themes'
+
 export const Main = styled.main`
-  padding: 4rem 0;
+  padding: ${pxToRem(64)} 0;
   flex: 1 0 auto;
   display: flex;
   flex-direction: column;
@@ -12,13 +14,13 @@ export const Main = styled.main`
 export const Title = styled.h1`
   margin: 0;
   line-height: 1.15;
-  font-size: 4rem;
+  font-size: ${pxToRem(64)};
   text-align: center;
 `
 
 export const Description = styled.p`
-  margin: 4rem 0;
+  margin: ${pxToRem(64)} 0;
   line-height: 1.5;
-  font-size: 1.25rem;
+  font-size: ${pxToRem(20)};
   text-align: center;
 `

@@ -1,11 +1,14 @@
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
 import type { AppProps } from 'next/app'
 
+import { baseFontSize } from '@themes'
+
 const GlobalStyle = createGlobalStyle`
   html,
   body {
     padding: 0;
     margin: 0;
+    font-size: ${baseFontSize}px;
     font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   }
 

@@ -20,7 +20,7 @@ export const typographyScaleMap = {
   ...bodyText,
 }
 
-export const typographyScale = (scale: keyof typeof typographyScaleMap) => {
+export const typographyScale = (scale: keyof typeof typographyScaleMap): string => {
   if (!typographyScaleMap[scale]) {
     throw new Error(`Invalid typography scale: ${scale}`)
   }

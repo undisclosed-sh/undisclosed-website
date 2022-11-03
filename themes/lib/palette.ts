@@ -31,7 +31,7 @@ export type Palette = typeof palette
 export const getColor = (
   color: keyof Palette,
   shade: keyof Palette[keyof Palette]
-) => {
+): string => {
   if (!palette[color]?.[shade]) throw new Error(`${color} ${shade} not found`);
 
   return palette[color][shade]
