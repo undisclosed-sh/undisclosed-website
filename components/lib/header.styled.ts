@@ -23,3 +23,22 @@ export const Logo = styled.span`
     transform: scale(1.1) rotate(90deg);
   }
 `
+
+export const StyledList = styled.ul`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+`
+
+export const StyledListItem = styled.li`
+  display: inline-flex;
+  margin: 0 ${spacing(1)};
+
+  & + & {
+    margin-left: ${spacing(0.5)};
+  }
+`

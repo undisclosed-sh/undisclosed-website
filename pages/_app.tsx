@@ -1,5 +1,6 @@
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
 import type { AppProps } from 'next/app'
+import { UserProvider } from '@auth0/nextjs-auth0/client'
 
 import { baseFontSize } from '@themes'
 
@@ -39,9 +40,11 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <GlobalStyle />
-      <ThemeProvider theme={{}}>
-        <Component {...pageProps} />
-      </ThemeProvider>
+      <UserProvider>
+        <ThemeProvider theme={{}}>
+          <Component {...pageProps} />
+        </ThemeProvider>
+      </UserProvider>
     </>
   )
 }
