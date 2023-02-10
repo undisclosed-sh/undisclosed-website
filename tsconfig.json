@@ -26,6 +26,8 @@
       "@data/*": ["./data/*"],
       "@hooks": ["./hooks"],
       "@hooks/*": ["./hooks/*"],
+      "@lib": ["./lib"],
+      "@lib/*": ["./lib/*"],
       "@themes": ["./themes"],
       "@themes/*": ["./themes/*"],
       "@utils": ["./utils"],

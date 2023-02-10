@@ -1,9 +1,9 @@
 import type { NextPage } from 'next'
 import styled from 'styled-components'
 
+import clientPromise from '@lib/mongo'
 import { Layout, PageHead } from '@components'
 import { spacing } from '@themes'
-
 
 export const Main = styled.main`
   padding: ${spacing(8)} 0;
@@ -35,12 +35,11 @@ const Home: NextPage = () => {
 
       <Layout>
         <Main>
-          <Title>
-            Undisclosed
-          </Title>
+          <Title>Undisclosed</Title>
 
           <Description>
-            Software development done right, at scale and with a focus on quality.
+            Software development done right, at scale and with a focus on
+            quality.
           </Description>
         </Main>
       </Layout>
@@ -49,3 +48,21 @@ const Home: NextPage = () => {
 }
 
 export default Home
+
+export async function getServerSideProps() {
+  try {
+    await clientPromise
+
+    return {
+      props: {
+        isConnected: true,
+      },
+    }
+  } catch (error) {
+    return {
+      props: {
+        isConnected: false,
+      },
+    }
+  }
+}
