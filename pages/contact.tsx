@@ -1,14 +1,22 @@
 import { NextPage } from 'next'
+import { useIntl } from 'react-intl'
 
 import { Layout, PageHead } from '@components'
 
 const Contact: NextPage = () => {
+  const { formatMessage } = useIntl()
+
   return (
     <>
       <PageHead pageName="Contact" />
 
       <Layout>
-        <h1>Contact</h1>
+        <h1>
+          {formatMessage({
+            defaultMessage: 'Contact',
+            id: 'contact.title',
+          })}
+        </h1>
       </Layout>
     </>
   )

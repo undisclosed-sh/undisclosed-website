@@ -1,2 +1,50 @@
 {
+  "about.title": [
+    {
+      "type": 0,
+      "value": "About"
+    }
+  ],
+  "contact.title": [
+    {
+      "type": 0,
+      "value": "Contact"
+    }
+  ],
+  "header.about": [
+    {
+      "type": 0,
+      "value": "About"
+    }
+  ],
+  "header.contact": [
+    {
+      "type": 0,
+      "value": "Contact"
+    }
+  ],
+  "header.login": [
+    {
+      "type": 0,
+      "value": "Login"
+    }
+  ],
+  "header.logout": [
+    {
+      "type": 0,
+      "value": "Logout"
+    }
+  ],
+  "header.playground": [
+    {
+      "type": 0,
+      "value": "Playground"
+    }
+  ],
+  "home.description": [
+    {
+      "type": 0,
+      "value": "Software development done right, at scale and with a focus on quality."
+    }
+  ]
 }

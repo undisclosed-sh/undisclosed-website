@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import styled from 'styled-components'
+import { useIntl } from 'react-intl'
 
 import clientPromise from '@lib/mongo'
 import { Layout, PageHead } from '@components'
@@ -29,6 +30,8 @@ export const Description = styled.p`
 `
 
 const Home: NextPage = () => {
+  const { formatMessage } = useIntl()
+
   return (
     <>
       <PageHead pageName="Home" />
@@ -38,8 +41,11 @@ const Home: NextPage = () => {
           <Title>Undisclosed</Title>
 
           <Description>
-            Software development done right, at scale and with a focus on
-            quality.
+            {formatMessage({
+              defaultMessage:
+                'Software development done right, at scale and with a focus on quality.',
+              id: 'home.description',
+            })}
           </Description>
         </Main>
       </Layout>

@@ -1,2 +1,10 @@
 {
+  "about.title": "About",
+  "contact.title": "Contact",
+  "header.about": "About",
+  "header.contact": "Contact",
+  "header.login": "Login",
+  "header.logout": "Logout",
+  "header.playground": "Playground",
+  "home.description": "Software development done right, at scale and with a focus on quality."
 }

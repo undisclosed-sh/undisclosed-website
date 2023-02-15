@@ -1,5 +1,6 @@
 import { memo } from 'react'
 import Link from 'next/link'
+import { useIntl } from 'react-intl'
 import { useUser } from '@auth0/nextjs-auth0/client'
 
 import {
@@ -11,6 +12,7 @@ import {
 } from './header.styled'
 
 export const Header = memo(() => {
+  const { formatMessage } = useIntl()
   const { user } = useUser()
 
   return (
@@ -22,23 +24,48 @@ export const Header = memo(() => {
 
         <StyledList>
           <StyledListItem>
-            <Link href="/about">About</Link>
+            <Link href="/about">
+              {formatMessage({
+                defaultMessage: 'About',
+                id: 'header.about',
+              })}
+            </Link>
           </StyledListItem>
           <StyledListItem>
-            <Link href="/contact">Contact</Link>
+            <Link href="/contact">
+              {formatMessage({
+                defaultMessage: 'Contact',
+                id: 'header.contact',
+              })}
+            </Link>
           </StyledListItem>
           {user && (
             <StyledListItem>
-              <Link href="/playground">Playground</Link>
+              <Link href="/playground">
+                {formatMessage({
+                  defaultMessage: 'Playground',
+                  id: 'header.playground',
+                })}
+              </Link>
             </StyledListItem>
           )}
           {!user && (
             <StyledListItem>
-              <Link href="/api/auth/login">Login</Link>
+              <Link href="/api/auth/login">
+                {formatMessage({
+                  defaultMessage: 'Login',
+                  id: 'header.login',
+                })}
+              </Link>
             </StyledListItem>
           )}
           <StyledListItem>
-            {user && <Link href="/api/auth/logout">Logout</Link>}
+            {user && <Link href="/api/auth/logout">
+              {formatMessage({
+                defaultMessage: 'Logout',
+                id: 'header.logout',
+              })}
+            </Link>}
           </StyledListItem>
         </StyledList>
       </StyledNav>
