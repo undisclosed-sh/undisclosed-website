@@ -1,3 +1,13 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": "next/core-web-vitals",
+  "plugins": ["formatjs"],
+  "rules": {
+    "formatjs/enforce-default-message": "error",
+    // "formatjs/enforce-description": "error",
+    "formatjs/enforce-placeholders": "error",
+    "formatjs/no-offset": "error",
+    // "formatjs/no-camel-case": "error",
+    "formatjs/no-multiple-whitespaces": "error",
+    "formatjs/enforce-id": "error"
+  }
 }
