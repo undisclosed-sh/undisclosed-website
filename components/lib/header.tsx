@@ -2,7 +2,13 @@ import { memo } from 'react'
 import Link from 'next/link'
 import { useUser } from '@auth0/nextjs-auth0/client'
 
-import { Logo, StyledHeader, StyledList, StyledListItem, StyledNav } from './header.styled'
+import {
+  Logo,
+  StyledHeader,
+  StyledList,
+  StyledListItem,
+  StyledNav,
+} from './header.styled'
 
 export const Header = memo(() => {
   const { user } = useUser()
@@ -21,12 +27,16 @@ export const Header = memo(() => {
           <StyledListItem>
             <Link href="/contact">Contact</Link>
           </StyledListItem>
-          <StyledListItem>
-            {user && <Link href="/playground">Playground</Link>}
-          </StyledListItem>
-          <StyledListItem>
-            {!user && <Link href="/api/auth/login">Login</Link>}
-          </StyledListItem>
+          {user && (
+            <StyledListItem>
+              <Link href="/playground">Playground</Link>
+            </StyledListItem>
+          )}
+          {!user && (
+            <StyledListItem>
+              <Link href="/api/auth/login">Login</Link>
+            </StyledListItem>
+          )}
           <StyledListItem>
             {user && <Link href="/api/auth/logout">Logout</Link>}
           </StyledListItem>
