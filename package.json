@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "extract:i18n": "formatjs extract '{pages,components}/**/*.{js,ts,tsx}' --format simple --id-interpolation-pattern '[sha512:contenthash:base64:6]' --out-file content/locales/en.json",
+    "compile:i18n": "formatjs compile-folder --ast --format simple content/locales content/compiled-locales",
+    "i18n": "npm run extract:i18n && npm run compile:i18n"
   },
   "dependencies": {
     "@auth0/nextjs-auth0": "^2.2.1",
@@ -14,13 +17,16 @@
     "next": "13.1.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-intl": "^6.2.8",
     "styled-components": "^5.3.6"
   },
   "devDependencies": {
+    "@formatjs/cli": "^6.0.1",
     "@types/node": "18.13.0",
     "@types/react": "18.0.27",
     "@types/react-dom": "18.0.10",
     "@types/styled-components": "^5.1.26",
+    "babel-plugin-formatjs": "^10.3.36",
     "eslint": "8.33.0",
     "eslint-config-next": "13.1.6",
     "typescript": "4.9.5"

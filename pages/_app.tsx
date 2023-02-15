@@ -1,8 +1,14 @@
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
 import type { AppProps } from 'next/app'
 import { UserProvider } from '@auth0/nextjs-auth0/client'
+import { IntlProvider } from 'react-intl'
+import { useRouter } from 'next/router'
+import { useMemo } from 'react'
 
 import { baseFontSize } from '@themes'
+
+import English from '../content/locales/en.json'
+import Czech from '../content/locales/cs.json'
 
 const GlobalStyle = createGlobalStyle`
   html,
@@ -37,14 +43,35 @@ const GlobalStyle = createGlobalStyle`
 `
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const { locale } = useRouter()
+  const shortLocale = locale?.split('-')[0] || 'en'
+
+  const messages = useMemo(() => {
+    switch (shortLocale) {
+      case 'en':
+        return English
+      case 'cs':
+        return Czech
+      default:
+        return English
+    }
+  }, [shortLocale])
+
   return (
     <>
-      <GlobalStyle />
-      <UserProvider>
-        <ThemeProvider theme={{}}>
-          <Component {...pageProps} />
-        </ThemeProvider>
-      </UserProvider>
+      <IntlProvider
+        locale={shortLocale}
+        messages={messages}
+        defaultLocale="en"
+        onError={() => null}
+      >
+        <GlobalStyle />
+        <UserProvider>
+          <ThemeProvider theme={{}}>
+            <Component {...pageProps} />
+          </ThemeProvider>
+        </UserProvider>
+      </IntlProvider>
     </>
   )
 }
