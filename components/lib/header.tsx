@@ -16,6 +16,12 @@ export const Header = memo(() => {
 
         <StyledList>
           <StyledListItem>
+            <Link href="/about">About</Link>
+          </StyledListItem>
+          <StyledListItem>
+            <Link href="/contact">Contact</Link>
+          </StyledListItem>
+          <StyledListItem>
             {user && <Link href="/playground">Playground</Link>}
           </StyledListItem>
           <StyledListItem>
