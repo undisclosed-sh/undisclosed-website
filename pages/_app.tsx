@@ -4,6 +4,7 @@ import { UserProvider } from '@auth0/nextjs-auth0/client'
 import { IntlProvider } from 'react-intl'
 import { useRouter } from 'next/router'
 import { useMemo } from 'react'
+import { GoogleAnalytics } from "nextjs-google-analytics"
 
 import { baseFontSize } from '@themes'
 
@@ -68,6 +69,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <GlobalStyle />
         <UserProvider>
           <ThemeProvider theme={{}}>
+            <GoogleAnalytics trackPageViews />
             <Component {...pageProps} />
           </ThemeProvider>
         </UserProvider>
