@@ -91,4 +91,16 @@ export const colors = {
   grey,
 }
 
+export type Shades = keyof typeof common | keyof typeof blue | keyof typeof red | keyof typeof green | keyof typeof yellow | keyof typeof orange | keyof typeof grey
+
 export type Colors = typeof colors
+
+export const palette = (color: keyof Colors, shade: Shades) => {
+  // @ts-expect-error Fix type error
+  if (!colors?.[color]?.[shade]) {
+    throw Error(`Combination "${color}" and "${shade}" was not found.`)
+  }
+
+  // @ts-expect-error Fix type error
+  return colors[color][shade]
+}
