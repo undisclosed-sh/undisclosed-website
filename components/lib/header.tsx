@@ -3,6 +3,8 @@ import Link from 'next/link'
 import { useIntl } from 'react-intl'
 import { useUser } from '@auth0/nextjs-auth0/client'
 
+import { pageLinks } from '@defs'
+
 import featureFlags from 'env/feature-flags'
 
 import {
@@ -27,7 +29,7 @@ export const Header = memo(() => {
         <StyledList>
           {featureFlags?.headerAbout && (
             <StyledListItem>
-              <Link href="/about">
+              <Link href={pageLinks.home}>
                 {formatMessage({
                   defaultMessage: 'About',
                   id: 'header.about',
@@ -37,7 +39,7 @@ export const Header = memo(() => {
           )}
           {featureFlags?.headerContact && (
             <StyledListItem>
-              <Link href="/contact">
+              <Link href={pageLinks.contact}>
                 {formatMessage({
                   defaultMessage: 'Contact',
                   id: 'header.contact',
@@ -47,7 +49,7 @@ export const Header = memo(() => {
           )}
           {user && (
             <StyledListItem>
-              <Link href="/playground">
+              <Link href={pageLinks.playground}>
                 {formatMessage({
                   defaultMessage: 'Playground',
                   id: 'header.playground',
@@ -57,7 +59,7 @@ export const Header = memo(() => {
           )}
           {!user && (
             <StyledListItem>
-              <Link href="/api/auth/login">
+              <Link href={pageLinks.login}>
                 {formatMessage({
                   defaultMessage: 'Login',
                   id: 'header.login',
@@ -67,7 +69,7 @@ export const Header = memo(() => {
           )}
           {user && (
             <StyledListItem>
-              <Link href="/api/auth/logout">
+              <Link href={pageLinks.logout}>
                 {formatMessage({
                   defaultMessage: 'Logout',
                   id: 'header.logout',
