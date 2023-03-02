@@ -28,7 +28,7 @@ export const colorMap = {
 
 export type Palette = typeof colorMap
 
-export const getColor = (
+export const palette = (
   color: keyof Palette,
   shade: string
 ): string => {
