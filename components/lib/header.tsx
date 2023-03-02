@@ -42,6 +42,16 @@ export const Header = memo(() => {
               </Link>
             </StyledListItem>
           )}
+          {featureFlags?.headerNewsletter && (
+            <StyledListItem>
+              <Link href={pageLinks.newsletter}>
+                {formatMessage({
+                  defaultMessage: 'Newsletter',
+                  id: 'header.newsletter',
+                })}
+              </Link>
+            </StyledListItem>
+          )}
           {featureFlags?.headerContact && (
             <StyledListItem>
               <Link href={pageLinks.contact}>

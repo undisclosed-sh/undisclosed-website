@@ -1,1 +1,1 @@
-export type FeatureFlags = 'headerContact' | 'headerAbout'
+export type FeatureFlags = 'headerContact' | 'headerAbout' | 'headerNewsletter'

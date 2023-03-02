@@ -1,6 +1,12 @@
 import { defineMessage, MessageDescriptor } from 'react-intl'
 
-export type Pages = 'home' | 'about' | 'contact' | 'playground' | 'editor'
+export type Pages =
+  | 'home'
+  | 'about'
+  | 'contact'
+  | 'playground'
+  | 'editor'
+  | 'newsletter'
 
 export const pageTitles: Record<Pages, MessageDescriptor> = {
   home: defineMessage({
@@ -22,5 +28,9 @@ export const pageTitles: Record<Pages, MessageDescriptor> = {
   editor: defineMessage({
     id: 'pageTitle.editor',
     defaultMessage: 'Editor',
+  }),
+  newsletter: defineMessage({
+    id: 'pageTitle.newsletter',
+    defaultMessage: 'Newsletter',
   }),
 }
