@@ -3,6 +3,8 @@ import Link from 'next/link'
 import { useIntl } from 'react-intl'
 import { useUser } from '@auth0/nextjs-auth0/client'
 
+import featureFlags from 'env/feature-flags'
+
 import {
   Logo,
   StyledHeader,
@@ -23,22 +25,26 @@ export const Header = memo(() => {
         </Link>
 
         <StyledList>
-          <StyledListItem>
-            <Link href="/about">
-              {formatMessage({
-                defaultMessage: 'About',
-                id: 'header.about',
-              })}
-            </Link>
-          </StyledListItem>
-          <StyledListItem>
-            <Link href="/contact">
-              {formatMessage({
-                defaultMessage: 'Contact',
-                id: 'header.contact',
-              })}
-            </Link>
-          </StyledListItem>
+          {featureFlags?.headerAbout && (
+            <StyledListItem>
+              <Link href="/about">
+                {formatMessage({
+                  defaultMessage: 'About',
+                  id: 'header.about',
+                })}
+              </Link>
+            </StyledListItem>
+          )}
+          {featureFlags?.headerContact && (
+            <StyledListItem>
+              <Link href="/contact">
+                {formatMessage({
+                  defaultMessage: 'Contact',
+                  id: 'header.contact',
+                })}
+              </Link>
+            </StyledListItem>
+          )}
           {user && (
             <StyledListItem>
               <Link href="/playground">
@@ -59,14 +65,16 @@ export const Header = memo(() => {
               </Link>
             </StyledListItem>
           )}
-          <StyledListItem>
-            {user && <Link href="/api/auth/logout">
-              {formatMessage({
-                defaultMessage: 'Logout',
-                id: 'header.logout',
-              })}
-            </Link>}
-          </StyledListItem>
+          {user && (
+            <StyledListItem>
+              <Link href="/api/auth/logout">
+                {formatMessage({
+                  defaultMessage: 'Logout',
+                  id: 'header.logout',
+                })}
+              </Link>
+            </StyledListItem>
+          )}
         </StyledList>
       </StyledNav>
     </StyledHeader>

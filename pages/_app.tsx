@@ -4,7 +4,7 @@ import { UserProvider } from '@auth0/nextjs-auth0/client'
 import { IntlProvider } from 'react-intl'
 import { useRouter } from 'next/router'
 import { useMemo } from 'react'
-import { GoogleAnalytics } from "nextjs-google-analytics"
+import { GoogleAnalytics } from 'nextjs-google-analytics'
 
 import { baseFontSize, defaultFontFamily, pxToRem } from '@themes'
 
