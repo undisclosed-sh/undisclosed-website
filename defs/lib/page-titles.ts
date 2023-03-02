@@ -1,6 +1,6 @@
 import { defineMessage, MessageDescriptor } from 'react-intl'
 
-export type Pages = 'home' | 'about' | 'contact' | 'playground'
+export type Pages = 'home' | 'about' | 'contact' | 'playground' | 'editor'
 
 export const pageTitles: Record<Pages, MessageDescriptor> = {
   home: defineMessage({
@@ -18,5 +18,9 @@ export const pageTitles: Record<Pages, MessageDescriptor> = {
   playground: defineMessage({
     id: 'pageTitle.playground',
     defaultMessage: 'Playground',
+  }),
+  editor: defineMessage({
+    id: 'pageTitle.editor',
+    defaultMessage: 'Editor',
   }),
 }

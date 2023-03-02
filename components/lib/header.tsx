@@ -64,6 +64,16 @@ export const Header = memo(() => {
           )}
           {!user && (
             <StyledListItem>
+              <Link href={pageLinks.editor}>
+                {formatMessage({
+                  defaultMessage: 'Editor',
+                  id: 'header.editor',
+                })}
+              </Link>
+            </StyledListItem>
+          )}
+          {!user && (
+            <StyledListItem>
               <Link href={pageLinks.login}>
                 {formatMessage({
                   defaultMessage: 'Login',
