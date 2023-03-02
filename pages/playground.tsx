@@ -6,7 +6,7 @@ import clientPromise from '@lib/mongo'
 import { Movie } from '@custom-types'
 import { Layout, PageHead } from '@components'
 import { pageTitles } from '@defs'
-import { PageHeading } from '@components/lib/pageHeading'
+import { PageHeading } from '@components/lib/pageH-heading'
 
 interface AboutProps {
   data?: Movie[]

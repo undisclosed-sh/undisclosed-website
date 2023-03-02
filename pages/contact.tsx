@@ -3,7 +3,7 @@ import { useIntl } from 'react-intl'
 
 import { Layout, PageHead } from '@components'
 import { pageTitles } from '@defs'
-import { PageHeading } from '@components/lib/pageHeading'
+import { PageHeading } from '@components/lib/pageH-heading'
 
 const Contact: NextPage = () => {
   const { formatMessage } = useIntl()

@@ -1,5 +1,5 @@
 import { memo } from 'react'
-import { StyledHeading } from './PageHead.styled'
+import { StyledHeading } from './page-head.styled'
 
 export interface PageHeadingProps {
   text: string
