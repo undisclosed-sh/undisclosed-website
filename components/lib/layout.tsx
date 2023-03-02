@@ -1,12 +1,7 @@
 import { memo } from 'react'
-import styled from 'styled-components'
 
 import { Footer, Header } from "@components"
-
-const StyledDiv = styled.div`
-  display: flex;
-  flex: 1 0 auto;
-`
+import { StyledDiv } from './layout.styled'
 
 export interface LayoutProps {
   children: React.ReactNode
