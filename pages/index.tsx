@@ -5,10 +5,10 @@ import { useIntl } from 'react-intl'
 import clientPromise from '@lib/mongo'
 import { pageTitles } from '@defs'
 import { Layout, PageHead } from '@components'
-import { spacing } from '@themes'
+import { pxToRem } from '@themes'
 
 export const Main = styled.main`
-  padding: ${spacing(8)} 0;
+  padding: ${pxToRem(64)} 0;
   flex: 1 0 auto;
   display: flex;
   flex-direction: column;
@@ -19,14 +19,14 @@ export const Main = styled.main`
 export const Title = styled.h1`
   margin: 0;
   line-height: 1.15;
-  font-size: ${spacing(8)};
+  font-size: ${pxToRem(64)};
   text-align: center;
 `
 
 export const Description = styled.p`
-  margin: ${spacing(8)} 0;
+  margin: ${pxToRem(64)} 0;
   line-height: 1.5;
-  font-size: ${spacing(2.5)};
+  font-size: 20px;
   text-align: center;
 `
 

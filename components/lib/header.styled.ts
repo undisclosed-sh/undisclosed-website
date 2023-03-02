@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 
-import { spacing, pxToRem } from '@themes'
+import { pxToRem } from '@themes'
 
 export const StyledHeader = styled.header`
-  padding: ${spacing(2)} ${spacing(2)};
+  padding: ${pxToRem(16)} ${pxToRem(16)};
 `
 
 export const StyledNav = styled.nav`
@@ -50,9 +50,9 @@ export const StyledList = styled.ul`
 
 export const StyledListItem = styled.li`
   display: inline-flex;
-  margin: 0 ${spacing(1)};
+  margin: 0 ${pxToRem(8)};
 
   & + & {
-    margin-left: ${spacing(0.5)};
+    margin-left: ${pxToRem(4)};
   }
 `
