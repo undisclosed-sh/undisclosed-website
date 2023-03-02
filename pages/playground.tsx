@@ -1,15 +1,18 @@
 import { GetServerSideProps, NextPage } from 'next'
 import { useMemo } from 'react'
+import { useIntl } from 'react-intl'
 
 import clientPromise from '@lib/mongo'
 import { Movie } from '@custom-types'
 import { Layout, PageHead } from '@components'
+import { pageTitles } from '@defs'
 
 interface AboutProps {
   data?: Movie[]
 }
 
 const Playground: NextPage = ({ data }: AboutProps) => {
+  const { formatMessage } = useIntl()
   const movies = useMemo(() => {
     return (data || []).map((movie) => {
       return (
@@ -24,7 +27,7 @@ const Playground: NextPage = ({ data }: AboutProps) => {
 
   return (
     <>
-      <PageHead pageName="Playground" />
+      <PageHead pageName={formatMessage(pageTitles.playground)} />
 
       <Layout>
         <ul>{movies}</ul>

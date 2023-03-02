@@ -24,6 +24,8 @@
       "@custom-types/*": ["./types/*"],
       "@data": ["./data"],
       "@data/*": ["./data/*"],
+      "@defs": ["./defs"],
+      "@defs/*": ["./defs/*"],
       "@hooks": ["./hooks"],
       "@hooks/*": ["./hooks/*"],
       "@lib": ["./lib"],

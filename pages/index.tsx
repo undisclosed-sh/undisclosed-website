@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { useIntl } from 'react-intl'
 
 import clientPromise from '@lib/mongo'
+import { pageTitles } from '@defs'
 import { Layout, PageHead } from '@components'
 import { spacing } from '@themes'
 
@@ -34,7 +35,7 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <PageHead pageName="Home" />
+      <PageHead pageName={formatMessage(pageTitles.home)} />
 
       <Layout>
         <Main>
@@ -43,7 +44,7 @@ const Home: NextPage = () => {
           <Description>
             {formatMessage({
               defaultMessage:
-                'Software development done right, at scale and with a focus on quality.',
+                'Building digital products at scale and with a focus on quality.',
               id: 'home.description',
             })}
           </Description>
