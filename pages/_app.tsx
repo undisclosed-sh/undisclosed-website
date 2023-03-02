@@ -6,24 +6,31 @@ import { useRouter } from 'next/router'
 import { useMemo } from 'react'
 import { GoogleAnalytics } from "nextjs-google-analytics"
 
-import { baseFontSize } from '@themes'
+import { baseFontSize, defaultFontFamily, pxToRem } from '@themes'
 
 import English from '../content/locales/en.json'
 import Czech from '../content/locales/cs.json'
 
 const GlobalStyle = createGlobalStyle`
+  html {
+    font-size: ${baseFontSize}px;
+  }
+
   html,
   body {
     padding: 0;
     margin: 0;
-    font-size: ${baseFontSize}px;
-    font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-family: ${defaultFontFamily};
   }
 
   html,
   body,
   body > div {
     min-height: 100vh;
+  }
+
+  body {
+    font-size: ${pxToRem(16)};
   }
 
   body > div {
