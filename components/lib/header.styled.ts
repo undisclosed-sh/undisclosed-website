@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { spacing } from '@themes'
+import { spacing, pxToRem } from '@themes'
 
 export const StyledHeader = styled.header`
   padding: ${spacing(2)} ${spacing(2)};
@@ -18,9 +18,23 @@ export const Logo = styled.span`
   font-size: 23px;
   font-weight: 700;
   transition: transform 0.2s ease-in-out;
+`
 
+export const LogoPostfix = styled.span`
+  position: relative;
+  left: 0;
+  transition: left 0.2s ease-in-out;
+`
+
+export const LogoWrapper = styled.span`
   &:hover {
-    transform: scale(1.1) rotate(90deg);
+    ${Logo} {
+      transform: scale(1.1) rotate(90deg);
+    }
+
+    ${LogoPostfix} {
+      left: ${pxToRem(4)};
+    }
   }
 `
 

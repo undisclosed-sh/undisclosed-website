@@ -9,6 +9,8 @@ import featureFlags from 'env/feature-flags'
 
 import {
   Logo,
+  LogoPostfix,
+  LogoWrapper,
   StyledHeader,
   StyledList,
   StyledListItem,
@@ -23,7 +25,10 @@ export const Header = memo(() => {
     <StyledHeader>
       <StyledNav>
         <Link href="/">
-          <Logo>U</Logo>
+          <LogoWrapper>
+            <Logo>U</Logo>
+            <LogoPostfix>ndisclosed</LogoPostfix>
+          </LogoWrapper>
         </Link>
 
         <StyledList>
