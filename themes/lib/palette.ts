@@ -1,6 +1,6 @@
 import { colors } from './colors'
 
-export const palette = {
+export const colorMap = {
   primary: {
     light: colors.blue[300],
     main: colors.blue[500],
@@ -26,15 +26,15 @@ export const palette = {
   ...colors,
 }
 
-export type Palette = typeof palette
+export type Palette = typeof colorMap
 
 export const getColor = (
   color: keyof Palette,
   shade: string
 ): string => {
   // @ts-ignore TODO
-  if (!palette[color]?.[shade]) throw new Error(`${color} ${shade} not found`);
+  if (!colorMap[color]?.[shade]) throw new Error(`${color} ${shade} not found`);
 
   // @ts-ignore TODO
-  return palette[color][shade]
+  return colorMap[color][shade]
 }
