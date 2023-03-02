@@ -24,7 +24,7 @@ export const Header = memo(() => {
   return (
     <StyledHeader>
       <StyledNav>
-        <Link href="/">
+        <Link href={pageLinks.home}>
           <LogoWrapper>
             <Logo>U</Logo>
             <LogoPostfix>ndisclosed</LogoPostfix>
@@ -34,7 +34,7 @@ export const Header = memo(() => {
         <StyledList>
           {featureFlags?.headerAbout && (
             <StyledListItem>
-              <Link href={pageLinks.home}>
+              <Link href={pageLinks.about}>
                 {formatMessage({
                   defaultMessage: 'About',
                   id: 'header.about',
