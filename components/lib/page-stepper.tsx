@@ -12,12 +12,16 @@ const routesMap = {
     prev: pageLinks.contact,
   },
   about: {
-    next: pageLinks.contact,
+    next: pageLinks.newsletter,
     prev: pageLinks.home,
+  },
+  newsletter: {
+    next: pageLinks.contact,
+    prev: pageLinks.about,
   },
   contact: {
     next: pageLinks.home,
-    prev: pageLinks.about,
+    prev: pageLinks.newsletter,
   },
 }
 
