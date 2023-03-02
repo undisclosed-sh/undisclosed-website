@@ -16,6 +16,24 @@ export const Main = styled.main`
   align-items: center;
 `
 
+export const EvenLetter = styled.span`
+  transition: transform 0.2s ease-in-out;
+  display: inline-block;
+
+  &:hover {
+    transform: translateY(-16px);
+  }
+`
+
+export const OddLetter = styled.span`
+  transition: transform 0.2s ease-in-out;
+  display: inline-block;
+
+  &:hover {
+    transform: translateX(8px);
+  }
+`
+
 export const Title = styled.h1`
   margin: 0;
   line-height: 1.15;
@@ -43,7 +61,19 @@ const Home: NextPage = ({ ...props }: HomeProps) => {
 
       <Layout>
         <Main>
-          <Title>Undisclosed</Title>
+          <Title>
+            <EvenLetter>U</EvenLetter>
+            <OddLetter>n</OddLetter>
+            <EvenLetter>d</EvenLetter>
+            <OddLetter>i</OddLetter>
+            <EvenLetter>s</EvenLetter>
+            <OddLetter>c</OddLetter>
+            <EvenLetter>l</EvenLetter>
+            <OddLetter>o</OddLetter>
+            <EvenLetter>s</EvenLetter>
+            <OddLetter>e</OddLetter>
+            <EvenLetter>d</EvenLetter>
+          </Title>
 
           <Description>
             {formatMessage({
