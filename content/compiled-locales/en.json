@@ -11,6 +11,24 @@
       "value": "Contact"
     }
   ],
+  "editor.saveButton": [
+    {
+      "type": 0,
+      "value": "Save changes"
+    }
+  ],
+  "editor.title": [
+    {
+      "type": 0,
+      "value": "Editor"
+    }
+  ],
+  "editor.translationUpdateSuccessMessage": [
+    {
+      "type": 0,
+      "value": "Translation data was successfully updated"
+    }
+  ],
   "header.about": [
     {
       "type": 0,
@@ -21,6 +39,12 @@
     {
       "type": 0,
       "value": "Contact"
+    }
+  ],
+  "header.editor": [
+    {
+      "type": 0,
+      "value": "Editor"
     }
   ],
   "header.login": [
@@ -35,6 +59,12 @@
       "value": "Logout"
     }
   ],
+  "header.newsletter": [
+    {
+      "type": 0,
+      "value": "Newsletter"
+    }
+  ],
   "header.playground": [
     {
       "type": 0,
@@ -45,6 +75,36 @@
     {
       "type": 0,
       "value": "Building digital products at scale, with focus on quality."
+    }
+  ],
+  "newsletter.inputPlaceholder": [
+    {
+      "type": 0,
+      "value": "Your e-mail"
+    }
+  ],
+  "newsletter.intro": [
+    {
+      "type": 0,
+      "value": "We are always working on some interesting project. You can subscribe to our newsletter to stay up to date with latest news."
+    }
+  ],
+  "newsletter.submitButton": [
+    {
+      "type": 0,
+      "value": "Send"
+    }
+  ],
+  "newsletter.title": [
+    {
+      "type": 0,
+      "value": "Newsletter"
+    }
+  ],
+  "playground.title": [
+    {
+      "type": 0,
+      "value": "Playground"
     }
   ]
 }
