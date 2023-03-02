@@ -3,6 +3,7 @@ import { useIntl } from 'react-intl'
 
 import { Layout, PageHead } from '@components'
 import { pageTitles } from '@defs'
+import { PageHeading } from '@components/lib/pageHeading'
 
 const Contact: NextPage = () => {
   const { formatMessage } = useIntl()
@@ -12,12 +13,12 @@ const Contact: NextPage = () => {
       <PageHead pageName={formatMessage(pageTitles.contact)} />
 
       <Layout>
-        <h1>
-          {formatMessage({
+        <PageHeading
+          text={formatMessage({
             defaultMessage: 'Contact',
             id: 'contact.title',
           })}
-        </h1>
+        />
       </Layout>
     </>
   )

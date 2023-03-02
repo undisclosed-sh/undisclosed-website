@@ -6,6 +6,7 @@ import clientPromise from '@lib/mongo'
 import { Movie } from '@custom-types'
 import { Layout, PageHead } from '@components'
 import { pageTitles } from '@defs'
+import { PageHeading } from '@components/lib/pageHeading'
 
 interface AboutProps {
   data?: Movie[]
@@ -30,6 +31,12 @@ const Playground: NextPage = ({ data }: AboutProps) => {
       <PageHead pageName={formatMessage(pageTitles.playground)} />
 
       <Layout>
+        <PageHeading
+          text={formatMessage({
+            defaultMessage: 'Playground',
+            id: 'playground.title',
+          })}
+        />
         <ul>{movies}</ul>
       </Layout>
     </>
