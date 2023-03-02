@@ -48,7 +48,7 @@ const Home: NextPage = ({ ...props }: HomeProps) => {
           <Description>
             {formatMessage({
               defaultMessage:
-                'Building digital products at scale and with a focus on quality.',
+                'Building digital products at scale, with focus on quality.',
               id: 'home.description',
             })}
           </Description>
