@@ -3,11 +3,11 @@ import { NextPage } from 'next'
 import styled from 'styled-components'
 
 import { PageHead } from '@components'
-import { colors, getColor, pxToRem, typographyElements } from '@themes'
+import { colors, palette, pxToRem, typographyElements } from '@themes'
 
 export const Layout = styled.div`
   padding: ${pxToRem(26)};
-  background: ${getColor('grey', '100')};
+  background: ${palette('grey', '100')};
 `
 
 export const MainWrapper = styled.div`
