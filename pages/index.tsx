@@ -30,7 +30,11 @@ export const Description = styled.p`
   text-align: center;
 `
 
-const Home: NextPage = () => {
+export interface HomeProps {
+  isConnected?: boolean
+}
+
+const Home: NextPage = ({ ...props }: HomeProps) => {
   const { formatMessage } = useIntl()
 
   return (
