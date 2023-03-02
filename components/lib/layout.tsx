@@ -1,6 +1,6 @@
 import { memo } from 'react'
 
-import { Footer, Header } from "@components"
+import { Footer, Header, PageStepper } from '@components'
 import { StyledDiv } from './layout.styled'
 
 export interface LayoutProps {
@@ -13,7 +13,7 @@ export const Layout = memo(({ children }: LayoutProps) => {
       <Header />
 
       <StyledDiv>
-        {children}
+        <PageStepper>{children}</PageStepper>
       </StyledDiv>
 
       <Footer />
