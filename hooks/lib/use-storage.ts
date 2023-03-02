@@ -1,36 +1,38 @@
 import { useCallback, useMemo } from 'react'
 
-const storagePrefix = 'undisclosed_'
+const delimiter = '_'
+const storagePrefix = 'undisclosed'
 
 export const useStorage = () => {
   const getItem = useCallback(
-    (storage: 'local' | 'session' = 'local') => {
-      let flags = null
+    (storage: 'local' | 'session' = 'local', itemName: string) => {
+      let item = null
       try {
         if (storage === 'local') {
-          flags = window.localStorage.getItem(`${storagePrefix}featureFlags`)
+          item = window.localStorage.getItem(`${storagePrefix}${delimiter}${itemName}`)
         } else {
-          flags = window.sessionStorage.getItem(`${storagePrefix}featureFlags`)
+          item = window.sessionStorage.getItem(`${storagePrefix}${delimiter}${itemName}`)
         }
       } catch (e) {
         console.error(`${storage} storage is not available`, e)
       }
 
-      return flags
+      return item
     },
     [],
   )
 
   const setItem = useCallback(
     (
+      itemName: string,
       item: unknown,
       storage: 'local' | 'session' = 'local',
     ) => {
       try {
         if (storage === 'local') {
-          window.localStorage.setItem(`${storagePrefix}featureFlags`, JSON.stringify(item))
+          window.localStorage.setItem(`${storagePrefix}${delimiter}${itemName}`, JSON.stringify(item))
         } else {
-          window.sessionStorage.setItem(`${storagePrefix}featureFlags`, JSON.stringify(item))
+          window.sessionStorage.setItem(`${storagePrefix}${delimiter}${itemName}`, JSON.stringify(item))
         }
       } catch (e) {
         console.error(`${storage} storage is not available`, e)
