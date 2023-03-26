@@ -64,6 +64,12 @@ const StyledButton = styled.button`
   }
 `
 
+const Wrapper = styled.div`
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+`
+
 const Newsletter: NextPage = () => {
   const { t } = useTranslation(['header', 'newsletter'])
   const [email, setEmail] = useState('')
@@ -95,22 +101,24 @@ const Newsletter: NextPage = () => {
       <PageHead pageName={t('header:newsletter')} />
 
       <Layout>
-        <PageHeading text={t('header:newsletter')} />
+        <Wrapper>
+          <PageHeading text={t('header:newsletter')} />
 
-        <StyledText componentType="p">{t('newsletter:intro')}</StyledText>
+          <StyledText componentType="p">{t('newsletter:intro')}</StyledText>
 
-        <StyledForm onSubmit={onSubmit}>
-          <StyledInput
-            type="email"
-            placeholder={t('common:form.email') as string}
-            value={email}
-            onChange={onEmailChange}
-            $error={emailError}
-          />
-          <StyledButton disabled={email.length === 0}>
-            {t('common:form.submit')}
-          </StyledButton>
-        </StyledForm>
+          <StyledForm onSubmit={onSubmit}>
+            <StyledInput
+              type="email"
+              placeholder={t('common:form.email') as string}
+              value={email}
+              onChange={onEmailChange}
+              $error={emailError}
+            />
+            <StyledButton disabled={email.length === 0}>
+              {t('common:form.submit')}
+            </StyledButton>
+          </StyledForm>
+        </Wrapper>
       </Layout>
     </>
   )
