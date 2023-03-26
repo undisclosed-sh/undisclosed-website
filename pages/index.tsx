@@ -14,6 +14,9 @@ const Main = styled.main`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
 `
 
 const EvenLetter = styled.span`
