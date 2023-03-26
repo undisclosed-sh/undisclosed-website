@@ -1,18 +1,41 @@
 export const defaultFontFamily = `Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif`
 
 export const headings = {
-  h1: 48,
-  h2: 36,
-  h3: 30,
-  h4: 24,
-  h5: 20,
-  h6: 18,
+  h1: {
+    desktop: 40,
+    mobile: 32,
+  },
+  h2: {
+    desktop: 32,
+    mobile: 28,
+  },
+  h3: {
+    desktop: 24,
+    mobile: 22,
+  },
+  h4: {
+    desktop: 20,
+    mobile: 18,
+  },
+  h5: {
+    desktop: 16,
+    mobile: 16,
+  },
 }
 
 export const bodyText = {
-  caption: 12,
-  body1: 15,
-  body2: 13,
+  caption: {
+    desktop: 12,
+    mobile: 12,
+  },
+  body1: {
+    desktop: 15,
+    mobile: 15,
+  },
+  body2: {
+    desktop: 13,
+    mobile: 13,
+  },
 }
 
 export const typographyScaleMap = {
@@ -20,8 +43,11 @@ export const typographyScaleMap = {
   ...bodyText,
 }
 
-export const typographyScale = (scale: keyof typeof typographyScaleMap): string => {
-  if (!typographyScaleMap[scale]) {
+export const typographyScale = (
+  scale: keyof typeof typographyScaleMap,
+  device: 'desktop' | 'mobile',
+): string => {
+  if (!typographyScaleMap[scale][device]) {
     throw new Error(`Invalid typography scale: ${scale}`)
   }
 
@@ -30,19 +56,19 @@ export const typographyScale = (scale: keyof typeof typographyScaleMap): string 
 
 type TypographyScale = keyof typeof typographyScaleMap
 type TypographyElement = {
-  fontSize: string;
-  fontWeight: number;
-  lineHeight: number;
+  fontSize: string
+  fontWeight: number
+  lineHeight: number
 }
 
 export const typographyElements = Object.entries(typographyScaleMap).reduce(
   (acc, [key, value]) => ({
     ...acc,
     [key]: {
-      fontSize: `${value * 1.5}px`,
+      fontSize: `${value.desktop * 1.5}px`,
       fontWeight: key in headings ? 500 : 400,
-      lineHeight: `${value * 1.5}px`,
+      lineHeight: `${value.desktop * 1.5}px`,
     },
   }),
-  {}
+  {},
 ) as Record<TypographyScale, TypographyElement>
