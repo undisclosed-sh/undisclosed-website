@@ -20,7 +20,7 @@ export const navigation: Record<
   //   label: 'features',
   // },
   aboutUs: {
-    route: '/about-us',
+    route: '/about',
     label: 'aboutUs',
   },
   // TODO: Add blog
