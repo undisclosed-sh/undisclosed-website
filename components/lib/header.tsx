@@ -2,10 +2,13 @@ import { memo } from 'react'
 import Link from 'next/link'
 import { useUser } from '@auth0/nextjs-auth0/client'
 import { useTranslation } from 'next-i18next'
+import { useRouter } from 'next/router'
 
 import { pageLinks } from '@defs'
 
 import {
+  LocaleSwitcher,
+  LocaleSwitcherItem,
   Logo,
   LogoPostfix,
   LogoWrapper,
@@ -17,7 +20,8 @@ import {
 import { navigation } from '@defs/lib/navigation'
 
 export const Header = memo(() => {
-  const { t } = useTranslation(['header'])
+  const router = useRouter()
+  const { t, i18n } = useTranslation(['header'])
   const { user } = useUser()
 
   return (
@@ -58,6 +62,16 @@ export const Header = memo(() => {
           )}
         </StyledList>
       </StyledNav>
+
+      <LocaleSwitcher>
+        <LocaleSwitcherItem $active={i18n.language === 'en'}>
+          <Link href={router.pathname} locale="en">EN</Link>
+        </LocaleSwitcherItem>
+        <LocaleSwitcherItem>/</LocaleSwitcherItem>
+        <LocaleSwitcherItem $active={i18n.language === 'cs'}>
+          <Link href={router.pathname} locale="cs">CS</Link>
+        </LocaleSwitcherItem>
+      </LocaleSwitcher>
     </StyledHeader>
   )
 })

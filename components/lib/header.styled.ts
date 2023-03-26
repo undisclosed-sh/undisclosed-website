@@ -4,6 +4,8 @@ import { pxToRem } from '@themes'
 
 export const StyledHeader = styled.header`
   padding: ${pxToRem(16)} ${pxToRem(16)};
+  display: flex;
+  justify-content: space-between;
 `
 
 export const StyledNav = styled.nav`
@@ -11,6 +13,8 @@ export const StyledNav = styled.nav`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  flex-grow: 1;
+  flex-shrink: 0;
 `
 
 export const Logo = styled.span`
@@ -55,4 +59,26 @@ export const StyledListItem = styled.li`
   & + & {
     margin-left: ${pxToRem(4)};
   }
+`
+
+export const LocaleSwitcher = styled.ul`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  margin: 0 0 0 ${pxToRem(8)};
+  padding: 0;
+
+  li {
+    font-size: ${pxToRem(14)};
+  }
+
+  li + li {
+    margin-left: ${pxToRem(4)};
+  }
+`
+
+export const LocaleSwitcherItem = styled.li<{ $active?: boolean }>`
+  color: ${({ $active }) => ($active ? '#222' : '#bdcad0')};
 `
