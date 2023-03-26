@@ -5,15 +5,16 @@ import { StyledDiv } from './layout.styled'
 
 export interface LayoutProps {
   children: React.ReactNode
+  stepperEnabled?: boolean
 }
 
-export const Layout = memo(({ children }: LayoutProps) => {
+export const Layout = memo(({ children, stepperEnabled }: LayoutProps) => {
   return (
     <>
       <Header />
 
       <StyledDiv>
-        <PageStepper>{children}</PageStepper>
+        {stepperEnabled ? <PageStepper>{children}</PageStepper> : children}
       </StyledDiv>
 
       <Footer />
