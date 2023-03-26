@@ -29,7 +29,7 @@ export const bodyText = {
     mobile: 12,
   },
   body1: {
-    desktop: 15,
+    desktop: 16,
     mobile: 15,
   },
   body2: {
