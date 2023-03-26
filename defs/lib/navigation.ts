@@ -7,34 +7,38 @@ export const navigation: Record<
     label: string
   }
 > = {
-  home: {
-    route: 'home',
-    label: 'home',
-  },
+  // home: {
+  //   route: '/',
+  //   label: 'home',
+  // },
   services: {
-    route: 'services',
+    route: '/services',
     label: 'services',
   },
-  features: {
-    route: 'features',
-    label: 'features',
-  },
+  // features: {
+  //   route: '/features',
+  //   label: 'features',
+  // },
   aboutUs: {
-    route: 'about-us',
+    route: '/about-us',
     label: 'aboutUs',
   },
   // TODO: Add blog
   // blog: {
-  //   route: 'blog',
+  //   route: '/blog',
   //   label: 'blog',
   // },
   contact: {
-    route: 'contact',
+    route: '/contact',
     label: 'contact',
+  },
+  newsletter: {
+    route: '/newsletter',
+    label: 'newsletter',
   },
   // TODO: Add get started
   // getStarted: {
-  //   route: 'get-started',
+  //   route: '/get-started',
   //   label: 'getStarted',
   // },
 }
