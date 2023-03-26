@@ -1,10 +1,10 @@
 import { ChangeEvent, FormEvent, useCallback, useState } from 'react'
 import { NextPage } from 'next'
-import { useIntl } from 'react-intl'
 import styled, { css } from 'styled-components'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { useTranslation } from 'next-i18next'
 
 import { Layout, PageHead, PageHeading, Text } from '@components'
-import { pageTitles } from '@defs'
 import { palette, pxToRem } from '@themes'
 
 const formHeight = pxToRem(32)
@@ -65,7 +65,7 @@ const StyledButton = styled.button`
 `
 
 const Newsletter: NextPage = () => {
-  const { formatMessage } = useIntl()
+  const { t } = useTranslation(['header', 'newsletter'])
   const [email, setEmail] = useState('')
   const [emailError, setEmailError] = useState(false)
 
@@ -92,40 +92,23 @@ const Newsletter: NextPage = () => {
 
   return (
     <>
-      <PageHead pageName={formatMessage(pageTitles.newsletter)} />
+      <PageHead pageName={t('header:newsletter')} />
 
       <Layout>
-        <PageHeading
-          text={formatMessage({
-            defaultMessage: 'Newsletter',
-            id: 'newsletter.title',
-          })}
-        />
+        <PageHeading text={t('header:newsletter')} />
 
-        <StyledText componentType="p">
-          {formatMessage({
-            defaultMessage:
-              'We are always working on some interesting project. You can subscribe to our newsletter to stay up to date with latest news.',
-            id: 'newsletter.intro',
-          })}
-        </StyledText>
+        <StyledText componentType="p">{t('newsletter:intro')}</StyledText>
 
         <StyledForm onSubmit={onSubmit}>
           <StyledInput
-            type="text"
-            placeholder={formatMessage({
-              id: 'newsletter.inputPlaceholder',
-              defaultMessage: 'Your e-mail',
-            })}
+            type="email"
+            placeholder={t('common:form.email') as string}
             value={email}
             onChange={onEmailChange}
             $error={emailError}
           />
           <StyledButton disabled={email.length === 0}>
-            {formatMessage({
-              defaultMessage: 'Send',
-              id: 'newsletter.submitButton',
-            })}
+            {t('common:form.submit')}
           </StyledButton>
         </StyledForm>
       </Layout>
@@ -134,3 +117,14 @@ const Newsletter: NextPage = () => {
 }
 
 export default Newsletter
+
+export const getServerSideProps = async ({ locale }: any) => ({
+  props: {
+    ...(await serverSideTranslations(locale, [
+      'common',
+      'header',
+      'footer',
+      'newsletter',
+    ])),
+  },
+})

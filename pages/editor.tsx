@@ -1,12 +1,12 @@
 import { ChangeEvent, useCallback, useEffect, useState } from 'react'
 import { NextPage } from 'next'
-import { useIntl } from 'react-intl'
 import styled from 'styled-components'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 import { Layout, PageHead } from '@components'
-import { pageTitles } from '@defs'
 import { PageHeading } from '@components/lib/pageH-heading'
 import { palette, pxToRem } from '@themes'
+import { useTranslation } from 'next-i18next'
 
 const StyledTextarea = styled.textarea`
   width: 100%;
@@ -52,7 +52,7 @@ const SuccessMessage = styled.span`
 `
 
 const Editor: NextPage = () => {
-  const { formatMessage } = useIntl()
+  const { t } = useTranslation(['header', 'editor'])
   const [translations, setTranslations] = useState<string | undefined>(
     undefined,
   )
@@ -115,15 +115,10 @@ const Editor: NextPage = () => {
 
   return (
     <>
-      <PageHead pageName={formatMessage(pageTitles.editor)} />
+      <PageHead pageName={t('header:editor')} />
 
       <Layout>
-        <PageHeading
-          text={formatMessage({
-            defaultMessage: 'Editor',
-            id: 'editor.title',
-          })}
-        />
+        <PageHeading text={t('header:editor')} />
 
         <StyledTextarea
           name=""
@@ -135,19 +130,11 @@ const Editor: NextPage = () => {
         ></StyledTextarea>
 
         {successMessageVisible && (
-          <SuccessMessage>
-            {formatMessage({
-              defaultMessage: 'Translation data was successfully updated',
-              id: 'editor.translationUpdateSuccessMessage',
-            })}
-          </SuccessMessage>
+          <SuccessMessage>{t('editor:updateSuccessMessage')}</SuccessMessage>
         )}
 
         <StyledButton type="button" onClick={onSaveChanges}>
-          {formatMessage({
-            defaultMessage: 'Save changes',
-            id: 'editor.saveButton',
-          })}
+          {t('editor:save')}
         </StyledButton>
       </Layout>
     </>
@@ -155,3 +142,14 @@ const Editor: NextPage = () => {
 }
 
 export default Editor
+
+export const getServerSideProps = async ({ locale }: any) => ({
+  props: {
+    ...(await serverSideTranslations(locale, [
+      'common',
+      'header',
+      'footer',
+      'editor',
+    ])),
+  },
+})

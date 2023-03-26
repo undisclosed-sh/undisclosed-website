@@ -1,27 +1,28 @@
 import { NextPage } from 'next'
-import { useIntl } from 'react-intl'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 import { Layout, PageHead } from '@components'
-import { pageTitles } from '@defs'
 import { PageHeading } from '@components/lib/pageH-heading'
+import { useTranslation } from 'next-i18next'
 
 const About: NextPage = () => {
-  const { formatMessage } = useIntl()
+  const { t } = useTranslation('header')
 
   return (
     <>
-      <PageHead pageName={formatMessage(pageTitles.about)} />
+      <PageHead pageName={t('about')} />
 
       <Layout>
-        <PageHeading
-          text={formatMessage({
-            defaultMessage: 'About',
-            id: 'about.title',
-          })}
-        />
+        <PageHeading text={t('about')} />
       </Layout>
     </>
   )
 }
 
 export default About
+
+export const getServerSideProps = async ({ locale }: any) => ({
+  props: {
+    ...(await serverSideTranslations(locale, ['common', 'header', 'footer'])),
+  },
+})

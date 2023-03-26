@@ -1,11 +1,9 @@
 import { memo } from 'react'
 import Link from 'next/link'
-import { useIntl } from 'react-intl'
 import { useUser } from '@auth0/nextjs-auth0/client'
+import { useTranslation } from 'next-i18next'
 
 import { pageLinks } from '@defs'
-
-import featureFlags from 'env/feature-flags'
 
 import {
   Logo,
@@ -16,9 +14,10 @@ import {
   StyledListItem,
   StyledNav,
 } from './header.styled'
+import { navigation } from '@defs/lib/navigation'
 
 export const Header = memo(() => {
-  const { formatMessage } = useIntl()
+  const { t } = useTranslation(['header'])
   const { user } = useUser()
 
   return (
@@ -32,74 +31,29 @@ export const Header = memo(() => {
         </Link>
 
         <StyledList>
-          {featureFlags?.headerAbout && (
-            <StyledListItem>
-              <Link href={pageLinks.about}>
-                {formatMessage({
-                  defaultMessage: 'About',
-                  id: 'header.about',
-                })}
-              </Link>
+          {Object.entries(navigation).map(([key, val]) => (
+            <StyledListItem key={`nav_link_${key}`}>
+              <Link href={val.route}>{t(val.label)}</Link>
             </StyledListItem>
-          )}
-          {featureFlags?.headerNewsletter && (
+          ))}
+          {user && (
             <StyledListItem>
-              <Link href={pageLinks.newsletter}>
-                {formatMessage({
-                  defaultMessage: 'Newsletter',
-                  id: 'header.newsletter',
-                })}
-              </Link>
-            </StyledListItem>
-          )}
-          {featureFlags?.headerContact && (
-            <StyledListItem>
-              <Link href={pageLinks.contact}>
-                {formatMessage({
-                  defaultMessage: 'Contact',
-                  id: 'header.contact',
-                })}
-              </Link>
+              <Link href={pageLinks.playground}>{t('playground')}</Link>
             </StyledListItem>
           )}
           {user && (
             <StyledListItem>
-              <Link href={pageLinks.playground}>
-                {formatMessage({
-                  defaultMessage: 'Playground',
-                  id: 'header.playground',
-                })}
-              </Link>
+              <Link href={pageLinks.editor}>{t('editor')}</Link>
             </StyledListItem>
           )}
           {!user && (
             <StyledListItem>
-              <Link href={pageLinks.editor}>
-                {formatMessage({
-                  defaultMessage: 'Editor',
-                  id: 'header.editor',
-                })}
-              </Link>
-            </StyledListItem>
-          )}
-          {!user && (
-            <StyledListItem>
-              <Link href={pageLinks.login}>
-                {formatMessage({
-                  defaultMessage: 'Login',
-                  id: 'header.login',
-                })}
-              </Link>
+              <Link href={pageLinks.login}>{t('login')}</Link>
             </StyledListItem>
           )}
           {user && (
             <StyledListItem>
-              <Link href={pageLinks.logout}>
-                {formatMessage({
-                  defaultMessage: 'Logout',
-                  id: 'header.logout',
-                })}
-              </Link>
+              <Link href={pageLinks.logout}>{t('logout')}</Link>
             </StyledListItem>
           )}
         </StyledList>

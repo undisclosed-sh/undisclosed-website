@@ -1,8 +1,8 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 import { writeFileSync } from 'fs'
 
-import CzTranslations from './../../content/locales/cs.json'
-import EnTranslations from './../../content/locales/en.json'
+// import CzTranslations from './../../content/locales/cs.json'
+// import EnTranslations from './../../content/locales/en.json'
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'POST') {
@@ -11,12 +11,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     if (locale === 'en') {
       res.status(200).json({
-        data: EnTranslations,
+        // data: EnTranslations,
         message: 'success',
       })
     } else if (locale === 'cs') {
       res.status(200).json({
-        data: CzTranslations,
+        // data: CzTranslations,
         message: 'success',
       })
     } else {

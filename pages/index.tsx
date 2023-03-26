@@ -1,11 +1,11 @@
 import type { NextPage } from 'next'
-import { useIntl } from 'react-intl'
 import styled from 'styled-components'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 import clientPromise from '@lib/mongo'
-import { pageTitles } from '@defs'
 import { Layout, PageHead } from '@components'
 import { pxToRem } from '@themes'
+import { useTranslation } from 'next-i18next'
 
 const Main = styled.main`
   padding: ${pxToRem(64)} 0;
@@ -53,15 +53,15 @@ export interface HomeProps {
 }
 
 const Home: NextPage = ({ ...props }: HomeProps) => {
-  const { formatMessage } = useIntl()
+  const { t } = useTranslation(['header', 'home'])
 
   return (
     <>
-      <PageHead pageName={formatMessage(pageTitles.home)} />
+      <PageHead pageName={t('header:home')} />
 
       <Layout>
         <Main>
-          <Title>
+          {/* <Title>
             <EvenLetter>U</EvenLetter>
             <OddLetter>n</OddLetter>
             <EvenLetter>d</EvenLetter>
@@ -73,14 +73,13 @@ const Home: NextPage = ({ ...props }: HomeProps) => {
             <EvenLetter>s</EvenLetter>
             <OddLetter>e</OddLetter>
             <EvenLetter>d</EvenLetter>
+          </Title> */}
+          <Title>
+            {t('home:hero.heading')}
           </Title>
 
           <Description>
-            {formatMessage({
-              defaultMessage:
-                'Building digital products at scale, with focus on quality.',
-              id: 'home.description',
-            })}
+            {t('home:hero.subheading')}
           </Description>
         </Main>
       </Layout>
@@ -90,20 +89,27 @@ const Home: NextPage = ({ ...props }: HomeProps) => {
 
 export default Home
 
-export async function getServerSideProps() {
-  try {
-    await clientPromise
+export const getServerSideProps = async ({ locale }: any) => ({
+  props: {
+    ...(await serverSideTranslations(locale, ['common', 'header', 'footer', 'home'])),
+  },
+});
 
-    return {
-      props: {
-        isConnected: true,
-      },
-    }
-  } catch (error) {
-    return {
-      props: {
-        isConnected: false,
-      },
-    }
-  }
-}
+// export async function getServerSideProps({ locale }: { locale: string }) {
+//   try {
+//     await clientPromise
+
+//     return {
+//       props: {
+//         isConnected: true,
+//       },
+//     }
+//   } catch (error) {
+//     return {
+//       props: {
+//         isConnected: false,
+//         ...(await serverSideTranslations(locale ?? 'en', ['header'])),
+//       },
+//     }
+//   }
+// }
