@@ -5,40 +5,42 @@ export const navigation: Record<
   {
     route: string
     label: string
+    disabled?: boolean
   }
 > = {
-  // home: {
-  //   route: '/',
-  //   label: 'home',
-  // },
   services: {
     route: '/services',
     label: 'services',
+    disabled: true,
   },
-  // features: {
-  //   route: '/features',
-  //   label: 'features',
-  // },
+  features: {
+    route: '/features',
+    label: 'features',
+    disabled: true,
+  },
   aboutUs: {
     route: '/about',
     label: 'aboutUs',
+    disabled: true,
   },
-  // TODO: Add blog
-  // blog: {
-  //   route: '/blog',
-  //   label: 'blog',
-  // },
+  blog: {
+    route: '/blog',
+    label: 'blog',
+    disabled: true,
+  },
   contact: {
     route: '/contact',
     label: 'contact',
+    disabled: true,
   },
   newsletter: {
     route: '/newsletter',
     label: 'newsletter',
+    disabled: true,
   },
-  // TODO: Add get started
-  // getStarted: {
-  //   route: '/get-started',
-  //   label: 'getStarted',
-  // },
+  getStarted: {
+    route: '/get-started',
+    label: 'getStarted',
+    disabled: true,
+  },
 }

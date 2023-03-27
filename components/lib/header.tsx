@@ -35,11 +35,13 @@ export const Header = memo(() => {
         </Link>
 
         <StyledList>
-          {Object.entries(navigation).map(([key, val]) => (
-            <StyledListItem key={`nav_link_${key}`}>
-              <Link href={val.route}>{t(val.label)}</Link>
-            </StyledListItem>
-          ))}
+          {Object.entries(navigation).map(([key, val]) =>
+            val.disabled ? null : (
+              <StyledListItem key={`nav_link_${key}`}>
+                <Link href={val.route}>{t(val.label)}</Link>
+              </StyledListItem>
+            ),
+          )}
           {user && (
             <StyledListItem>
               <Link href={pageLinks.playground}>{t('playground')}</Link>
@@ -65,11 +67,15 @@ export const Header = memo(() => {
 
       <LocaleSwitcher>
         <LocaleSwitcherItem $active={i18n.language === 'en'}>
-          <Link href={router.pathname} locale="en">EN</Link>
+          <Link href={router.pathname} locale="en">
+            EN
+          </Link>
         </LocaleSwitcherItem>
         <LocaleSwitcherItem>/</LocaleSwitcherItem>
         <LocaleSwitcherItem $active={i18n.language === 'cs'}>
-          <Link href={router.pathname} locale="cs">CS</Link>
+          <Link href={router.pathname} locale="cs">
+            CS
+          </Link>
         </LocaleSwitcherItem>
       </LocaleSwitcher>
     </StyledHeader>
