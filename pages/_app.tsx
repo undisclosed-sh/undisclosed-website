@@ -10,7 +10,7 @@ const GlobalStyle = createGlobalStyle`
   html {
     font-size: ${baseFontSize}px;
 
-    @media (min-width: 480px) {
+    @media (min-width: 480pxpx) {
       font-size: ${baseFontSize};
     }
   }
@@ -51,15 +51,15 @@ const GlobalStyle = createGlobalStyle`
   h1 {
     font-size: ${pxToRem(headings.h1.mobile)};
 
-    @media (min-width: ${breakpoints.tablet}) {
+    @media (min-width: ${breakpoints.tablet}px) {
       font-size: ${pxToRem(headings.h1.tablet)};
     }
 
-    @media (min-width: ${breakpoints.desktop}) {
+    @media (min-width: ${breakpoints.desktop}px) {
       font-size: ${pxToRem(headings.h1.desktop)};
     }
 
-    @media (min-width: ${breakpoints.largeDesktop}) {
+    @media (min-width: ${breakpoints.largeDesktop}px) {
       font-size: ${pxToRem(headings.h1.largeDesktop)};
     }
   }
@@ -67,15 +67,15 @@ const GlobalStyle = createGlobalStyle`
   h2 {
     font-size: ${pxToRem(headings.h2.mobile)};
 
-    @media (min-width: ${breakpoints.tablet}) {
+    @media (min-width: ${breakpoints.tablet}px) {
       font-size: ${pxToRem(headings.h2.tablet)};
     }
 
-    @media (min-width: ${breakpoints.desktop}) {
+    @media (min-width: ${breakpoints.desktop}px) {
       font-size: ${pxToRem(headings.h2.desktop)};
     }
 
-    @media (min-width: ${breakpoints.largeDesktop}) {
+    @media (min-width: ${breakpoints.largeDesktop}px) {
       font-size: ${pxToRem(headings.h2.largeDesktop)};
     }
   }
@@ -83,15 +83,15 @@ const GlobalStyle = createGlobalStyle`
   h3 {
     font-size: ${pxToRem(headings.h3.mobile)};
 
-    @media (min-width: ${breakpoints.tablet}) {
+    @media (min-width: ${breakpoints.tablet}px) {
       font-size: ${pxToRem(headings.h3.tablet)};
     }
 
-    @media (min-width: ${breakpoints.desktop}) {
+    @media (min-width: ${breakpoints.desktop}px) {
       font-size: ${pxToRem(headings.h3.desktop)};
     }
 
-    @media (min-width: ${breakpoints.largeDesktop}) {
+    @media (min-width: ${breakpoints.largeDesktop}px) {
       font-size: ${pxToRem(headings.h3.largeDesktop)};
     }
   }
@@ -99,15 +99,15 @@ const GlobalStyle = createGlobalStyle`
   h4 {
     font-size: ${pxToRem(headings.h4.mobile)};
 
-    @media (min-width: ${breakpoints.tablet}) {
+    @media (min-width: ${breakpoints.tablet}px) {
       font-size: ${pxToRem(headings.h4.tablet)};
     }
 
-    @media (min-width: ${breakpoints.desktop}) {
+    @media (min-width: ${breakpoints.desktop}px) {
       font-size: ${pxToRem(headings.h4.desktop)};
     }
 
-    @media (min-width: ${breakpoints.largeDesktop}) {
+    @media (min-width: ${breakpoints.largeDesktop}px) {
       font-size: ${pxToRem(headings.h4.largeDesktop)};
     }
   }
@@ -115,15 +115,15 @@ const GlobalStyle = createGlobalStyle`
   h5 {
     font-size: ${pxToRem(headings.h5.mobile)};
 
-    @media (min-width: ${breakpoints.tablet}) {
+    @media (min-width: ${breakpoints.tablet}px) {
       font-size: ${pxToRem(headings.h5.tablet)};
     }
 
-    @media (min-width: ${breakpoints.desktop}) {
+    @media (min-width: ${breakpoints.desktop}px) {
       font-size: ${pxToRem(headings.h5.desktop)};
     }
 
-    @media (min-width: ${breakpoints.largeDesktop}) {
+    @media (min-width: ${breakpoints.largeDesktop}px) {
       font-size: ${pxToRem(headings.h5.largeDesktop)};
     }
   }
@@ -131,32 +131,32 @@ const GlobalStyle = createGlobalStyle`
   h6 {
     font-size: ${pxToRem(headings.h5.mobile)};
 
-    @media (min-width: ${breakpoints.tablet}) {
+    @media (min-width: ${breakpoints.tablet}px) {
       font-size: ${pxToRem(headings.h5.tablet)};
     }
 
-    @media (min-width: ${breakpoints.desktop}) {
+    @media (min-width: ${breakpoints.desktop}px) {
       font-size: ${pxToRem(headings.h5.desktop)};
     }
 
-    @media (min-width: ${breakpoints.largeDesktop}) {
+    @media (min-width: ${breakpoints.largeDesktop}px) {
       font-size: ${pxToRem(headings.h5.largeDesktop)};
     }
   }
 
   small {
-    font-size: ${bodyText.small.mobile}px;
+    font-size: ${pxToRem(bodyText.small.mobile)};
 
-    @media (min-width: ${breakpoints.tablet}) {
-      font-size: ${bodyText.small.desktop};
-    tablet
-
-    @media (min-width: ${breakpoints.desktop}) {
-      font-size: ${bodyText.small.desktop};
+    @media (min-width: ${breakpoints.tablet}px) {
+      font-size: ${pxToRem(bodyText.small.desktop)};
     }
 
-    @media (min-width: ${breakpoints.largeDesktop}) {
-      font-size: ${bodyText.small.largeDesktop};
+    @media (min-width: ${breakpoints.desktop}px) {
+      font-size: ${pxToRem(bodyText.small.desktop)};
+    }
+
+    @media (min-width: ${breakpoints.largeDesktop}px) {
+      font-size: ${pxToRem(bodyText.small.largeDesktop)};
     }
   }
 `
