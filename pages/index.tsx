@@ -4,7 +4,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 import clientPromise from '@lib/mongo'
 import { Heading, Layout, PageHead } from '@components'
-import { pxToRem } from '@themes'
+import { breakpoints, pxToRem } from '@themes'
 import { useTranslation } from 'next-i18next'
 
 const Main = styled.main`
@@ -38,6 +38,10 @@ const StyledGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: ${pxToRem(16)}};
+
+  @media (min-width: ${breakpoints.largeDesktop}px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 `
 
 const StyledGridItem = styled.div`
