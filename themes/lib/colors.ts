@@ -94,3 +94,73 @@ export const colors = {
 export type Shades = keyof typeof common | keyof typeof blue | keyof typeof red | keyof typeof green | keyof typeof yellow | keyof typeof orange | keyof typeof grey
 
 export type Colors = typeof colors
+
+// Color palette v2
+const primaryColor = {
+  lightest: '#f0f4f8',
+  light: '#c8d6e5',
+  main: '#2c3e50',
+  dark: '#1c2833',
+  darkest: '#0e151a',
+};
+
+const secondaryColor = {
+  lightest: '#f8e7da',
+  light: '#f0c38e',
+  main: '#e67e22',
+  dark: '#ba5a19',
+  darkest: '#8e3f11',
+};
+
+const accentColor = {
+  lightest: '#eff7fa',
+  light: '#9bd5e1',
+  main: '#22a7f0',
+  dark: '#1977b3',
+  darkest: '#104c75',
+};
+
+const successColor = {
+  lightest: '#edf7ed',
+  light: '#a3e6a3',
+  main: '#27ae60',
+  dark: '#1e8449',
+  darkest: '#196f3d',
+};
+
+const warningColor = {
+  lightest: '#fdebd0',
+  light: '#f5b041',
+  main: '#f39c12',
+  dark: '#b9770e',
+  darkest: '#7e5109',
+};
+
+const errorColor = {
+  lightest: '#fadbd8',
+  light: '#f1948a',
+  main: '#e74c3c',
+  dark: '#ba372a',
+  darkest: '#922b21',
+};
+
+const backgroundColor = {
+  light: '#f7f9fa',
+  main: '#ffffff',
+};
+
+const textColor = {
+  main: '#2c3e50',
+  light: '#546778',
+};
+
+export const palette = {
+  primary: primaryColor,
+  secondary: secondaryColor,
+  accent: accentColor,
+  success: successColor,
+  warning: warningColor,
+  error: errorColor,
+  background: backgroundColor,
+  text: textColor,
+};
