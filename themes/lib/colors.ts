@@ -154,7 +154,7 @@ const textColor = {
   light: '#546778',
 };
 
-export const palette = {
+export const colorPalette = {
   primary: primaryColor,
   secondary: secondaryColor,
   accent: accentColor,
