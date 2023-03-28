@@ -1,6 +1,35 @@
 {
   "hero": {
-    "heading": "From Idea to Reality",
-    "subheading": "We help turn your ideas into reality with transparent and flexible app development process. Our team works collaboratively with companies and startups to validate, design, and build apps that make life better, all without vendor lock-in."
+    "heading": "Přeměňte své nápady na řešení připravená pro trh",
+    "subheading": "Provedeme vás každou fází vývoje produktu, od ověření hypotézy po uvedení na trh a dále. Poskytujeme agilní vývoj produktů a komplexní projektové řízení, pro dodání škálovatelného řešení, to vše bez vender lock-inu."
+  },
+  "services": {
+    "heading": "Služby",
+    "services": {
+      "webDevelopment": {
+        "heading": "Web development",
+        "description": "Create user-friendly, responsive websites tailored to your unique business requirements. Our expert team ensures a strong online presence that truly resonates with your target audience."
+      },
+      "webAppDevelopment": {
+        "heading": "Web app development",
+        "description": "Develop powerful, feature-rich web applications for startups and SMEs in the technology and finance sectors. We focus on creating custom solutions that streamline your business processes and enhance user experience."
+      },
+      "machineLearning": {
+        "heading": "Machine learning solutions",
+        "description": "Build intelligent, data-driven applications that can learn from experience and make predictions. Implement intelligent algorithms to gain valuable insights, improve efficiency, and drive innovation."
+      },
+      "productDevelopment": {
+        "heading": "Product development",
+        "description": "Maximize efficiency and reduce time to market with our product development process optimization services. We'll help you identify bottlenecks, streamline workflows, and implement best practices to achieve your goals faster."
+      },
+      "productDiscovery": {
+        "heading": "Product & customer discovery",
+        "description": "Discover the right product-market fit and understand your target customers with our product and customer discovery services. We'll help you validate your business hypotheses, identify opportunities, and create a solid foundation for your product development efforts."
+      },
+      "projectManagement": {
+        "heading": "Project management",
+        "description": "Ensure your projects are delivered on time and within budget with our project management services. We'll help you define project scope, set clear goals, and manage timelines and deliverables, keeping your project on track and within budget."
+      }
+    }
   }
 }
