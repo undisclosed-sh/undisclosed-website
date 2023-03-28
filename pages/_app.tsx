@@ -4,7 +4,7 @@ import { UserProvider } from '@auth0/nextjs-auth0/client'
 import { GoogleAnalytics } from 'nextjs-google-analytics'
 import { appWithTranslation } from 'next-i18next'
 
-import { baseFontSize, bodyText, breakpoints, defaultFontFamily, headings, pxToRem } from '@themes'
+import { baseFontSize, bodyText, breakpoints, defaultFontFamily, headings, palette, pxToRem } from '@themes'
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -20,6 +20,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     margin: 0;
     font-family: ${defaultFontFamily};
+    color: ${palette.text.main};
   }
 
   html,

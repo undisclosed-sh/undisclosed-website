@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 import clientPromise from '@lib/mongo'
-import { Layout, PageHead } from '@components'
+import { Heading, Layout, PageHead } from '@components'
 import { pxToRem } from '@themes'
 import { useTranslation } from 'next-i18next'
 
@@ -15,26 +15,9 @@ const Main = styled.main`
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 640px;
+  max-width: ${pxToRem(640)};
   margin: 0 auto;
-`
-
-const EvenLetter = styled.span`
-  transition: transform 0.2s ease-in-out;
-  display: inline-block;
-
-  &:hover {
-    transform: translateY(-16px);
-  }
-`
-
-const OddLetter = styled.span`
-  transition: transform 0.2s ease-in-out;
-  display: inline-block;
-
-  &:hover {
-    transform: translateX(8px);
-  }
+  min-height: 100vh;
 `
 
 const Title = styled.h1`
@@ -47,9 +30,38 @@ const Title = styled.h1`
 const Description = styled.p`
   margin: ${pxToRem(64)} 0;
   line-height: 1.5;
-  font-size: 20px;
+  font-size: ${pxToRem(20)};
   text-align: center;
 `
+
+const StyledGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: ${pxToRem(16)}};
+`
+
+const StyledGridItem = styled.div`
+  padding: ${pxToRem(16)};
+  text-align: center;
+`
+
+const ServicesOverview = styled.section`
+  padding: ${pxToRem(64)} 0;
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`
+
+const servicesLabels = [
+  'webDevelopment',
+  'webAppDevelopment',
+  'machineLearning',
+  'productDevelopment',
+  'productDiscovery',
+  'projectManagement',
+]
 
 export interface HomeProps {
   isConnected?: boolean
@@ -62,29 +74,27 @@ const Home: NextPage = ({ ...props }: HomeProps) => {
     <>
       <PageHead pageName={t('header:home')} />
 
-      <Layout>
+      <Layout flexDirection="column">
         <Main>
-          {/* <Title>
-            <EvenLetter>U</EvenLetter>
-            <OddLetter>n</OddLetter>
-            <EvenLetter>d</EvenLetter>
-            <OddLetter>i</OddLetter>
-            <EvenLetter>s</EvenLetter>
-            <OddLetter>c</OddLetter>
-            <EvenLetter>l</EvenLetter>
-            <OddLetter>o</OddLetter>
-            <EvenLetter>s</EvenLetter>
-            <OddLetter>e</OddLetter>
-            <EvenLetter>d</EvenLetter>
-          </Title> */}
-          <Title>
-            {t('home:hero.heading')}
-          </Title>
+          <Title>{t('home:hero.heading')}</Title>
 
-          <Description>
-            {t('home:hero.subheading')}
-          </Description>
+          <Description>{t('home:hero.subheading')}</Description>
         </Main>
+
+        <ServicesOverview>
+          <Heading centered as="h1">
+            {t('home:services.heading')}
+          </Heading>
+
+          <StyledGrid>
+            {servicesLabels.map((label) => (
+              <StyledGridItem key={label}>
+                <h3>{t(`home:services.services.${label}.heading`)}</h3>
+                <p>{t(`home:services.services.${label}.description`)}</p>
+              </StyledGridItem>
+            ))}
+          </StyledGrid>
+        </ServicesOverview>
       </Layout>
     </>
   )
@@ -94,9 +104,14 @@ export default Home
 
 export const getServerSideProps = async ({ locale }: any) => ({
   props: {
-    ...(await serverSideTranslations(locale, ['common', 'header', 'footer', 'home'])),
+    ...(await serverSideTranslations(locale, [
+      'common',
+      'header',
+      'footer',
+      'home',
+    ])),
   },
-});
+})
 
 // export async function getServerSideProps({ locale }: { locale: string }) {
 //   try {
