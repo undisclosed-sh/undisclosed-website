@@ -4,19 +4,19 @@
     "subheading": "Guiding you through every stage of product development, from hypothesis validation to launch, and beyond. We provide agile product development and comprehensive project management to deliver scalable solutions, all without vendor lock-in."
   },
   "services": {
-    "heading": "Služby",
+    "heading": "Services",
     "services": {
       "webDevelopment": {
         "heading": "Web development",
-        "description": "Create user-friendly, responsive websites tailored to your unique business requirements. Our expert team ensures a strong online presence that truly resonates with your target audience."
+        "description": "Create user-friendly, responsive websites tailored to your unique business requirements. We'll help you build a website that's easy to navigate, looks great on any device, and converts visitors into customers."
       },
       "webAppDevelopment": {
         "heading": "Web app development",
-        "description": "Develop powerful, feature-rich web applications for startups and SMEs in the technology and finance sectors. We focus on creating custom solutions that streamline your business processes and enhance user experience."
+        "description": "Develop powerful, feature-rich web applications optimized for performance and usability. We focus on creating custom solutions that streamline your business processes and enhance user experience."
       },
       "machineLearning": {
         "heading": "Machine learning solutions",
-        "description": "Build intelligent, data-driven applications that can learn from experience and make predictions. Implement intelligent algorithms to gain valuable insights, improve efficiency, and drive innovation."
+        "description": "Build intelligent, data-driven applications that can learn from experience and make predictions. We help you utilize intelligent algorithms to gain valuable insights, improve efficiency, and drive innovation."
       },
       "productDevelopment": {
         "heading": "Product development",
