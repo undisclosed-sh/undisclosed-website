@@ -9,9 +9,13 @@ export const spacing = (px: number, multiplier: number = spacingMultiplier): str
   return `${px * multiplier}px`
 }
 
-export const pxToRem = (px: number): string => {
-  if (!px || typeof px !== 'number') {
+export const pxToRem = (px: number | string): string => {
+  if (!px || (typeof px !== 'number' && typeof px !== 'string')) {
     throw new Error('px is required')
+  }
+
+  if (typeof px === 'string') {
+    px = parseFloat(px)
   }
 
   return `${px / baseFontSize}rem`
