@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 import { baseSpacing, containerWidth, pxToRem } from '@themes'
 
-export const StyledDiv = styled.div`
+export const StyledDiv = styled.div<{ flexDirection?: 'column' | 'row' }>`
   padding-left: ${pxToRem(baseSpacing)};
   padding-right: ${pxToRem(baseSpacing)};
   display: flex;
@@ -10,4 +10,6 @@ export const StyledDiv = styled.div`
   width: 100%;
   max-width: ${containerWidth}px;
   margin: auto;
+
+  ${({ flexDirection }) => flexDirection && `flex-direction: ${flexDirection};`}
 `

@@ -5,15 +5,16 @@ import { StyledDiv } from './layout.styled'
 
 export interface LayoutProps {
   children: React.ReactNode
+  flexDirection?: 'column' | 'row'
   stepperEnabled?: boolean
 }
 
-export const Layout = memo(({ children, stepperEnabled }: LayoutProps) => {
+export const Layout = memo(({ children, flexDirection, stepperEnabled }: LayoutProps) => {
   return (
     <>
       <Header />
 
-      <StyledDiv>
+      <StyledDiv flexDirection={flexDirection}>
         {stepperEnabled ? <PageStepper>{children}</PageStepper> : children}
       </StyledDiv>
 
