@@ -2,39 +2,55 @@ export const defaultFontFamily = `Roboto, -apple-system, BlinkMacSystemFont, 'Se
 
 export const headings = {
   h1: {
-    desktop: 40,
-    mobile: 32,
+    mobile: 28,
+    tablet: 32,
+    desktop: 36,
+    largeDesktop: 42,
   },
   h2: {
-    desktop: 32,
-    mobile: 28,
+    mobile: 24,
+    tablet: 28,
+    desktop: 30,
+    largeDesktop: 34,
   },
   h3: {
-    desktop: 24,
-    mobile: 22,
+    mobile: 20,
+    tablet: 24,
+    desktop: 26,
+    largeDesktop: 28,
   },
   h4: {
-    desktop: 20,
     mobile: 18,
+    tablet: 20,
+    desktop: 22,
+    largeDesktop: 24,
   },
   h5: {
-    desktop: 16,
     mobile: 16,
+    tablet: 18,
+    desktop: 20,
+    largeDesktop: 20,
+  },
+  h6: {
+    mobile: 14,
+    tablet: 16,
+    desktop: 18,
+    largeDesktop: 18,
   },
 }
 
 export const bodyText = {
-  caption: {
-    desktop: 12,
-    mobile: 12,
-  },
-  body1: {
-    desktop: 16,
+  body: {
     mobile: 15,
+    tablet: 18,
+    desktop: 18,
+    largeDesktop: 18,
   },
-  body2: {
-    desktop: 13,
-    mobile: 13,
+  small: {
+    mobile: 14,
+    tablet: 14,
+    desktop: 14,
+    largeDesktop: 14,
   },
 }
 
