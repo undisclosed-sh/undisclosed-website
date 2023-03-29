@@ -5,7 +5,7 @@ import { pxToRem } from '@themes'
 export const StyledHeader = styled.header`
   padding: ${pxToRem(16)} ${pxToRem(16)};
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
 `
 
 export const StyledNav = styled.nav`
