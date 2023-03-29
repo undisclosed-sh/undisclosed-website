@@ -1,0 +1,22 @@
+{
+  "submit": "Send",
+  "name": "Your name",
+  "email": "Your e-smail",
+  "message": "Your message",
+  "success": "Your message has been sent successfully",
+  "error": "An error occurred while sending the message",
+  "required": "This field is required",
+  "invalid": "This field is invalid",
+  "validation": {
+    "name": {
+      "required": "Please enter your name"
+    },
+    "email": {
+      "required": "Please enter your e-mail",
+      "invalid": "Please enter a valid e-mail"
+    },
+    "message": {
+      "required": "Please enter your message"
+    }
+  }
+}

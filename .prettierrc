@@ -3,5 +3,20 @@
   "useTabs": false,
   "semi": false,
   "singleQuote": true,
-  "trailingComma": "all"
+  "trailingComma": "all",
+  "importOrder": [
+    "<THIRD_PARTY_MODULES>",
+    "^(libs)\/(@components)\/",
+    "^(libs)\/(@contexts)\/",
+    "^(libs)\/(@custom-types)\/",
+    "^(libs)\/(@data)\/",
+    "^(libs)\/(@defs)\/",
+    "^(libs)\/(@hooks)\/",
+    "^(libs)\/(@lib)\/",
+    "^(libs)\/(@themes)\/",
+    "^(libs)\/(@utils)\/",
+    "[.](c|le|sc)ss$"
+  ],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true
 }

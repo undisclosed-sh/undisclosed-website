@@ -31,7 +31,7 @@ export const navigation: Record<
   contact: {
     route: '/contact',
     label: 'contact',
-    disabled: true,
+    disabled: false,
   },
   newsletter: {
     route: '/newsletter',

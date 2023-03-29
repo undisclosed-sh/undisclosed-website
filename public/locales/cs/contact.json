@@ -1,0 +1,22 @@
+{
+  "submit": "Odeslat",
+  "name": "Vaše jméno",
+  "email": "Váš e-mail",
+  "message": "Vaše zpráva",
+  "success": "Vaše zpráva byla odeslána",
+  "error": "Při odesílání vaší zprávy došlo k chybě",
+  "required": "Toto pole je povinné",
+  "invalid": "Toto pole není validní",
+  "validation": {
+    "name": {
+      "required": "Zadejte prosím vaše jméno"
+    },
+    "email": {
+      "required": "Zadejte prosím váš e-mail",
+      "invalid": "Zadejte prosím validní e-mail"
+    },
+    "message": {
+      "required": "Zadejte prosím zprávu"
+    }
+  }
+}
