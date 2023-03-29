@@ -31,7 +31,7 @@ const StyledForm = styled.form`
   align-items: center;
   justify-content: center;
   width: 100%;
-  max-width: ${pxToRem(320)};
+  max-width: ${pxToRem(480)};
 `
 
 const StyledButton = styled(Button)`
