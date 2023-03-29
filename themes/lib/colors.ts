@@ -163,4 +163,5 @@ export const colorPalette = {
   error: errorColor,
   background: backgroundColor,
   text: textColor,
+  common,
 };
