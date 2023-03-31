@@ -11,16 +11,21 @@ export const StyledHeader = styled.header`
 export const StyledNav = styled.nav`
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  // justify-content: space-between;
   align-items: center;
   flex-grow: 1;
   flex-shrink: 0;
+
+  a {
+    flex: 1 0 auto;
+  }
 `
 
 export const Logo = styled.span`
   display: inline-flex;
   font-size: 23px;
   font-weight: 700;
+  flex: 0 0 auto;
   transition: transform 0.2s ease-in-out;
 `
 
@@ -50,6 +55,8 @@ export const StyledList = styled.ul`
   list-style: none;
   margin: 0;
   padding: 0;
+  width: 100%;
+  justify-content: center;
 `
 
 export const StyledListItem = styled.li`
