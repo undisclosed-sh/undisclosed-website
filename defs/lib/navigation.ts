@@ -6,27 +6,32 @@ export const navigation: Record<
     route: string
     label: string
     disabled?: boolean
+    hidden?: boolean
   }
 > = {
   services: {
     route: '/services',
     label: 'services',
     disabled: true,
+    hidden: true,
   },
   features: {
     route: '/features',
     label: 'features',
     disabled: true,
+    hidden: true,
   },
   aboutUs: {
     route: '/about',
     label: 'aboutUs',
     disabled: true,
+    hidden: false,
   },
   blog: {
     route: '/blog',
     label: 'blog',
     disabled: true,
+    hidden: true,
   },
   contact: {
     route: '/contact',
@@ -37,10 +42,12 @@ export const navigation: Record<
     route: '/newsletter',
     label: 'newsletter',
     disabled: true,
+    hidden: true,
   },
   getStarted: {
     route: '/get-started',
     label: 'getStarted',
     disabled: true,
+    hidden: true,
   },
 }
