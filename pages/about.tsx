@@ -23,7 +23,7 @@ const StyledMain = styled.main`
 `
 
 const About: NextPage = () => {
-  const { t } = useTranslation(['header', 'footer', 'about'])
+  const { t } = useTranslation(['header', 'about'])
 
   return (
     <>
