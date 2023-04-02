@@ -1,34 +1,30 @@
 {
   "hero": {
     "heading": "Přeměňte své nápady na řešení připravená pro trh",
-    "subheading": "Provedeme vás každou fází vývoje produktu, od ověření hypotézy po uvedení na trh a dále. Poskytujeme agilní vývoj produktů a komplexní projektové řízení, pro dodání škálovatelného řešení, to vše bez vender lock-inu."
+    "subheading": "Váš partner při vývoji a managementu produktů, který vás provede všemi fázemi od ověření nápadu až po jeho uvedení na trh. Nabízíme na míru šitá řešení pro web, webové aplikace a strojové učení, která vám pomohou vytvářet produkty, které si lidé oblíbí."
   },
   "services": {
     "heading": "Služby",
     "services": {
+      "productDevelopment": {
+        "heading": "Vývoj produktů a produktový management",
+        "description": "Zaměřujeme se především na provázení začínajících firem a společností celým procesem vývoje produktu. Úzce spolupracujeme s našimi klienty na definování cílů produktu, ověřování nápadů, vytváření prototypů a řízení procesu vývoje, abychom zajistili, že výsledný produkt bude mít pro uživatele skutečnou hodnotu a bude v souladu s vaší vizí."
+      },
+      "projectManagement": {
+        "heading": "Projektový management",
+        "description": "Poskytujeme komplexní podporu při řízení projektů, zajišťujeme hladkou komunikaci, efektivní přidělování zdrojů a včasné dodání vašich projektů. Využíváme osvědčené metodiky a nástroje, abychom vaše projekty udrželi na správné cestě a minimalizovali rizika."
+      },
       "webDevelopment": {
-        "heading": "Web development",
-        "description": "Uživatelsky přívětivé a responzivní webové stránky přizpůsobené vašim jedinečným obchodním požadavkům. Pomůžeme vám vytvořit web, který se snadno ovládá, vypadá skvěle na jakémkoli zařízení a mění návštěvníky v zákazníky."
+        "heading": "Vývoj webových stránek",
+        "description": "Jako další službu nabízíme tvorbu webových stránek, které jsou vizuálně atraktivní, uživatelsky přívětivé a responzivní a které prezentují vaši značku a zaujmou cílovou skupinu. Jsme zběhlí v různých technologiích a frameworcích, což zajišťuje bezproblémový zážitek na všech zařízeních."
       },
       "webAppDevelopment": {
-        "heading": "Web app development",
-        "description": "Výkonné webové aplikace s bohatými funkcemi optimalizované pro výkon a použitelnost. Zaměřujeme se na vytváření vlastních řešení, která zefektivní vaše obchodní procesy a zlepší uživatelskou zkušenost."
+        "heading": "Vývoj webových aplikací",
+        "description": "Specializujeme se také na vývoj webových aplikací a vytváříme výkonné a škálovatelné aplikace, které uživatelům poskytují funkce potřebné pro přístup k vašim službám a interakci s vaší značkou. Máme odborné znalosti v široké škále technologií a frameworků, což zajišťuje vysoce výkonné webové aplikace, které rostou spolu s vaším podnikáním."
       },
       "machineLearning": {
         "heading": "Machine learning solutions",
-        "description": "Inteligentní aplikace založené na datech, které se mohou učit ze zkušeností a vytvářet předpovědi. Pomůžeme vám využít inteligentní algoritmy k získání cenných poznatků, zvýšení efektivity a podpoře inovací."
-      },
-      "productDevelopment": {
-        "heading": "Product development",
-        "description": "Maximalizujte efektivitu a zkraťte dobu uvedení na trh pomocí našich služeb optimalizace procesu vývoje produktů. Pomůžeme vám identifikovat problematická místa, zefektivnit pracovní postupy a implementovat osvědčené postupy k rychlejšímu dosažení vašich cílů."
-      },
-      "productDiscovery": {
-        "heading": "Product & customer discovery",
-        "description": "Objevte product-market fit trh a porozumějte svým cílovým zákazníkům pomocí našich služeb vyhledávání produktů a zákazníků. Pomůžeme vám ověřit vaše byznys hypotézy, identifikovat příležitosti a vytvořit pevný základ pro vaš produktový vývoj."
-      },
-      "projectManagement": {
-        "heading": "Project management",
-        "description": "Zajistěte, aby byly vaše projekty dodány včas a v rámci rozpočtu s našimi službami projektového řízení. Pomůžeme vám definovat rozsah projektu, stanovit jasné cíle a spravovat časové osy a výstupy, abychom váš projekt udrželi na správné cestě a v rámci rozpočtu."
+        "description": "Naše řešení strojového učení umožní vašemu podnikání rozhodování založené na datech a automatizaci. Vyvíjíme vlastní modely a algoritmy strojového učení, které optimalizují vaše obchodní procesy, zvyšují hodnotu vašich produktů a poskytují užitečné informace pro budoucí růst."
       }
     }
   }

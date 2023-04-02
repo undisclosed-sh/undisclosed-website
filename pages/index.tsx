@@ -38,6 +38,7 @@ const StyledGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: ${pxToRem(16)}};
+  align-items: flex-start;
 
   @media (min-width: ${breakpoints.largeDesktop}px) {
     grid-template-columns: 1fr 1fr 1fr;
@@ -59,12 +60,11 @@ const ServicesOverview = styled.section`
 `
 
 const servicesLabels = [
+  'productDevelopment',
+  'projectManagement',
   'webDevelopment',
   'webAppDevelopment',
   'machineLearning',
-  'productDevelopment',
-  'productDiscovery',
-  'projectManagement',
 ]
 
 export interface HomeProps {
