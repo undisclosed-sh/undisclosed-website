@@ -1,14 +1,20 @@
 {
   "title": "About us",
-  "subtitle": "Your partner in agile product development and growth",
+  "subtitle": "Committed to Creating Impactful Products that Improve Lives",
   "mainContent": [{
-    "text": "At Undisclosed, we believe in the power of ideas and the potential they hold. Our mission is to help technology and finance startups and SMEs transform their innovative ideas into market-ready solutions that drive growth and success.",
+    "text": "At Undisclosed, our mission is to help startups and businesses navigate the complex process of transforming ideas into products that make a positive impact on people's lives. We believe that innovative products have the power to change the world, and we're passionate about guiding our clients through every stage of the product development journey.",
     "contentType": "text"
   }, {
-    "text": "As your dedicated partner in the product development journey, we guide you through every stage, from hypothesis validation to launch, and beyond. Our team of experts is committed to agile product development and comprehensive project management, enabling us to deliver scalable, user-friendly, and data-driven solutions tailored to your unique needs.",
+    "text": "Our team of experienced professionals specializes in product development and management, project management, web development, web app development, and machine learning solutions. We work closely with our clients to define product goals, validate ideas, create prototypes, and manage the development process, ensuring the final product delivers real value to users and aligns with your vision.",
     "contentType": "text"
   }, {
-    "text": "We understand the challenges faced by startups and SMEs in the competitive technology and finance sectors. That's why we focus on speed, quality, and innovation, ensuring your products stand out in the market while addressing your target customers' needs effectively.",
+    "text": "Our approach is centered around collaboration, transparency, and agility. We tailor our services to each client's unique needs and challenges, while utilizing proven methodologies and tools to ensure smooth communication, efficient resource allocation, and timely delivery of your projects.",
+    "contentType": "text"
+  }, {
+    "text": "As we grow, our vision extends beyond providing services to our clients. Drawing from our experience in helping others create successful products, we are also committed to developing and launching our own innovative products, backed by venture capital, that address pressing challenges and create positive change.",
+    "contentType": "text"
+  }, {
+    "text": "By choosing Undisclosed, you're not only gaining a dedicated partner in your product development journey, but you're also joining our mission to create impactful products that improve lives and shape the future.",
     "contentType": "text"
   }, {
     "text": "Our services include:",
@@ -16,6 +22,12 @@
   }, {
     "contentType": "list",
     "list": [{
+      "text": "Product Development and Management",
+      "contentType": "listItem"
+    }, {
+      "text": "Project Management",
+      "contentType": "listItem"
+    }, {
       "text": "Web Development",
       "contentType": "listItem"
     }, {
@@ -23,15 +35,6 @@
       "contentType": "listItem"
     }, {
       "text": "Machine Learning Solutions",
-      "contentType": "listItem"
-    }, {
-      "text": "Product Development Process Optimization",
-      "contentType": "listItem"
-    }, {
-      "text": "Product & Customer Discovery",
-      "contentType": "listItem"
-    }, {
-      "text": "Project Management",
       "contentType": "listItem"
     }]
   }, {

@@ -3,11 +3,13 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import ReactMarkdown from 'react-markdown'
 import { useTranslation } from 'next-i18next'
 import styled from 'styled-components'
+import Link from 'next/link'
 
 import { Layout, PageHead } from '@components'
 import { PageHeading } from '@components/lib/pageH-heading'
 import { Translation, TranslationList } from '@custom-types'
 import { pxToRem } from '@themes'
+import { navigation } from '@defs'
 
 const Intro = styled.div`
   font-size: ${pxToRem(16)};
@@ -19,7 +21,14 @@ const Intro = styled.div`
 
 const StyledMain = styled.main`
   max-width: ${pxToRem(560)};
-  margin: 0 auto;
+  margin: ${pxToRem(12)} auto ${pxToRem(32)};
+`
+
+const StyledLink = styled(Link)`
+  display: inline-block;
+  margin-top: ${pxToRem(12)};
+  text-decoration: none;
+  border-bottom: 1px solid #adb5bd;
 `
 
 const About: NextPage = () => {
@@ -63,6 +72,8 @@ const About: NextPage = () => {
               <p key={`about_paragraph_${index}`}>{paragraph.text}</p>
             ),
           )}
+
+          <StyledLink href={navigation.contact.route}>{t('about:cta')}</StyledLink>
         </StyledMain>
       </Layout>
     </>

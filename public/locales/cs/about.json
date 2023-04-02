@@ -2,13 +2,19 @@
   "title": "O nás",
   "subtitle": "Váš partner v agilním produktovém vývoji a růstu",
   "mainContent": [{
-    "text": "V Undisclosed, věříme v sílu nápadů a v potenciál který se v nich který mají. Naším posláním je pomáhat technologickým a finančním startupům a malým a středním podnikům transformovat jejich inovativní nápady na řešení připravená pro trh, která pohánějí růst a úspěch.",
+    "text": "Naším posláním ve společnosti Undisclosed je pomáhat začínajícím startupům a firmám projít složitým procesem přeměny nápadů na produkty, které mají pozitivní dopad na životy lidí. Věříme, že inovativní produkty mají sílu změnit svět, a s nadšením provádíme naše klienty všemi fázemi vývoje produktu.",
     "contentType": "text"
   }, {
-    "text": "Jako váš oddaný partner na cestě vývoje produktu vás provedeme každou fází, od ověření vaší hypotézy po uvedení na trh a dále. Náš tým odborníků se vyznává agilní vývoj produktů a komplexní řízení projektů, což nám umožňuje dodávat škálovatelná, uživatelsky přívětivá a na datech založená řešení šitá na míru vašim jedinečným potřebám.",
+    "text": "Náš tým zkušených odborníků se specializuje na vývoj a správu produktů, řízení projektů, vývoj webových aplikací a řešení strojového učení. Úzce spolupracujeme s našimi klienty na definování cílů produktu, ověřování hypotéz, vytváření prototypů a řízení procesu vývoje, abychom zajistili, že výsledný produkt bude mít pro uživatele skutečnou hodnotu a bude v souladu s vaší vizí.",
     "contentType": "text"
   }, {
-    "text": "Rozumíme výzvám, kterým čelí startupy a malé a střední podniky v konkurenčních technologických a finančních sektorech. To je důvod, proč se zaměřujeme na rychlost, kvalitu a inovace, abychom zajistili, že vaše produkty vyniknou na trhu a zároveň efektivně uspokojí potřeby vašich cílových zákazníků.",
+    "text": "Náš přístup je zaměřen na spolupráci, transparentnost a agilitu. Naše služby přizpůsobujeme jedinečným potřebám a výzvám každého klienta a zároveň využíváme osvědčené metodiky a nástroje, abychom zajistili hladkou komunikaci, efektivní přidělování zdrojů a včasnou realizaci vašich projektů.",
+    "contentType": "text"
+  }, {
+    "text": "S naším růstem se naše vize rozšiřuje za hranice poskytování služeb našim klientům. Díky zkušenostem získaným skrze pomoc ostatním startupům a firmám při vytváření úspěšných produktů se snažíme vyvíjet a uvádět na trh vlastní inovativní produkty podporované rizikovým kapitálem, které řeší naléhavé problémy a mění svět k lepšímu.",
+    "contentType": "text"
+  }, {
+    "text": "Výběrem společnosti Undisclosed získáte nejen oddaného partnera na cestě k vývoji produktu, ale také se připojíte k našemu poslání vytvářet působivé produkty, které zlepšují životy a utvářejí budoucnost.",
     "contentType": "text"
   }, {
     "text": "Naše služby zahrnují:",
@@ -16,22 +22,19 @@
   }, {
     "contentType": "list",
     "list": [{
+      "text": "Produktový vývoj a management",
+      "contentType": "listItem"
+    }, {
+      "text": "Projektové řízení",
+      "contentType": "listItem"
+    }, {
       "text": "Vývoj webových stránek",
       "contentType": "listItem"
     }, {
       "text": "Vývoj webových aplikací",
       "contentType": "listItem"
     }, {
-      "text": "Řešení založení na strojovém učení",
-      "contentType": "listItem"
-    }, {
-      "text": "Optimalizace procesu vývoje",
-      "contentType": "listItem"
-    }, {
-      "text": "Product & Customer Discovery",
-      "contentType": "listItem"
-    }, {
-      "text": "Projektové řízení",
+      "text": "Řešení založená na strojovém učení",
       "contentType": "listItem"
     }]
   }, {
