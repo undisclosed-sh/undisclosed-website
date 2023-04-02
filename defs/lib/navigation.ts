@@ -13,7 +13,7 @@ export const navigation: Record<
     route: '/services',
     label: 'services',
     disabled: true,
-    hidden: true,
+    hidden: false,
   },
   features: {
     route: '/features',
