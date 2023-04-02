@@ -1,7 +1,11 @@
 {
   "text": "Naše služby",
-  "description": "Ve společnosti Undisclosed nabízíme komplexní sadu služeb navržených tak, aby podporovaly váš byznys v každé fázi procesu vývoje produktu. Naše znalosti zahrnují vývoj webových stránek, vývoj webových aplikací, řešení postavených na strojovém učení, optimalizaci procesu vývoje produktů, product and customer discovery a řízení projektů.",
+  "subtitle": "Řešení na míru pro každou fázi vývoje produktu",
   "mainContent": [
+    {
+      "text": "Ve společnosti Undisclosed nabízíme komplexní sadu služeb navržených tak, aby podporovaly váš byznys v každé fázi procesu vývoje produktu. Naše znalosti zahrnují vývoj webových stránek, vývoj webových aplikací, řešení postavených na strojovém učení, optimalizaci procesu vývoje produktů, product and customer discovery a řízení projektů.",
+      "contentType": "text"
+    },
     {
       "text": "Vývoj webových stránek",
       "contentType": "h2"

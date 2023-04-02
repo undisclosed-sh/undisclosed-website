@@ -1,7 +1,11 @@
 {
   "text": "Our services",
-  "description": "At Undisclosed, we offer a comprehensive suite of services designed to support your business through every stage of the product development journey. Our expertise spans across web development, web app development, machine learning solutions, product development process optimization, product & customer discovery, and project management.",
+  "subtitle": "Tailored Solutions for Every Stage of the Product Development Journey",
   "mainContent": [
+    {
+      "text": "At Undisclosed, we offer a comprehensive suite of services designed to support your business through every stage of the product development journey. Our expertise spans across web development, web app development, machine learning solutions, product development process optimization, product & customer discovery, and project management.",
+      "contentType": "text"
+    },
     {
       "text": "Web development",
       "contentType": "h2"

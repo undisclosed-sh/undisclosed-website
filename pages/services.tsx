@@ -1,12 +1,36 @@
 import { NextPage } from 'next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import styled from 'styled-components'
+import ReactMarkdown from 'react-markdown'
+import { createElement } from 'react'
+import { useTranslation } from 'next-i18next'
+import Link from 'next/link'
 
 import { Layout, PageHead } from '@components'
 import { PageHeading } from '@components/lib/pageH-heading'
-import { useTranslation } from 'next-i18next'
 import { Translation, TranslationList } from '@custom-types'
-import ReactMarkdown from 'react-markdown'
-import { createElement } from 'react'
+import { pxToRem } from '@themes'
+import { navigation } from '@defs'
+
+const Intro = styled.div`
+  font-size: ${pxToRem(16)};
+  margin-top: ${pxToRem(18)};
+  margin-bottom: ${pxToRem(32)};
+  text-align: center;
+  color: #adb5bd;
+`
+
+const StyledMain = styled.main`
+  max-width: ${pxToRem(560)};
+  margin: ${pxToRem(12)} auto ${pxToRem(32)};
+`
+
+const StyledLink = styled(Link)`
+  display: inline-block;
+  margin-top: ${pxToRem(12)};
+  text-decoration: none;
+  border-bottom: 1px solid #adb5bd;
+`
 
 const Services: NextPage = () => {
   const { t } = useTranslation(['header', 'services'])
@@ -18,7 +42,11 @@ const Services: NextPage = () => {
       <Layout flexDirection="column">
         <PageHeading text={t('services')} />
 
-        <main>
+        <Intro>
+          {t('services:subtitle')}
+        </Intro>
+
+        <StyledMain>
           {(
             t('services:mainContent', { returnObjects: true }) as (
               | Translation
@@ -39,7 +67,7 @@ const Services: NextPage = () => {
                         ) ? (
                         createElement(
                           listItem.contentType.toLowerCase(),
-                          {},
+                          { key: `services_paragraph_${index}` },
                           listItem.text,
                         )
                       ) : (
@@ -56,14 +84,16 @@ const Services: NextPage = () => {
               ) ? (
               createElement(
                 paragraph.contentType.toLowerCase(),
-                {},
+                { key: `services_paragraph_${index}` },
                 paragraph.text,
               )
             ) : (
               <p key={`services_paragraph_${index}`}>{paragraph.text}</p>
             ),
           )}
-        </main>
+
+          <StyledLink href={navigation.contact.route}>{t('services:cta')}</StyledLink>
+        </StyledMain>
       </Layout>
     </>
   )
