@@ -4,9 +4,8 @@ import styled from 'styled-components'
 import ReactMarkdown from 'react-markdown'
 import { createElement } from 'react'
 import { useTranslation } from 'next-i18next'
-import Link from 'next/link'
 
-import { Layout, PageHead } from '@components'
+import { Layout, Link, PageHead } from '@components'
 import { PageHeading } from '@components/lib/pageH-heading'
 import { Translation, TranslationList } from '@custom-types'
 import { pxToRem } from '@themes'
@@ -23,13 +22,6 @@ const Intro = styled.div`
 const StyledMain = styled.main`
   max-width: ${pxToRem(560)};
   margin: ${pxToRem(12)} auto ${pxToRem(32)};
-`
-
-const StyledLink = styled(Link)`
-  display: inline-block;
-  margin-top: ${pxToRem(12)};
-  text-decoration: none;
-  border-bottom: 1px solid #adb5bd;
 `
 
 const Services: NextPage = () => {
@@ -92,7 +84,7 @@ const Services: NextPage = () => {
             ),
           )}
 
-          <StyledLink href={navigation.contact.route}>{t('services:cta')}</StyledLink>
+          <Link href={navigation.contact.route}>{t('services:cta')}</Link>
         </StyledMain>
       </Layout>
     </>
