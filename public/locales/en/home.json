@@ -27,5 +27,11 @@
         "description": "Our machine learning solutions empower your business with data-driven decision-making and automation. We develop custom machine learning models and algorithms that optimize your business processes, enhance the value of your products, and provide actionable insights for future growth."
       }
     }
+  },
+  "cta": {
+    "heading": "Ready to Bring Your Idea to Life?",
+    "subheading": "Partner with us to create market-ready, innovative products that make a difference.",
+    "description": "Our team of experts is here to guide you through the entire product development process, from hypothesis validation to launch and beyond. We'll help you navigate the complexities of project management, web and app development, and machine learning solutions to deliver scalable and user-friendly products that your customers will love.",
+    "cta": "Let's talk about your ideas"
   }
 }

@@ -1,11 +1,12 @@
 import type { NextPage } from 'next'
 import styled from 'styled-components'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { useTranslation } from 'next-i18next'
 
 import clientPromise from '@lib/mongo'
-import { Heading, Layout, PageHead } from '@components'
+import { Heading, Layout, Link, PageHead } from '@components'
 import { breakpoints, pxToRem } from '@themes'
-import { useTranslation } from 'next-i18next'
+import { navigation } from '@defs'
 
 const Main = styled.main`
   padding: ${pxToRem(64)} 0;
@@ -59,6 +60,21 @@ const ServicesOverview = styled.section`
   align-items: center;
 `
 
+const CTA = styled.section`
+  padding: ${pxToRem(64)} 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: ${pxToRem(640)};
+  margin: 0 auto;
+  text-align: center;
+`
+
+const StyledLink = styled(Link)`
+  margin: ${pxToRem(16)} auto;
+`
+
 const servicesLabels = [
   'productDevelopment',
   'projectManagement',
@@ -99,6 +115,20 @@ const Home: NextPage = ({ ...props }: HomeProps) => {
             ))}
           </StyledGrid>
         </ServicesOverview>
+
+        <CTA>
+          <Heading centered as="h1">
+            {t('home:cta.heading')}
+          </Heading>
+
+          <Heading centered as="h5">
+            {t('home:cta.subheading')}
+          </Heading>
+
+          <p>{t('home:cta.description')}</p>
+
+          <StyledLink href={navigation.contact.route}>{t('home:cta.cta')}</StyledLink>
+        </CTA>
       </Layout>
     </>
   )

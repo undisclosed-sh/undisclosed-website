@@ -27,5 +27,11 @@
         "description": "Naše řešení strojového učení umožní vašemu podnikání rozhodování založené na datech a automatizaci. Vyvíjíme vlastní modely a algoritmy strojového učení, které optimalizují vaše obchodní procesy, zvyšují hodnotu vašich produktů a poskytují užitečné informace pro budoucí růst."
       }
     }
+  },
+  "cta": {
+    "heading": "Jste připraveni uvést svůj nápad do života?",
+    "subheading": "Spolupracujme při vytváření inovativních produktů připravených pro trh, které mají význam.",
+    "description": "Jsme zde, abychom vás provedli celým procesem vývoje produktu, od ověření hypotézy až po uvedení na trh a dále. Pomůžeme vám projít složitostí řízení projektů, vývoje webových stránek a aplikací a řešení strojového učení, abychom vám dodali škálovatelné a uživatelsky přívětivé produkty, které si vaši zákazníci oblíbí.",
+    "cta": "Pojďme si promluvit o vašich nápadech"
   }
 }
