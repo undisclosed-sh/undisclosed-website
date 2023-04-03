@@ -33,5 +33,74 @@
     "subheading": "Partner with us to create market-ready, innovative products that make a difference.",
     "description": "Our team of experts is here to guide you through the entire product development process, from hypothesis validation to launch and beyond. We'll help you navigate the complexities of project management, web and app development, and machine learning solutions to deliver scalable and user-friendly products that your customers will love.",
     "cta": "Let's talk about your ideas"
+  },
+  "faq": {
+    "heading": "Frequently Asked Questions",
+    "mainContent": [
+      {
+        "text": "### **What industries do you specialize in?**",
+        "contentType": "richText"
+      },
+      {
+        "text": "We specialize in the technology and finance sectors, working with startups and SMEs to create innovative and impactful products.",
+        "contentType": "text"
+      },
+      {
+        "text": "### How do you ensure a smooth product development process?",
+        "contentType": "richText"
+      },
+      {
+        "text": "We follow an agile and iterative approach, maintaining close collaboration with our clients throughout the process. We prioritize effective communication and offer comprehensive project management to ensure timely delivery and quality results.",
+        "contentType": "text"
+      },
+      {
+        "text": "### What is your approach to product and customer discovery?",
+        "contentType": "richText"
+      },
+      {
+        "text": "We start by understanding your business goals, target audience, and market needs. We then help you define and validate your product hypothesis, followed by user research, design, prototyping, and testing to ensure a successful product-market fit.",
+        "contentType": "text"
+      },
+      {
+        "text": "### Can you help with web and web app development as well as machine learning solutions?",
+        "contentType": "richText"
+      },
+      {
+        "text": "Yes, we offer web and web app development services, as well as machine learning solutions, as part of our comprehensive product development offerings.",
+        "contentType": "text"
+      },
+      {
+        "text": "### What is your pricing structure?",
+        "contentType": "richText"
+      },
+      {
+        "text": "Our pricing is tailored to the specific needs of each project. We offer flexible pricing models to accommodate various budgets and project scopes. Please contact us for a personalized quote.",
+        "contentType": "text"
+      },
+      {
+        "text": "### How do you ensure the security and privacy of our data?",
+        "contentType": "richText"
+      },
+      {
+        "text": "We take data security and privacy very seriously. We follow industry best practices and adhere to strict security standards to ensure the protection of your data.",
+        "contentType": "text"
+      },
+      {
+        "text": "### Can you scale your services to accommodate our growing business?",
+        "contentType": "richText"
+      },
+      {
+        "text": "Yes, we can scale our services to meet the changing needs of your business as it grows. Our team of experts can adapt to new requirements and expand the scope of our services as necessary.",
+        "contentType": "text"
+      },
+      {
+        "text": "### What is your typical project timeline?",
+        "contentType": "richText"
+      },
+      {
+        "text": "Project timelines can vary depending on the complexity and scope of the project. We work closely with our clients to establish realistic timelines and milestones, ensuring timely delivery without compromising quality.",
+        "contentType": "text"
+      }
+    ]
   }
 }

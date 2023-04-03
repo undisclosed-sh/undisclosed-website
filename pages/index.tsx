@@ -2,11 +2,13 @@ import type { NextPage } from 'next'
 import styled from 'styled-components'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next'
+import ReactMarkdown from 'react-markdown'
 
 import clientPromise from '@lib/mongo'
 import { Heading, Layout, Link, PageHead } from '@components'
 import { breakpoints, pxToRem } from '@themes'
 import { navigation } from '@defs'
+import { Translation, TranslationList } from '@custom-types'
 
 const Main = styled.main`
   padding: ${pxToRem(64)} 0;
@@ -75,6 +77,30 @@ const StyledLink = styled(Link)`
   margin: ${pxToRem(16)} auto;
 `
 
+const FAQ = styled.section`
+  padding: ${pxToRem(64)} 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: ${pxToRem(640)};
+  margin: 0 auto;
+
+  h2 {
+    font-size: ${pxToRem(24)};
+    margin-top: ${pxToRem(16)};
+    margin-bottom: ${pxToRem(16)};
+  }
+
+  p {
+    margin-top: 0;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+`
+
 const servicesLabels = [
   'productDevelopment',
   'projectManagement',
@@ -115,6 +141,39 @@ const Home: NextPage = ({ ...props }: HomeProps) => {
             ))}
           </StyledGrid>
         </ServicesOverview>
+
+        <FAQ>
+          <Heading centered as="h1">
+            {t('home:faq.heading')}
+          </Heading>
+
+          {(
+            t('home:faq.mainContent', { returnObjects: true }) as (
+              | Translation
+              | TranslationList
+            )[]
+          ).map((paragraph, index: number) =>
+            paragraph.contentType === 'list' ? (
+              <ul key={`about_paragraph_${index}`}>
+                {(paragraph as TranslationList).list.map(
+                  (listItem, index: number) => (
+                    <li key={`about_list_item_${index}`}>
+                      {listItem.contentType.toLowerCase().includes('rich') ? (
+                        <ReactMarkdown>{listItem.text}</ReactMarkdown>
+                      ) : (
+                        listItem.text
+                      )}
+                    </li>
+                  ),
+                )}
+              </ul>
+            ) : paragraph.contentType.toLowerCase().includes('rich') ? (
+              <ReactMarkdown>{paragraph.text}</ReactMarkdown>
+            ) : (
+              <p key={`about_paragraph_${index}`}>{paragraph.text}</p>
+            ),
+          )}
+        </FAQ>
 
         <CTA>
           <Heading centered as="h1">

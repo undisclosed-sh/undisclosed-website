@@ -33,5 +33,74 @@
     "subheading": "Spolupracujme při vytváření inovativních produktů připravených pro trh, které mají význam.",
     "description": "Jsme zde, abychom vás provedli celým procesem vývoje produktu, od ověření hypotézy až po uvedení na trh a dále. Pomůžeme vám projít složitostí řízení projektů, vývoje webových stránek a aplikací a řešení strojového učení, abychom vám dodali škálovatelné a uživatelsky přívětivé produkty, které si vaši zákazníci oblíbí.",
     "cta": "Pojďme si promluvit o vašich nápadech"
+  },
+  "faq": {
+    "heading": "Frequently Asked Questions",
+    "mainContent": [
+      {
+        "text": "## **Na jaká odvětví se specializujete?**",
+        "contentType": "richText"
+      },
+      {
+        "text": "Specializujeme se na technologický a finanční sektor a spolupracujeme se startupy a malými a středními podniky na vytváření inovativních a účinných produktů.",
+        "contentType": "text"
+      },
+      {
+        "text": "## Jak zajišťujete hladký průběh vývoje produktu?",
+        "contentType": "richText"
+      },
+      {
+        "text": "Postupujeme agilně a iterativně a v průběhu celého procesu úzce spolupracujeme s našimi klienty. Klademe důraz na efektivní komunikaci a nabízíme komplexní řízení projektu, abychom zajistili včasné dodání a kvalitní výsledky.",
+        "contentType": "text"
+      },
+      {
+        "text": "## Jaký je váš přístup k product and customer discovery?",
+        "contentType": "richText"
+      },
+      {
+        "text": "Začneme tím, že porozumíme vašim obchodním cílům, cílové skupině a potřebám trhu. Poté vám pomůžeme definovat a ověřit hypotézu vašeho produktu, následuje průzkum uživatelů, návrh, prototypování a testování, abychom zajistili úspěšné sladění produktu s trhem.",
+        "contentType": "text"
+      },
+      {
+        "text": "## Pomůžete s vývojem webových a webových aplikací, případně s řešeními strojového učení?",
+        "contentType": "richText"
+      },
+      {
+        "text": "Ano, v rámci naší komplexní nabídky vývoje produktů nabízíme služby vývoje webových stránek a webových aplikací a také řešení strojového učení.",
+        "contentType": "text"
+      },
+      {
+        "text": "## Jaká je vaše cenová struktura?",
+        "contentType": "richText"
+      },
+      {
+        "text": "Naše ceny jsou přizpůsobeny konkrétním potřebám každého projektu. Nabízíme flexibilní cenové modely, které se přizpůsobí různým rozpočtům a rozsahům projektů. Pro individuální cenovou nabídku nás prosím kontaktujte.",
+        "contentType": "text"
+      },
+      {
+        "text": "## Jak zajišťujete bezpečnost a ochranu našich údajů?",
+        "contentType": "richText"
+      },
+      {
+        "text": "Zabezpečení dat a ochranu soukromí bereme velmi vážně. Řídíme se osvědčenými postupy v oboru a dodržujeme přísné bezpečnostní standardy, abychom zajistili ochranu vašich údajů.",
+        "contentType": "text"
+      },
+      {
+        "text": "## Dokážete rozšířit své služby tak, aby se přizpůsobily našemu rostoucímu podnikání?",
+        "contentType": "richText"
+      },
+      {
+        "text": "Ano, naše služby můžeme rozšířit tak, aby vyhovovaly měnícím se potřebám vaší firmy, která roste. Náš tým odborníků se dokáže přizpůsobit novým požadavkům a rozšířit rozsah našich služeb podle potřeby.",
+        "contentType": "text"
+      },
+      {
+        "text": "## Jaký je váš typický časový harmonogram projektu?",
+        "contentType": "richText"
+      },
+      {
+        "text": "Časový harmonogram projektu se může lišit v závislosti na složitosti a rozsahu projektu. Úzce spolupracujeme s našimi klienty na stanovení realistických časových plánů a milníků, abychom zajistili včasné dodání bez snížení kvality.",
+        "contentType": "text"
+      }
+    ]
   }
 }
