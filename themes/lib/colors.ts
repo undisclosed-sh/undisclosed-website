@@ -165,3 +165,18 @@ export const colorPalette = {
   text: textColor,
   common,
 };
+
+// Dark mode
+export const darkModeTheme = {
+  background: '#121212',
+  primary: '#BB86FC',
+  primaryVariant: '#3700B3',
+  secondary: '#03DAC6',
+  secondaryVariant: '#018786',
+  textOnBackground: '#E0E0E0',
+  textOnPrimary: '#000000',
+  textOnSecondary: '#000000',
+  disabledText: '#8D8D8D',
+  divider: '#1F1F1F',
+  error: '#CF6679',
+}

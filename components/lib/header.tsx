@@ -7,6 +7,7 @@ import { useRouter } from 'next/router'
 import { pageLinks } from '@defs'
 
 import {
+  HeaderActions,
   LocaleSwitcher,
   LocaleSwitcherItem,
   Logo,
@@ -18,8 +19,11 @@ import {
   StyledNav,
 } from './header.styled'
 import { navigation } from '@defs/lib/navigation'
+import { ThemeModeSwitcher } from './theme-mode-switcher'
+import { useThemeMode } from '@contexts'
 
 export const Header = memo(() => {
+  const { themeMode, handleThemeToggle } = useThemeMode()
   const router = useRouter()
   const { t, i18n } = useTranslation(['header'])
   const { user } = useUser()
@@ -65,6 +69,7 @@ export const Header = memo(() => {
         </StyledList>
       </StyledNav>
 
+      <HeaderActions>
       <LocaleSwitcher>
         <LocaleSwitcherItem $active={i18n.language === 'en'}>
           <Link href={router.pathname} locale="en">
@@ -78,6 +83,9 @@ export const Header = memo(() => {
           </Link>
         </LocaleSwitcherItem>
       </LocaleSwitcher>
+
+      <ThemeModeSwitcher themeMode={themeMode} onClick={handleThemeToggle} />
+      </HeaderActions>
     </StyledHeader>
   )
 })

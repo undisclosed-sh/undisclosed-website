@@ -4,17 +4,20 @@ import { UserProvider } from '@auth0/nextjs-auth0/client'
 import { GoogleAnalytics } from 'nextjs-google-analytics'
 import { appWithTranslation } from 'next-i18next'
 
+import { ThemeModeConsumer, ThemeModeProvider } from '@contexts'
 import {
   baseFontSize,
   bodyText,
   breakpoints,
   colorPalette,
+  darkModeTheme,
   defaultFontFamily,
   headings,
   pxToRem,
 } from '@themes'
+import { ThemeMode } from '@custom-types'
 
-const GlobalStyle = createGlobalStyle`
+const GlobalStyle = createGlobalStyle<{ themeMode: ThemeMode }>`
   html {
     font-size: ${baseFontSize}px;
 
@@ -39,6 +42,13 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     font-size: ${pxToRem(16)};
+
+    ${({ themeMode }) =>
+      themeMode === 'dark' &&
+      `
+      background-color: ${darkModeTheme.background};
+      color: ${darkModeTheme.textOnBackground};
+    `}})}
   }
 
   body > div {
@@ -172,15 +182,21 @@ const GlobalStyle = createGlobalStyle`
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <>
-      <GlobalStyle />
-      <UserProvider>
-        <ThemeProvider theme={{}}>
-          <GoogleAnalytics trackPageViews />
-          <Component {...pageProps} />
-        </ThemeProvider>
-      </UserProvider>
-    </>
+    <ThemeModeProvider>
+      <ThemeModeConsumer>
+        {({ themeMode }) => (
+          <>
+            <GlobalStyle themeMode={themeMode} />
+            <UserProvider>
+              <ThemeProvider theme={{}}>
+                <GoogleAnalytics trackPageViews />
+                <Component {...pageProps} />
+              </ThemeProvider>
+            </UserProvider>
+          </>
+        )}
+      </ThemeModeConsumer>
+    </ThemeModeProvider>
   )
 }
 

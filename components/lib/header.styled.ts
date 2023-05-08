@@ -74,7 +74,7 @@ export const LocaleSwitcher = styled.ul`
   justify-content: space-between;
   align-items: center;
   list-style: none;
-  margin: 0 0 0 ${pxToRem(8)};
+  margin: 0 ${pxToRem(12)} 0 ${pxToRem(8)};
   padding: 0;
 
   li {
@@ -88,4 +88,12 @@ export const LocaleSwitcher = styled.ul`
 
 export const LocaleSwitcherItem = styled.li<{ $active?: boolean }>`
   color: ${({ $active }) => ($active ? '#222' : '#bdcad0')};
+`
+
+export const HeaderActions = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex: 0 0 auto;
 `

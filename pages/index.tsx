@@ -115,6 +115,9 @@ export interface HomeProps {
 
 const Home: NextPage = ({ ...props }: HomeProps) => {
   const { t } = useTranslation(['header', 'home'])
+  const includeServices = false
+  const includeFAQ = false
+  const includeCTA = false
 
   return (
     <>
@@ -127,67 +130,75 @@ const Home: NextPage = ({ ...props }: HomeProps) => {
           <Description>{t('home:hero.subheading')}</Description>
         </Main>
 
-        <ServicesOverview>
-          <Heading centered as="h1">
-            {t('home:services.heading')}
-          </Heading>
+        {includeServices && (
+          <ServicesOverview>
+            <Heading centered as="h1">
+              {t('home:services.heading')}
+            </Heading>
 
-          <StyledGrid>
-            {servicesLabels.map((label) => (
-              <StyledGridItem key={label}>
-                <h3>{t(`home:services.services.${label}.heading`)}</h3>
-                <p>{t(`home:services.services.${label}.description`)}</p>
-              </StyledGridItem>
-            ))}
-          </StyledGrid>
-        </ServicesOverview>
+            <StyledGrid>
+              {servicesLabels.map((label) => (
+                <StyledGridItem key={label}>
+                  <h3>{t(`home:services.services.${label}.heading`)}</h3>
+                  <p>{t(`home:services.services.${label}.description`)}</p>
+                </StyledGridItem>
+              ))}
+            </StyledGrid>
+          </ServicesOverview>
+        )}
 
-        <FAQ>
-          <Heading centered as="h1">
-            {t('home:faq.heading')}
-          </Heading>
+        {includeFAQ && (
+          <FAQ>
+            <Heading centered as="h1">
+              {t('home:faq.heading')}
+            </Heading>
 
-          {(
-            t('home:faq.mainContent', { returnObjects: true }) as (
-              | Translation
-              | TranslationList
-            )[]
-          ).map((paragraph, index: number) =>
-            paragraph.contentType === 'list' ? (
-              <ul key={`about_paragraph_${index}`}>
-                {(paragraph as TranslationList).list.map(
-                  (listItem, index: number) => (
-                    <li key={`about_list_item_${index}`}>
-                      {listItem.contentType.toLowerCase().includes('rich') ? (
-                        <ReactMarkdown>{listItem.text}</ReactMarkdown>
-                      ) : (
-                        listItem.text
-                      )}
-                    </li>
-                  ),
-                )}
-              </ul>
-            ) : paragraph.contentType.toLowerCase().includes('rich') ? (
-              <ReactMarkdown>{paragraph.text}</ReactMarkdown>
-            ) : (
-              <p key={`about_paragraph_${index}`}>{paragraph.text}</p>
-            ),
-          )}
-        </FAQ>
+            {(
+              t('home:faq.mainContent', { returnObjects: true }) as (
+                | Translation
+                | TranslationList
+              )[]
+            ).map((paragraph, index: number) =>
+              paragraph.contentType === 'list' ? (
+                <ul key={`about_paragraph_${index}`}>
+                  {(paragraph as TranslationList).list.map(
+                    (listItem, index: number) => (
+                      <li key={`about_list_item_${index}`}>
+                        {listItem.contentType.toLowerCase().includes('rich') ? (
+                          <ReactMarkdown>{listItem.text}</ReactMarkdown>
+                        ) : (
+                          listItem.text
+                        )}
+                      </li>
+                    ),
+                  )}
+                </ul>
+              ) : paragraph.contentType.toLowerCase().includes('rich') ? (
+                <ReactMarkdown>{paragraph.text}</ReactMarkdown>
+              ) : (
+                <p key={`about_paragraph_${index}`}>{paragraph.text}</p>
+              ),
+            )}
+          </FAQ>
+        )}
 
-        <CTA>
-          <Heading centered as="h1">
-            {t('home:cta.heading')}
-          </Heading>
+        {includeCTA && (
+          <CTA>
+            <Heading centered as="h1">
+              {t('home:cta.heading')}
+            </Heading>
 
-          <Heading centered as="h5">
-            {t('home:cta.subheading')}
-          </Heading>
+            <Heading centered as="h5">
+              {t('home:cta.subheading')}
+            </Heading>
 
-          <p>{t('home:cta.description')}</p>
+            <p>{t('home:cta.description')}</p>
 
-          <StyledLink href={navigation.contact.route}>{t('home:cta.cta')}</StyledLink>
-        </CTA>
+            <StyledLink href={navigation.contact.route}>
+              {t('home:cta.cta')}
+            </StyledLink>
+          </CTA>
+        )}
       </Layout>
     </>
   )
