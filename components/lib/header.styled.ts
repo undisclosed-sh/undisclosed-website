@@ -1,9 +1,10 @@
 import styled from 'styled-components'
 
-import { pxToRem } from '@themes'
+import { headerHeight, pxToRem } from '@themes'
 
 export const StyledHeader = styled.header`
-  padding: ${pxToRem(16)} ${pxToRem(16)};
+  padding: 0 ${pxToRem(16)};
+  height: ${headerHeight}px;
   display: flex;
   justify-content: flex-start;
 `
@@ -35,7 +36,14 @@ export const LogoPostfix = styled.span`
   transition: left 0.2s ease-in-out;
 `
 
-export const LogoWrapper = styled.span`
+export const LogoWrapper = styled.span<{ $animationEnabled?: boolean }>`
+  font-family: Antonio, 'Roboto', sans-serif;
+  text-transform: uppercase;
+  font-size: ${pxToRem(21)};
+
+  ${({ $animationEnabled }) =>
+    $animationEnabled &&
+    `
   &:hover {
     ${Logo} {
       transform: scale(1.1) rotate(90deg);
@@ -45,6 +53,7 @@ export const LogoWrapper = styled.span`
       left: ${pxToRem(4)};
     }
   }
+  `}
 `
 
 export const StyledList = styled.ul`
@@ -87,6 +96,7 @@ export const LocaleSwitcher = styled.ul`
 `
 
 export const LocaleSwitcherItem = styled.li<{ $active?: boolean }>`
+  font-family: Antonio, 'Roboto', sans-serif;
   color: ${({ $active }) => ($active ? '#222' : '#bdcad0')};
 `
 

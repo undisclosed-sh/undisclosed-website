@@ -1,4 +1,5 @@
-export const footerHeight = 48;
+export const headerHeight = 60
+export const footerHeight = 48
 
 export const baseSpacing = 16
 

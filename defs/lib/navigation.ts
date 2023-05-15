@@ -13,7 +13,7 @@ export const navigation: Record<
     route: '/services',
     label: 'services',
     disabled: true,
-    hidden: false,
+    hidden: true,
   },
   features: {
     route: '/features',
@@ -25,7 +25,7 @@ export const navigation: Record<
     route: '/about',
     label: 'aboutUs',
     disabled: true,
-    hidden: false,
+    hidden: true,
   },
   blog: {
     route: '/blog',
@@ -37,6 +37,7 @@ export const navigation: Record<
     route: '/contact',
     label: 'contact',
     disabled: false,
+    hidden: true,
   },
   newsletter: {
     route: '/newsletter',
@@ -47,6 +48,12 @@ export const navigation: Record<
   getStarted: {
     route: '/get-started',
     label: 'getStarted',
+    disabled: true,
+    hidden: true,
+  },
+  signIn: {
+    route: '/api/auth/login',
+    label: 'signIn',
     disabled: true,
     hidden: true,
   },

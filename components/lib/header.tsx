@@ -33,8 +33,8 @@ export const Header = memo(() => {
       <StyledNav>
         <Link href={pageLinks.home}>
           <LogoWrapper>
-            <Logo>U</Logo>
-            <LogoPostfix>ndisclosed</LogoPostfix>
+            {/* <Logo>U</Logo> */}
+            <LogoPostfix>Undisclosed</LogoPostfix>
           </LogoWrapper>
         </Link>
 
@@ -46,17 +46,7 @@ export const Header = memo(() => {
               </StyledListItem>
             ),
           )}
-          {user && (
-            <StyledListItem>
-              <Link href={pageLinks.playground}>{t('playground')}</Link>
-            </StyledListItem>
-          )}
-          {user && (
-            <StyledListItem>
-              <Link href={pageLinks.editor}>{t('editor')}</Link>
-            </StyledListItem>
-          )}
-          {!user && (
+          {!user && !navigation.signIn.hidden && (
             <StyledListItem>
               <Link href={pageLinks.login}>{t('login')}</Link>
             </StyledListItem>
@@ -70,21 +60,21 @@ export const Header = memo(() => {
       </StyledNav>
 
       <HeaderActions>
-      <LocaleSwitcher>
-        <LocaleSwitcherItem $active={i18n.language === 'en'}>
-          <Link href={router.pathname} locale="en">
-            EN
-          </Link>
-        </LocaleSwitcherItem>
-        <LocaleSwitcherItem>/</LocaleSwitcherItem>
-        <LocaleSwitcherItem $active={i18n.language === 'cs'}>
-          <Link href={router.pathname} locale="cs">
-            CS
-          </Link>
-        </LocaleSwitcherItem>
-      </LocaleSwitcher>
+        <LocaleSwitcher>
+          <LocaleSwitcherItem $active={i18n.language === 'en'}>
+            <Link href={router.pathname} locale="en">
+              EN
+            </Link>
+          </LocaleSwitcherItem>
+          <LocaleSwitcherItem>/</LocaleSwitcherItem>
+          <LocaleSwitcherItem $active={i18n.language === 'cs'}>
+            <Link href={router.pathname} locale="cs">
+              CS
+            </Link>
+          </LocaleSwitcherItem>
+        </LocaleSwitcher>
 
-      <ThemeModeSwitcher themeMode={themeMode} onClick={handleThemeToggle} />
+        <ThemeModeSwitcher themeMode={themeMode} onClick={handleThemeToggle} />
       </HeaderActions>
     </StyledHeader>
   )

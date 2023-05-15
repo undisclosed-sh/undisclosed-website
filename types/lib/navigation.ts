@@ -6,3 +6,4 @@ export type NavigationLinks =
   | 'getStarted'
   | 'newsletter'
   | 'services'
+  | 'signIn'

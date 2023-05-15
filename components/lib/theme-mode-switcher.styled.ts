@@ -14,7 +14,10 @@ export const Wrapper = styled.div<{ $themeMode: ThemeMode }>`
       stroke: ${$themeMode === 'light' ? '#222' : '#fff'};
     }
   `}
-
 `
 
-export const Handle = styled.div``
+export const Handle = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`

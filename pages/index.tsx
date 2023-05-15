@@ -6,7 +6,7 @@ import ReactMarkdown from 'react-markdown'
 
 import clientPromise from '@lib/mongo'
 import { Heading, Layout, Link, PageHead } from '@components'
-import { breakpoints, pxToRem } from '@themes'
+import { breakpoints, footerHeight, headerHeight, pxToRem } from '@themes'
 import { navigation } from '@defs'
 import { Translation, TranslationList } from '@custom-types'
 
@@ -20,7 +20,7 @@ const Main = styled.main`
   width: 100%;
   max-width: ${pxToRem(640)};
   margin: 0 auto;
-  min-height: 100vh;
+  min-height: calc(100vh - (${footerHeight}px + ${headerHeight}px));
 `
 
 const Title = styled.h1`
@@ -28,6 +28,7 @@ const Title = styled.h1`
   line-height: 1.15;
   font-size: ${pxToRem(64)};
   text-align: center;
+  font-family: Antonio, 'Roboto', sans-serif;
 `
 
 const Description = styled.p`
@@ -125,9 +126,10 @@ const Home: NextPage = ({ ...props }: HomeProps) => {
 
       <Layout flexDirection="column">
         <Main>
-          <Title>{t('home:hero.heading')}</Title>
+          {/* <Title>{t('home:hero.heading')}</Title> */}
+          <Title>{t('home:hero.companyName')}</Title>
 
-          <Description>{t('home:hero.subheading')}</Description>
+          {/* <Description>{t('home:hero.subheading')}</Description> */}
         </Main>
 
         {includeServices && (
