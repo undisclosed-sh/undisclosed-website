@@ -26,9 +26,21 @@ const Main = styled.main`
 const Title = styled.h1`
   margin: 0;
   line-height: 1.15;
-  font-size: ${pxToRem(64)};
+  font-size: ${pxToRem(32)};
   text-align: center;
   font-family: Antonio, 'Roboto', sans-serif;
+
+  @media (min-width: ${breakpoints.mobile}px) {
+    font-size: ${pxToRem(42)};
+  }
+
+  @media (min-width: ${breakpoints.tablet}px) {
+    font-size: ${pxToRem(64)};
+  }
+
+  @media (min-width: ${breakpoints.largeDesktop}px) {
+    font-size: ${pxToRem(96)};
+  }
 `
 
 const Description = styled.p`

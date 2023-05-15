@@ -38,6 +38,7 @@ const GlobalStyle = createGlobalStyle<{ themeMode: ThemeMode }>`
   body,
   body > div {
     min-height: 100vh;
+    background: linear-gradient(180deg, #e6eaf5 0%, #f6f6f6 80%);
   }
 
   body {
