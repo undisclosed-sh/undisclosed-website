@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { headerHeight, pxToRem } from '@themes'
+import { colorPalette, headerHeight, pxToRem } from '@themes'
 
 export const StyledHeader = styled.header`
   padding: 0 ${pxToRem(16)};
@@ -28,6 +28,10 @@ export const Logo = styled.span`
   font-weight: 700;
   flex: 0 0 auto;
   transition: transform 0.2s ease-in-out;
+
+  * {
+    color: ${colorPalette.text.main};
+  }
 `
 
 export const LogoPostfix = styled.span`
