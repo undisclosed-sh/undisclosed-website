@@ -11,6 +11,7 @@ import {
   LocaleSwitcher,
   LocaleSwitcherItem,
   Logo,
+  LogoLink,
   LogoPostfix,
   LogoWrapper,
   StyledHeader,
@@ -32,12 +33,12 @@ export const Header = memo(() => {
   return (
     <StyledHeader>
       <StyledNav>
-        <StyledLink href={pageLinks.home}>
+        <LogoLink href={pageLinks.home} $darkMode={themeMode === 'dark'}>
           <LogoWrapper>
             {/* <Logo>U</Logo> */}
             <LogoPostfix>Undisclosed</LogoPostfix>
           </LogoWrapper>
-        </StyledLink>
+        </LogoLink>
 
         <StyledList>
           {Object.entries(navigation).map(([key, val]) =>
@@ -62,13 +63,19 @@ export const Header = memo(() => {
 
       <HeaderActions>
         <LocaleSwitcher>
-          <LocaleSwitcherItem $active={i18n.language === 'en'}>
+          <LocaleSwitcherItem
+            $active={i18n.language === 'en'}
+            $darkMode={themeMode === 'dark'}
+          >
             <StyledLink href={router.pathname} locale="en">
               EN
             </StyledLink>
           </LocaleSwitcherItem>
           <LocaleSwitcherItem>/</LocaleSwitcherItem>
-          <LocaleSwitcherItem $active={i18n.language === 'cs'}>
+          <LocaleSwitcherItem
+            $active={i18n.language === 'cs'}
+            $darkMode={themeMode === 'dark'}
+          >
             <StyledLink href={router.pathname} locale="cs">
               CS
             </StyledLink>

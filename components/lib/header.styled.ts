@@ -42,6 +42,17 @@ export const Logo = styled.span`
   transition: transform 0.2s ease-in-out;
 `
 
+export const LogoLink = styled(Link)<{ $darkMode?: boolean }>`
+  text-decoration: none;
+
+  &,
+  &:hover,
+  &:active {
+    color: ${({ $darkMode }) =>
+      $darkMode ? colorPalette.common.white : colorPalette.text.main};
+  }
+`
+
 export const LogoPostfix = styled.span`
   position: relative;
   left: 0;
@@ -107,24 +118,29 @@ export const LocaleSwitcher = styled.ul`
   }
 `
 
-export const LocaleSwitcherItem = styled.li<{ $active?: boolean }>`
+export const LocaleSwitcherItem = styled.li<{
+  $active?: boolean
+  $darkMode?: boolean
+}>`
   font-family: Antonio, 'Roboto', sans-serif;
 
   ${StyledLink} {
-    ${({ $active }) =>
+    ${({ $active, $darkMode }) =>
       $active
         ? `
         &,
         &:hover,
         &:active {
-          color: ${colorPalette.text.main};
+          color: ${
+            !$darkMode ? colorPalette.text.main : colorPalette.common.white
+          };
         }
         `
         : `
         &,
         &:hover,
         &:active {
-          color: #bdcad0 !important;
+          color: ${!$darkMode ? '#bdcad0' : '#aaa'} !important;
         }
       }
     `};
