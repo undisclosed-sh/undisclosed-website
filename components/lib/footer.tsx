@@ -1,16 +1,27 @@
 import { memo, useMemo } from 'react'
 
-import {
-  CopyText,
-  FooterComponent,
-} from './footer.styled'
+import { CopyText, FooterComponent, SocialsList } from './footer.styled'
+import { socials } from '@defs'
 
 export const Footer = memo(() => {
   const currentYear = useMemo(() => new Date().getFullYear().toString(), [])
 
   return (
     <FooterComponent>
-      <CopyText>Copyright &copy; <span>{currentYear}</span>&nbsp;Undisclosed</CopyText>
+      <SocialsList>
+        {Object.values(socials)
+          .filter((link) => !link.hidden)
+          .map((social) => (
+            <li key={`social_${social.label}`}>
+              <a href={social.route} rel="noopener noreferrer">
+                {social.component()}
+              </a>
+            </li>
+          ))}
+      </SocialsList>
+      <CopyText>
+        Copyright &copy; <span>{currentYear}</span>&nbsp;Undisclosed
+      </CopyText>
     </FooterComponent>
   )
 })
