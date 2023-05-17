@@ -20,7 +20,7 @@ const Main = styled.main`
   width: 100%;
   max-width: ${pxToRem(640)};
   margin: 0 auto;
-  min-height: calc(100vh - (${footerHeight}px + ${headerHeight}px));
+  flex: 1 0 auto;
 `
 
 const Title = styled.h1`

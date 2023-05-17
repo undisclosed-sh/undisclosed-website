@@ -37,6 +37,8 @@ const GlobalStyle = createGlobalStyle<{ themeMode: ThemeMode }>`
   html,
   body,
   body > div {
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
     background: linear-gradient(180deg, #e6eaf5 0%, #f6f6f6 80%);
   }
