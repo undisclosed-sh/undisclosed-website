@@ -14,6 +14,7 @@ import {
   LogoPostfix,
   LogoWrapper,
   StyledHeader,
+  StyledLink,
   StyledList,
   StyledListItem,
   StyledNav,
@@ -31,12 +32,12 @@ export const Header = memo(() => {
   return (
     <StyledHeader>
       <StyledNav>
-        <Link href={pageLinks.home}>
+        <StyledLink href={pageLinks.home}>
           <LogoWrapper>
             {/* <Logo>U</Logo> */}
             <LogoPostfix>Undisclosed</LogoPostfix>
           </LogoWrapper>
-        </Link>
+        </StyledLink>
 
         <StyledList>
           {Object.entries(navigation).map(([key, val]) =>
@@ -62,15 +63,15 @@ export const Header = memo(() => {
       <HeaderActions>
         <LocaleSwitcher>
           <LocaleSwitcherItem $active={i18n.language === 'en'}>
-            <Link href={router.pathname} locale="en">
+            <StyledLink href={router.pathname} locale="en">
               EN
-            </Link>
+            </StyledLink>
           </LocaleSwitcherItem>
           <LocaleSwitcherItem>/</LocaleSwitcherItem>
           <LocaleSwitcherItem $active={i18n.language === 'cs'}>
-            <Link href={router.pathname} locale="cs">
+            <StyledLink href={router.pathname} locale="cs">
               CS
-            </Link>
+            </StyledLink>
           </LocaleSwitcherItem>
         </LocaleSwitcher>
 

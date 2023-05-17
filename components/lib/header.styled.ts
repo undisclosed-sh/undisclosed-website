@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 import { colorPalette, headerHeight, pxToRem } from '@themes'
+import Link from 'next/link'
 
 export const StyledHeader = styled.header`
   padding: 0 ${pxToRem(16)};
@@ -22,16 +23,23 @@ export const StyledNav = styled.nav`
   }
 `
 
+export const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: ${colorPalette.text.main};
+
+  &,
+  &:hover,
+  &:active {
+    color: ${colorPalette.text.main};
+  }
+`
+
 export const Logo = styled.span`
   display: inline-flex;
   font-size: 23px;
   font-weight: 700;
   flex: 0 0 auto;
   transition: transform 0.2s ease-in-out;
-
-  * {
-    color: ${colorPalette.text.main};
-  }
 `
 
 export const LogoPostfix = styled.span`
@@ -101,7 +109,25 @@ export const LocaleSwitcher = styled.ul`
 
 export const LocaleSwitcherItem = styled.li<{ $active?: boolean }>`
   font-family: Antonio, 'Roboto', sans-serif;
-  color: ${({ $active }) => ($active ? '#222' : '#bdcad0')};
+
+  ${StyledLink} {
+    ${({ $active }) =>
+      $active
+        ? `
+        &,
+        &:hover,
+        &:active {
+          color: ${colorPalette.text.main};
+        }
+        `
+        : `
+        &,
+        &:hover,
+        &:active {
+          color: #bdcad0 !important;
+        }
+      }
+    `};
 `
 
 export const HeaderActions = styled.div`
