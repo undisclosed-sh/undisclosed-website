@@ -9,27 +9,27 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@auth0/nextjs-auth0": "2.3.1",
-    "i18next": "^22.4.13",
-    "mongodb": "5.1.0",
-    "next": "13.1.6",
+    "@auth0/nextjs-auth0": "2.6.0",
+    "i18next": "^22.5.0",
+    "mongodb": "5.5.0",
+    "next": "13.4.3",
     "next-i18next": "^13.2.2",
     "nextjs-google-analytics": "2.3.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-i18next": "^12.2.0",
-    "react-markdown": "^8.0.6",
+    "react-i18next": "^12.3.1",
+    "react-markdown": "^8.0.7",
     "styled-components": "5.3.9",
     "yup": "^1.0.2"
   },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^4.1.1",
-    "@types/node": "18.15.10",
-    "@types/react": "18.0.29",
-    "@types/react-dom": "18.0.11",
+    "@types/node": "20.2.3",
+    "@types/react": "18.2.6",
+    "@types/react-dom": "18.2.4",
     "@types/styled-components": "^5.1.26",
-    "eslint": "8.36.0",
-    "eslint-config-next": "13.3.2",
-    "typescript": "5.0.2"
+    "eslint": "8.41.0",
+    "eslint-config-next": "13.4.3",
+    "typescript": "5.0.4"
   }
 }
