@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 import { colorPalette, headerHeight, pxToRem } from '@themes'
-import Link from 'next/link'
+import Link from 'next-intl/link'
 
 export const StyledHeader = styled.header`
   padding: 0 ${pxToRem(16)};
@@ -60,7 +60,7 @@ export const LogoPostfix = styled.span`
 `
 
 export const LogoWrapper = styled.span<{ $animationEnabled?: boolean }>`
-  font-family: Antonio, 'Roboto', sans-serif;
+  font-family: var(--font-antonio), 'Roboto', sans-serif;
   text-transform: uppercase;
   font-size: ${pxToRem(21)};
 

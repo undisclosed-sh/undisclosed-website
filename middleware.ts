@@ -1,25 +1,14 @@
-// import { NextRequest, NextResponse } from 'next/server';
+import createMiddleware from 'next-intl/middleware'
 
-// const protectedPagePath = '/protected';
+export default createMiddleware({
+  // A list of all locales that are supported
+  locales: ['en', 'cs'],
+
+  // If this locale is matched, pathnames work without a prefix (e.g. `/about`)
+  defaultLocale: 'en',
+})
 
 export const config = {
-  matcher: ['/protected'],
+  // Skip all paths that should not be internationalized
+  matcher: ['/((?!api|_next|.*\\..*).*)'],
 }
-
-// export function middleware(req: NextRequest) {
-//   const url = new URL(req.url)
-//   const searchParams = url.search
-
-//   if (url.pathname.indexOf(protectedPagePath) > -1) {
-//     const allowed = typeof searchParams === 'string' && searchParams.includes('allowed=true')
-
-//     // if (!allowed) {
-//     //   NextResponse.rewrite(new URL('/', req.url))
-//     //   return NextResponse.redirect(new URL('/', req.url))
-//     // }
-
-//     // return NextResponse.redirect(new URL(req.url.replace(searchParams, ''), req.url))
-//   }
-
-//   return NextResponse.next();
-// }

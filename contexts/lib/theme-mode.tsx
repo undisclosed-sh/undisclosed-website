@@ -1,3 +1,5 @@
+'use client'
+
 import { useContext } from '@hooks'
 import { createContext, useMemo, useState } from 'react'
 

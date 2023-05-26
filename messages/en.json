@@ -1,0 +1,175 @@
+{
+  "Home": {
+    "companyName": "U.N.D.I.S.C.L.O.S.E.D"
+  },
+  "Header": {
+    "aboutUs": "Who we are",
+    "blog": "Blog",
+    "contact": "Get in touch",
+    "home": "Home",
+    "login": "Login",
+    "logout": "Logout",
+    "newsletter": "Newsletter",
+    "services": "What we do"
+  },
+  "Common": {
+    "form": {
+      "email": "Your email",
+      "submit": "Send"
+    }
+  },
+  "Newsletter": {
+    "intro": "We are always working on some interesting project. You can subscribe to our newsletter to stay up to date with latest news."
+  },
+  "Contact": {
+    "submit": "Send",
+    "name": "Your name",
+    "email": "Your e-smail",
+    "message": "Your message",
+    "success": "Your message has been sent successfully",
+    "error": "An error occurred while sending the message",
+    "required": "This field is required",
+    "invalid": "This field is invalid",
+    "validation": {
+      "name": {
+        "required": "Please enter your name"
+      },
+      "email": {
+        "required": "Please enter your e-mail",
+        "invalid": "Please enter a valid e-mail"
+      },
+      "message": {
+        "required": "Please enter your message"
+      }
+    }
+  },
+  "About": {
+    "title": "About us",
+    "subtitle": "Committed to Creating Impactful Products that Improve Lives",
+    "mainContent": [{
+      "text": "At Undisclosed, our mission is to help startups and businesses navigate the complex process of transforming ideas into products that make a positive impact on people's lives. We believe that innovative products have the power to change the world, and we're passionate about guiding our clients through every stage of the product development journey.",
+      "contentType": "text"
+    }, {
+      "text": "Our team of experienced professionals specializes in product development and management, project management, web development, web app development, and machine learning solutions. We work closely with our clients to define product goals, validate ideas, create prototypes, and manage the development process, ensuring the final product delivers real value to users and aligns with your vision.",
+      "contentType": "text"
+    }, {
+      "text": "Our approach is centered around collaboration, transparency, and agility. We tailor our services to each client's unique needs and challenges, while utilizing proven methodologies and tools to ensure smooth communication, efficient resource allocation, and timely delivery of your projects.",
+      "contentType": "text"
+    }, {
+      "text": "As we grow, our vision extends beyond providing services to our clients. Drawing from our experience in helping others create successful products, we are also committed to developing and launching our own innovative products, backed by venture capital, that address pressing challenges and create positive change.",
+      "contentType": "text"
+    }, {
+      "text": "By choosing Undisclosed, you're not only gaining a dedicated partner in your product development journey, but you're also joining our mission to create impactful products that improve lives and shape the future.",
+      "contentType": "text"
+    }, {
+      "text": "Our services include:",
+      "contentType": "text"
+    }, {
+      "contentType": "list",
+      "list": [{
+        "text": "Product Development and Management",
+        "contentType": "listItem"
+      }, {
+        "text": "Project Management",
+        "contentType": "listItem"
+      }, {
+        "text": "Web Development",
+        "contentType": "listItem"
+      }, {
+        "text": "Web App Development",
+        "contentType": "listItem"
+      }, {
+        "text": "Machine Learning Solutions",
+        "contentType": "listItem"
+      }]
+    }, {
+      "text": "Our core values drive our approach to every project:",
+      "contentType": "text"
+    }, {
+      "contentType": "list",
+      "list": [{
+        "text": "**Innovation**: We embrace cutting-edge technologies and creative problem-solving to deliver groundbreaking solutions.",
+        "contentType": "richListItem"
+      }, {
+        "text": "**Collaboration**: We work closely with our clients, fostering open communication and strong partnerships to achieve shared success.",
+        "contentType": "richListItem"
+      }, {
+        "text": "**Agility**: We adopt flexible methodologies that allow us to pivot and adapt as projects evolve, ensuring the best possible outcomes.",
+        "contentType": "richListItem"
+      }, {
+        "text": "**Results-focused**: We measure our success by the impact we create for our clients and the value we deliver through our work.",
+        "contentType": "richListItem"
+      }, {
+        "text": "**Trust**: We prioritize transparency, accountability, and integrity in all our interactions.",
+        "contentType": "richListItem"
+      }]
+    }, {
+      "text": "At Undisclosed, we're passionate about helping businesses unlock their full potential. Let's work together to bring your ideas to life and create lasting impact in the technology and finance sectors.",
+      "contentType": "text"
+    }],
+    "cta": "Get in touch with us"
+  },
+  "Services": {
+    "title": "Our services",
+    "subtitle": "Tailored Solutions for Every Stage of the Product Development Journey",
+    "mainContent": [
+      {
+        "text": "At Undisclosed, we offer a comprehensive suite of services designed to support your business through every stage of the product development journey. Our expertise spans across web development, web app development, machine learning solutions, product development process optimization, product & customer discovery, and project management.",
+        "contentType": "text"
+      },
+      {
+        "text": "Web development",
+        "contentType": "h2"
+      },
+      {
+        "text": "Our web development services are tailored to create visually appealing, user-friendly, and responsive websites that effectively showcase your brand and engage your target audience. From front-end to back-end development, our experienced team utilizes cutting-edge technologies and best practices to build custom websites that align with your business objectives and deliver a seamless user experience across all devices.",
+        "contentType": "text"
+      },
+      {
+        "text": "Web app development",
+        "contentType": "h2"
+      },
+      {
+        "text": "We specialize in web app development, creating powerful and scalable applications that provide your users with the functionality they need to access your services and interact with your brand. Our team of developers is proficient in a wide range of technologies and frameworks, ensuring the development of high-performance web applications that meet your unique requirements and grow with your business.",
+        "contentType": "text"
+      },
+      {
+        "text": "Machine learning solutions",
+        "contentType": "h2"
+      },
+      {
+        "text": "Our machine learning solutions empower your business with the power of data-driven decision-making and automation. Our expert team of data scientists and engineers will work with you to develop custom machine learning models and algorithms that optimize your business processes, enhance the value of your products, and provide actionable insights for future growth.",
+        "contentType": "text"
+      },
+      {
+        "text": "Product development process optimization",
+        "contentType": "h2"
+      },
+      {
+        "text": "We understand the importance of a streamlined product development process. Our team of experts will work closely with your organization to identify bottlenecks, inefficiencies, and areas for improvement within your current development processes. By implementing agile methodologies, iterative development, and continuous improvement, we help optimize your product development process, ensuring faster time to market and higher quality outcomes.",
+        "contentType": "text"
+      },
+      {
+        "text": "Product & customer discovery",
+        "contentType": "h2"
+      },
+      {
+        "text": "Successful products start with a deep understanding of your target customers and their needs. Our product & customer discovery services focus on market research, user interviews, and data analysis to gain insights into your target audience and validate your product ideas. With this information, we help you define your product's unique value proposition and develop a go-to-market strategy that resonates with your target customers.",
+        "contentType": "text"
+      },
+      {
+        "text": "Project management",
+        "contentType": "h2"
+      },
+      {
+        "text": "Effective project management is crucial to the success of any product development endeavor. Our project management services provide end-to-end support, ensuring smooth communication, efficient resource allocation, and timely delivery of your projects. Our experienced project managers utilize proven methodologies and tools to keep your projects on track and minimize risks, giving you peace of mind and allowing you to focus on your core business.",
+        "contentType": "text"
+      },
+      {
+        "text": "At [Your Agency Name], our goal is to be your trusted partner in technology and finance, providing the expertise and support you need to bring your ideas to life and achieve lasting success.",
+        "contentType": "text"
+      }
+    ],
+    "cta": "Get in touch"
+  }
+}

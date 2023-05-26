@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { useRouter } from 'next/router'
+import { usePathname, useRouter } from 'next/navigation'
 import { memo, ReactNode, useEffect } from 'react'
 
 import { pageLinks } from '@defs'
@@ -30,7 +30,8 @@ export interface PageStepperProps {
 }
 
 export const PageStepper = memo(({ children, ...props }: PageStepperProps) => {
-  const { pathname, push } = useRouter()
+  const { push } = useRouter()
+  const pathname = usePathname()
 
   const currentPage = Object.entries(pageLinks)
     .filter(([key, value]) => value === pathname)

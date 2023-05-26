@@ -1,16 +1,18 @@
+'use client'
+
 import { memo } from 'react'
 import Link from 'next/link'
 import { useUser } from '@auth0/nextjs-auth0/client'
-import { useTranslation } from 'next-i18next'
-import { useRouter } from 'next/router'
+import { usePathname } from 'next-intl/client'
+import { useLocale, useTranslations } from 'next-intl'
 
+import { useThemeMode } from '@contexts'
 import { pageLinks } from '@defs'
 
 import {
   HeaderActions,
   LocaleSwitcher,
   LocaleSwitcherItem,
-  Logo,
   LogoLink,
   LogoPostfix,
   LogoWrapper,
@@ -22,20 +24,20 @@ import {
 } from './header.styled'
 import { navigation } from '@defs/lib/navigation'
 import { ThemeModeSwitcher } from './theme-mode-switcher'
-import { useThemeMode } from '@contexts'
 
 export const Header = memo(() => {
+  const t = useTranslations('Header')
   const { themeMode, handleThemeToggle } = useThemeMode()
-  const router = useRouter()
-  const { t, i18n } = useTranslation(['header'])
+  const pathname = usePathname()
   const { user } = useUser()
+  const locale = useLocale()
 
+  console.log(locale)
   return (
     <StyledHeader>
       <StyledNav>
         <LogoLink href={pageLinks.home} $darkMode={themeMode === 'dark'}>
           <LogoWrapper>
-            {/* <Logo>U</Logo> */}
             <LogoPostfix>Undisclosed</LogoPostfix>
           </LogoWrapper>
         </LogoLink>
@@ -64,19 +66,19 @@ export const Header = memo(() => {
       <HeaderActions>
         <LocaleSwitcher>
           <LocaleSwitcherItem
-            $active={i18n.language === 'en'}
+            $active={locale === 'en'}
             $darkMode={themeMode === 'dark'}
           >
-            <StyledLink href={router.pathname} locale="en">
+            <StyledLink href={pathname} locale="en">
               EN
             </StyledLink>
           </LocaleSwitcherItem>
           <LocaleSwitcherItem>/</LocaleSwitcherItem>
           <LocaleSwitcherItem
-            $active={i18n.language === 'cs'}
+            $active={locale === 'cs'}
             $darkMode={themeMode === 'dark'}
           >
-            <StyledLink href={router.pathname} locale="cs">
+            <StyledLink href={pathname} locale="cs">
               CS
             </StyledLink>
           </LocaleSwitcherItem>

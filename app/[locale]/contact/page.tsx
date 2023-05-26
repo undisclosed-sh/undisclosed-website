@@ -1,12 +1,12 @@
-import { NextPage } from 'next'
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+'use client'
+
 import { ChangeEvent, FormEvent, useCallback, useState } from 'react'
-import { useTranslation } from 'next-i18next'
 import { object, string, ValidationError } from 'yup'
 import styled from 'styled-components'
 
-import { Button, FormField, Layout, PageHead, PageHeading } from '@components'
+import { Button, FormField, PageHead, PageHeading } from '@components'
 import { colorPalette, pxToRem } from '@themes'
+import { useTranslations } from 'next-intl'
 
 const StyledMain = styled.main`
   display: flex;
@@ -47,8 +47,8 @@ const StyledMessage = styled.p`
   font-size: ${pxToRem(15)};
 `
 
-const Contact: NextPage = () => {
-  const { t } = useTranslation(['header', 'footer', 'contact'])
+export default function Page() {
+  const t = useTranslations()
   const [name, setName] = useState<string>('')
   const [email, setEmail] = useState<string>('')
   const [message, setMessage] = useState<string>('')
@@ -61,12 +61,12 @@ const Contact: NextPage = () => {
     useState<boolean>(false)
 
   const schema = object({
-    name: string().required(t('contact:validation.name.required') as string),
+    name: string().required(t('Contact.validation.name.required') as string),
     email: string()
-      .email(t('contact:validation.email.invalid') as string)
-      .required(t('contact:validation.email.required') as string),
+      .email(t('Contact.validation.email.invalid') as string)
+      .required(t('Contact.validation.email.required') as string),
     message: string().required(
-      t('contact:validation.message.required') as string,
+      t('Contact.validation.message.required') as string,
     ),
   })
 
@@ -133,75 +133,60 @@ const Contact: NextPage = () => {
 
   return (
     <>
-      <PageHead pageName={t('header:contact')} />
+      <PageHead pageName={t('Header.contact')} />
 
-      <Layout flexDirection="column">
-        <PageHeading text={t('header:contact')} />
+      <PageHeading text={t('Header.contact')} />
 
-        <StyledMain>
-          <StyledForm action="" onSubmit={handleFormSubmit}>
-            <StyledFormField
-              name="name"
-              label={t('contact:name')}
-              type="text"
-              placeholder=""
-              value={name}
-              error={errors.name}
-              onChange={
-                handleNameChange as (
-                  e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-                ) => void
-              }
-            />
-            <StyledFormField
-              name="email"
-              label={t('contact:email')}
-              type="text"
-              placeholder=""
-              value={email}
-              error={errors.email}
-              onChange={
-                handleEmailChange as (
-                  e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-                ) => void
-              }
-            />
-            <StyledFormField
-              name="message"
-              label={t('contact:message')}
-              type="text"
-              placeholder=""
-              component="textarea"
-              value={message}
-              error={errors.message}
-              onChange={
-                handleMessageChange as (
-                  e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-                ) => void
-              }
-            />
+      <StyledMain>
+        <StyledForm action="" onSubmit={handleFormSubmit}>
+          <StyledFormField
+            name="name"
+            label={t('Contact.name')}
+            type="text"
+            placeholder=""
+            value={name}
+            error={errors.name}
+            onChange={
+              handleNameChange as (
+                e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+              ) => void
+            }
+          />
+          <StyledFormField
+            name="email"
+            label={t('Contact.email')}
+            type="text"
+            placeholder=""
+            value={email}
+            error={errors.email}
+            onChange={
+              handleEmailChange as (
+                e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+              ) => void
+            }
+          />
+          <StyledFormField
+            name="message"
+            label={t('Contact.message')}
+            type="text"
+            placeholder=""
+            component="textarea"
+            value={message}
+            error={errors.message}
+            onChange={
+              handleMessageChange as (
+                e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+              ) => void
+            }
+          />
 
-            {successMessageVisible && (
-              <StyledMessage>{t('contact:success')}</StyledMessage>
-            )}
+          {successMessageVisible && (
+            <StyledMessage>{t('Contact.success')}</StyledMessage>
+          )}
 
-            <StyledButton type="submit">{t('contact:submit')}</StyledButton>
-          </StyledForm>
-        </StyledMain>
-      </Layout>
+          <StyledButton type="submit">{t('Contact.submit')}</StyledButton>
+        </StyledForm>
+      </StyledMain>
     </>
   )
 }
-
-export default Contact
-
-export const getServerSideProps = async ({ locale }: any) => ({
-  props: {
-    ...(await serverSideTranslations(locale, [
-      'common',
-      'header',
-      'footer',
-      'contact',
-    ])),
-  },
-})

@@ -1,13 +1,13 @@
+'use client'
+
 import { ChangeEvent, FormEvent, useCallback, useState } from 'react'
-import { NextPage } from 'next'
 import styled, { css } from 'styled-components'
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import { useTranslation } from 'next-i18next'
 
-import { Layout, PageHead, PageHeading, Text } from '@components'
-import { palette, pxToRem } from '@themes'
+import { PageHeading, Text } from '@components'
+import { palette } from '@themes'
+import { useTranslations } from 'next-intl'
 
-const formHeight = pxToRem(32)
+const formHeight = '32px'
 
 const StyledText = styled(Text)`
   align-self: center;
@@ -15,7 +15,7 @@ const StyledText = styled(Text)`
 `
 
 const StyledForm = styled.form`
-  margin-top: ${pxToRem(8)};
+  margin-top: 8px;
   align-self: center;
   height: ${formHeight};
   display: flex;
@@ -24,11 +24,11 @@ const StyledForm = styled.form`
 const StyledInput = styled.input<{ $error: boolean }>`
   height: ${formHeight};
   border: 0;
-  padding: 0 ${pxToRem(12)};
+  padding: 0 12px;
   border: 1px solid ${palette('grey', '300')};
   font-size: 14px;
-  border-top-left-radius: ${pxToRem(4)};
-  border-bottom-left-radius: ${pxToRem(4)};
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
 
   &:focus,
   &:hover {
@@ -51,11 +51,11 @@ const StyledInput = styled.input<{ $error: boolean }>`
 const StyledButton = styled.button`
   height: ${formHeight};
   border: 0;
-  padding: 0 ${pxToRem(12)};
+  padding: 0 12px;
   color: ${palette('common', 'white')};
   background-color: ${palette('blue', '500')};
-  border-top-right-radius: ${pxToRem(4)};
-  border-bottom-right-radius: ${pxToRem(4)};
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
   cursor: pointer;
 
   &:disabled {
@@ -70,8 +70,8 @@ const Wrapper = styled.div`
   flex-direction: column;
 `
 
-const Newsletter: NextPage = () => {
-  const { t } = useTranslation(['header', 'newsletter'])
+export default function Page() {
+  const t = useTranslations()
   const [email, setEmail] = useState('')
   const [emailError, setEmailError] = useState(false)
 
@@ -97,42 +97,23 @@ const Newsletter: NextPage = () => {
   )
 
   return (
-    <>
-      <PageHead pageName={t('header:newsletter')} />
+    <Wrapper>
+      <PageHeading text={t('Header.newsletter')} />
 
-      <Layout>
-        <Wrapper>
-          <PageHeading text={t('header:newsletter')} />
+      <StyledText componentType="p">{t('Newsletter.intro')}</StyledText>
 
-          <StyledText componentType="p">{t('newsletter:intro')}</StyledText>
-
-          <StyledForm onSubmit={onSubmit}>
-            <StyledInput
-              type="email"
-              placeholder={t('common:form.email') as string}
-              value={email}
-              onChange={onEmailChange}
-              $error={emailError}
-            />
-            <StyledButton disabled={email.length === 0}>
-              {t('common:form.submit')}
-            </StyledButton>
-          </StyledForm>
-        </Wrapper>
-      </Layout>
-    </>
+      <StyledForm onSubmit={onSubmit}>
+        <StyledInput
+          type="email"
+          placeholder={t('Common.form.email') as string}
+          value={email}
+          onChange={onEmailChange}
+          $error={emailError}
+        />
+        <StyledButton disabled={email.length === 0}>
+          {t('Common.form.submit')}
+        </StyledButton>
+      </StyledForm>
+    </Wrapper>
   )
 }
-
-export default Newsletter
-
-export const getServerSideProps = async ({ locale }: any) => ({
-  props: {
-    ...(await serverSideTranslations(locale, [
-      'common',
-      'header',
-      'footer',
-      'newsletter',
-    ])),
-  },
-})

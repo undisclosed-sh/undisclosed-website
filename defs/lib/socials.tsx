@@ -16,8 +16,8 @@ export const socials = {
     component: GitHubOutlined,
   },
   linkedin: {
-    route: 'https://github.com/undisclosed',
-    label: 'github',
+    route: '',
+    label: 'linkedin',
     disabled: false,
     hidden: false,
     component: LinkedinOutlined,
