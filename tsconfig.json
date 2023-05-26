@@ -22,6 +22,10 @@
       "@contexts/*": ["./contexts/*"],
       "@custom-types": ["./types"],
       "@custom-types/*": ["./types/*"],
+      "@/firebase": ["./firebase"],
+      "@/firebase/*": ["./firebase/*"],
+      "@/firestore": ["./firestore"],
+      "@/firestore/*": ["./firestore/*"],
       "@data": ["./data"],
       "@data/*": ["./data/*"],
       "@defs": ["./defs"],
@@ -33,9 +37,14 @@
       "@themes": ["./themes"],
       "@themes/*": ["./themes/*"],
       "@utils": ["./utils"],
-      "@utils/*": ["./utils/*"],
-    }
+      "@utils/*": ["./utils/*"]
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
 }
