@@ -224,7 +224,7 @@ export default async function RootLayout(args: {
   try {
     messages = (await import(`../../messages/${locale}.json`)).default
   } catch (error) {
-    console.log(error)
+    console.error(error)
     notFound()
   }
 

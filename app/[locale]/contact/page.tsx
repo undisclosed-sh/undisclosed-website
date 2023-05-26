@@ -125,7 +125,7 @@ export default function Page() {
           [field as string]: message,
         }))
 
-        console.log(field, message)
+        console.error(field, message)
       }
     },
     [email, message, name, schema, setErrors],

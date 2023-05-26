@@ -32,7 +32,6 @@ export const Header = memo(() => {
   const { user } = useUser()
   const locale = useLocale()
 
-  console.log(locale)
   return (
     <StyledHeader>
       <StyledNav>
