@@ -1,6 +1,8 @@
 {
   "Home": {
-    "companyName": "U.N.D.I.S.C.L.O.S.E.D"
+    "companyName": "U.N.D.I.S.C.L.O.S.E.D",
+    "heading": "Jsme banda softwarových nadšenců. Tvoříme, inovujeme a cestou občas porušíme pár pravidel.",
+    "subheading": "Jsme odvážní, troufalí a trochu drzí a s nadšením vytváříme výjimečné webové produkty a pomáháme firmám posunout jejich projekty na vyšší úroveň."
   },
   "Header": {
     "aboutUs": "Kdo jsme",
@@ -10,7 +12,8 @@
     "login": "Přihlásit se",
     "logout": "Odhlásit se",
     "newsletter": "Odběr novinek",
-    "services": "Co děláme"
+    "services": "Co děláme",
+    "approach": "Jak to děláme"
   },
   "Common": {
     "form": {

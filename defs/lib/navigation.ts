@@ -15,9 +15,9 @@ export const navigation: Record<
     disabled: true,
     hidden: false,
   },
-  features: {
-    route: '/features',
-    label: 'features',
+  approach: {
+    route: '/approach',
+    label: 'approach',
     disabled: true,
     hidden: true,
   },
@@ -42,12 +42,6 @@ export const navigation: Record<
   newsletter: {
     route: '/newsletter',
     label: 'newsletter',
-    disabled: true,
-    hidden: true,
-  },
-  getStarted: {
-    route: '/get-started',
-    label: 'getStarted',
     disabled: true,
     hidden: true,
   },

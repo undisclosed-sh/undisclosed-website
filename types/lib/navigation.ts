@@ -1,9 +1,8 @@
 export type NavigationLinks =
   | 'aboutUs'
+  | 'approach'
   | 'blog'
   | 'contact'
-  | 'features'
-  | 'getStarted'
   | 'newsletter'
   | 'services'
   | 'signIn'

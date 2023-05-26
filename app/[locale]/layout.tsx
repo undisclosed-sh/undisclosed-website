@@ -81,7 +81,7 @@ const GlobalStyle = createGlobalStyle<{ themeMode: ThemeMode }>`
   body > div {
     display: flex;
     flex-direction: column;
-    font-family: var(--font-inter)
+    font-family: var(--font-inter);
   }
 
   a {

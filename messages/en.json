@@ -1,16 +1,19 @@
 {
   "Home": {
-    "companyName": "U.N.D.I.S.C.L.O.S.E.D"
+    "companyName": "U.N.D.I.S.C.L.O.S.E.D",
+    "heading": "We're a band of software enthusiasts. We create, we innovate, and we might break a few rules along the way.",
+    "subheading": "Daring, audacious, and a little bit irreverent, we're passionate about building extraordinary web products and helping companies take their projects to the next level"
   },
   "Header": {
     "aboutUs": "Who we are",
     "blog": "Blog",
-    "contact": "Get in touch",
+    "contact": "Let's talk",
     "home": "Home",
     "login": "Login",
     "logout": "Logout",
     "newsletter": "Newsletter",
-    "services": "What we do"
+    "services": "What we do",
+    "approach": "How we roll"
   },
   "Common": {
     "form": {

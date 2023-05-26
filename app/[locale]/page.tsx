@@ -37,12 +37,30 @@ const Title = styled.h1`
   }
 `
 
+const Subtitle = styled.h2`
+  margin: 24px 0 0;
+  line-height: 1.415;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  font-family: var(--font-inter), 'Roboto', sans-serif;
+
+  @media (min-width: ${breakpoints.mobile}px) {
+    font-size: 18px;
+  }
+
+  @media (min-width: ${breakpoints.tablet}px) {
+    font-size: 24px;
+  }
+`
+
 export default function Home() {
   const t = useTranslations('Home')
 
   return (
     <Main>
       <Title>{t('companyName')}</Title>
+      <Subtitle>{t('heading')}</Subtitle>
     </Main>
   )
 }
