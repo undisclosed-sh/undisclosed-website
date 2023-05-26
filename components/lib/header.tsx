@@ -42,9 +42,9 @@ export const Header = memo(() => {
         </LogoLink>
 
         <StyledList>
-          {Object.entries(navigation).map(([key, val]) =>
+          {Object.entries(navigation).map(([key, val], i) =>
             val.hidden ? null : (
-              <StyledListItem key={`nav_link_${key}`}>
+              <StyledListItem key={`nav_link_${key}_${i}`}>
                 <Link href={val.route}>{t(val.label)}</Link>
               </StyledListItem>
             ),

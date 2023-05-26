@@ -11,8 +11,8 @@ export const Footer = memo(() => {
       <SocialsList>
         {Object.values(socials)
           .filter((link) => !link.hidden)
-          .map((social) => (
-            <li key={`social_${social.label}`}>
+          .map((social, i) => (
+            <li key={`social_${social.label}_${i}`}>
               <a href={social.route} rel="noopener noreferrer">
                 {social.component()}
               </a>
