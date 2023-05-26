@@ -45,18 +45,18 @@ export const Header = memo(() => {
           {Object.entries(navigation).map(([key, val], i) =>
             val.hidden ? null : (
               <StyledListItem key={`nav_link_${key}_${i}`}>
-                <Link href={val.route}>{t(val.label)}</Link>
+                <StyledLink href={val.route}>{t(val.label)}</StyledLink>
               </StyledListItem>
             ),
           )}
           {!user && !navigation.signIn.hidden && (
             <StyledListItem>
-              <Link href={pageLinks.login}>{t('login')}</Link>
+              <StyledLink href={pageLinks.login}>{t('login')}</StyledLink>
             </StyledListItem>
           )}
           {user && (
             <StyledListItem>
-              <Link href={pageLinks.logout}>{t('logout')}</Link>
+              <StyledLink href={pageLinks.logout}>{t('logout')}</StyledLink>
             </StyledListItem>
           )}
         </StyledList>
