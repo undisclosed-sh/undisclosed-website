@@ -1,9 +1,9 @@
 const nextConfig = {
   // reactStrictMode: true,
-  // swcMinify: true,
-  // compiler: {
-  //   styledComponents: true,
-  // },
+  swcMinify: true,
+  compiler: {
+    styledComponents: true,
+  },
   experimental: {
     appDir: true,
   },

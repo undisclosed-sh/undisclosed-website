@@ -1,4 +1,4 @@
-import { getAnalytics } from 'firebase/analytics'
+import { Analytics, getAnalytics, isSupported } from 'firebase/analytics'
 import { initializeApp, getApps } from 'firebase/app'
 
 const firebaseConfig = {
@@ -14,6 +14,22 @@ const firebaseConfig = {
 let firebase_app =
   getApps().length === 0 ? initializeApp(firebaseConfig) : getApps()[0]
 
-const analytics = getAnalytics(firebase_app)
+let analytics: Analytics | null = null
+
+async function getAnalyticsInstance() {
+  if (analytics) {
+    return analytics
+  } else if (await isSupported()) {
+    analytics = getAnalytics(firebase_app)
+    return analytics
+  } else {
+    return null
+  }
+}
+
+// TODO: Test this
+// getAnalyticsInstance()
+
+export { getAnalyticsInstance }
 
 export default firebase_app
