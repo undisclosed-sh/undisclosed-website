@@ -47,132 +47,70 @@
     }
   },
   "About": {
-    "title": "About us",
-    "subtitle": "Committed to Creating Impactful Products that Improve Lives",
-    "mainContent": [{
-      "text": "At Undisclosed, our mission is to help startups and businesses navigate the complex process of transforming ideas into products that make a positive impact on people's lives. We believe that innovative products have the power to change the world, and we're passionate about guiding our clients through every stage of the product development journey.",
-      "contentType": "text"
-    }, {
-      "text": "Our team of experienced professionals specializes in product development and management, project management, web development, web app development, and machine learning solutions. We work closely with our clients to define product goals, validate ideas, create prototypes, and manage the development process, ensuring the final product delivers real value to users and aligns with your vision.",
-      "contentType": "text"
-    }, {
-      "text": "Our approach is centered around collaboration, transparency, and agility. We tailor our services to each client's unique needs and challenges, while utilizing proven methodologies and tools to ensure smooth communication, efficient resource allocation, and timely delivery of your projects.",
-      "contentType": "text"
-    }, {
-      "text": "As we grow, our vision extends beyond providing services to our clients. Drawing from our experience in helping others create successful products, we are also committed to developing and launching our own innovative products, backed by venture capital, that address pressing challenges and create positive change.",
-      "contentType": "text"
-    }, {
-      "text": "By choosing Undisclosed, you're not only gaining a dedicated partner in your product development journey, but you're also joining our mission to create impactful products that improve lives and shape the future.",
-      "contentType": "text"
-    }, {
-      "text": "Our services include:",
-      "contentType": "text"
-    }, {
-      "contentType": "list",
-      "list": [{
-        "text": "Product Development and Management",
-        "contentType": "listItem"
-      }, {
-        "text": "Project Management",
-        "contentType": "listItem"
-      }, {
-        "text": "Web Development",
-        "contentType": "listItem"
-      }, {
-        "text": "Web App Development",
-        "contentType": "listItem"
-      }, {
-        "text": "Machine Learning Solutions",
-        "contentType": "listItem"
-      }]
-    }, {
-      "text": "Our core values drive our approach to every project:",
-      "contentType": "text"
-    }, {
-      "contentType": "list",
-      "list": [{
-        "text": "**Innovation**: We embrace cutting-edge technologies and creative problem-solving to deliver groundbreaking solutions.",
-        "contentType": "richListItem"
-      }, {
-        "text": "**Collaboration**: We work closely with our clients, fostering open communication and strong partnerships to achieve shared success.",
-        "contentType": "richListItem"
-      }, {
-        "text": "**Agility**: We adopt flexible methodologies that allow us to pivot and adapt as projects evolve, ensuring the best possible outcomes.",
-        "contentType": "richListItem"
-      }, {
-        "text": "**Results-focused**: We measure our success by the impact we create for our clients and the value we deliver through our work.",
-        "contentType": "richListItem"
-      }, {
-        "text": "**Trust**: We prioritize transparency, accountability, and integrity in all our interactions.",
-        "contentType": "richListItem"
-      }]
-    }, {
-      "text": "At Undisclosed, we're passionate about helping businesses unlock their full potential. Let's work together to bring your ideas to life and create lasting impact in the technology and finance sectors.",
-      "contentType": "text"
-    }],
-    "cta": "Get in touch with us"
+    "title": "Who we are",
+    "subtitle": "Meet the rule-breakers",
+    "ourStory": {
+      "heading": "Our Story",
+      "content": "In a world of conventional tech garages, we decided to carve a different path. We were a group of software enthusiasts – audacious, daring, and a bit irreverent – who believed that we could bring something different, something extraordinary, to the table. So we took our collective passion for building software products, threw in a healthy dose of audacity, and created our startup. We're not an agency. We're not a studio. We're a band of friends united by a shared love for what we do and how we do it. And we're just getting started."
+    },
+    "ourPhilosophy": {
+      "heading": "Our Philosophy",
+      "content": "We believe that the best ideas often come from the most unexpected places. That's why we're all about thinking outside the box, challenging norms, and pushing boundaries. We're not afraid to break a few rules if it means finding a solution that others wouldn't dare to look for. We're not just here to build products – we're here to innovate, to disrupt, and to make a real impact. And we do it all with a smile, because life's too short to take ourselves too seriously."
+    },
+    "ourTeam": {
+      "heading": "The Gang",
+      "content": "Our team is our strength. We're a band of innovators, disruptors, rule-breakers, and most importantly, friends. We work together, argue together, challenge each other, and celebrate together. We believe that our diverse backgrounds, skills, and perspectives are our biggest asset. We're not just colleagues – we're a team. And just like any team, we've got our quirks. But we wouldn't have it any other way."
+    },
+    "ourCommitment": {
+      "heading": "Our Commitment",
+      "content": "We're not just here to build products – we're here to build the best products. And we're not just competing with others – we're competing with ourselves. We constantly challenge ourselves to deliver faster, better, and more innovative solutions. We obsess over details, strive for perfection, and settle for nothing less than excellence. We know that we're capable of great things, and we're committed to proving it, one project at a time."
+    },
+    "ourCulture": {
+      "heading": "Our Culture",
+      "content": "We're serious about our work, but we don't take ourselves too seriously. We value humor, playfulness, and authenticity. We believe that the best ideas often come from the most heated debates, and we're not afraid of a little conflict. We might ruffle a few feathers along the way, but for us, it's all about staying true to who we are. We believe in being ourselves, in breaking rules, and in doing things our own way. Because at the end of the day, we're not just building products – we're building a culture."
+    },
+    "cta": "Let's talk"
   },
   "Services": {
-    "title": "Our services",
-    "subtitle": "Tailored Solutions for Every Stage of the Product Development Journey",
-    "mainContent": [
-      {
-        "text": "At Undisclosed, we offer a comprehensive suite of services designed to support your business through every stage of the product development journey. Our expertise spans across web development, web app development, machine learning solutions, product development process optimization, product & customer discovery, and project management.",
-        "contentType": "text"
+    "title": "What we do",
+    "subtitle": "We don't just build products, we craft experiences",
+    "services": {
+      "heading": "How we can help",
+      "apps": {
+        "heading": "Crafting custom web app development",
+        "content": "We breathe life into ideas. If you have a concept for a web application, we're the team that can bring it to reality. We're not just coders – we're craftsmen, dedicated to delivering clean, efficient, and high-performance web apps. We pride ourselves on our attention to detail and our ability to deliver on tight deadlines, all while maintaining the highest quality standards."
       },
-      {
-        "text": "Web development",
-        "contentType": "h2"
+      "product": {
+        "heading": "Joining your team for product development",
+        "content": "Not all companies have the resources or expertise to develop their own web applications – and that's where we come in. We work closely with companies to understand their vision and then make it our own. We act as an extension of your team, handling everything from design to development, so you can focus on what you do best."
       },
-      {
-        "text": "Our web development services are tailored to create visually appealing, user-friendly, and responsive websites that effectively showcase your brand and engage your target audience. From front-end to back-end development, our experienced team utilizes cutting-edge technologies and best practices to build custom websites that align with your business objectives and deliver a seamless user experience across all devices.",
-        "contentType": "text"
-      },
-      {
-        "text": "Web app development",
-        "contentType": "h2"
-      },
-      {
-        "text": "We specialize in web app development, creating powerful and scalable applications that provide your users with the functionality they need to access your services and interact with your brand. Our team of developers is proficient in a wide range of technologies and frameworks, ensuring the development of high-performance web applications that meet your unique requirements and grow with your business.",
-        "contentType": "text"
-      },
-      {
-        "text": "Machine learning solutions",
-        "contentType": "h2"
-      },
-      {
-        "text": "Our machine learning solutions empower your business with the power of data-driven decision-making and automation. Our expert team of data scientists and engineers will work with you to develop custom machine learning models and algorithms that optimize your business processes, enhance the value of your products, and provide actionable insights for future growth.",
-        "contentType": "text"
-      },
-      {
-        "text": "Product development process optimization",
-        "contentType": "h2"
-      },
-      {
-        "text": "We understand the importance of a streamlined product development process. Our team of experts will work closely with your organization to identify bottlenecks, inefficiencies, and areas for improvement within your current development processes. By implementing agile methodologies, iterative development, and continuous improvement, we help optimize your product development process, ensuring faster time to market and higher quality outcomes.",
-        "contentType": "text"
-      },
-      {
-        "text": "Product & customer discovery",
-        "contentType": "h2"
-      },
-      {
-        "text": "Successful products start with a deep understanding of your target customers and their needs. Our product & customer discovery services focus on market research, user interviews, and data analysis to gain insights into your target audience and validate your product ideas. With this information, we help you define your product's unique value proposition and develop a go-to-market strategy that resonates with your target customers.",
-        "contentType": "text"
-      },
-      {
-        "text": "Project management",
-        "contentType": "h2"
-      },
-      {
-        "text": "Effective project management is crucial to the success of any product development endeavor. Our project management services provide end-to-end support, ensuring smooth communication, efficient resource allocation, and timely delivery of your projects. Our experienced project managers utilize proven methodologies and tools to keep your projects on track and minimize risks, giving you peace of mind and allowing you to focus on your core business.",
-        "contentType": "text"
-      },
-      {
-        "text": "At [Your Agency Name], our goal is to be your trusted partner in technology and finance, providing the expertise and support you need to bring your ideas to life and achieve lasting success.",
-        "contentType": "text"
+      "management": {
+        "heading": "Guiding you with consultancy in project management and operations",
+        "content": "We're more than just developers, we're seasoned project managers, product people and operatives too. We'll help you streamline your processes, optimize your operations, and get the most out of your team by offering guidance and support in project management, agile practices, and business operations."
       }
-    ],
+    },
+    "ourApproach": {
+      "heading": "How we work our magic",
+      "content": "Our approach to work is a reflection of who we are - creative and audacious. We thrive on challenges, pushing boundaries, and thinking outside the box. We're not afraid of tough conversations or conflicts; we believe they lead to the best solutions. Our process is flexible and agile, allowing us to adapt and pivot as needed. Here's a peek into how we do what we do:",
+      "stages": {
+        "discovery": {
+          "heading": "Discovery & Ideation",
+          "content": "We start by getting to know you and your idea. We dig deep to understand your vision, your goals, and your users. We ask the tough questions, challenge assumptions, and explore all possibilities. This is where we let our imaginations run wild, brainstorming ideas and coming up with innovative solutions. We're not just looking for good ideas – we're looking for the best idea."
+        },
+        "planning": {
+          "heading": "Planning & Design",
+          "content": "Once we've got a clear understanding of your idea, we get to work on planning and design. We sketch, wireframe, and prototype, turning your idea into a tangible, visual concept. We're meticulous about details and obsessed with user experience. We ensure that every pixel is perfect and that the design is not just beautiful, but also intuitive and user-friendly."
+        },
+        "development": {
+          "heading": "Development & Testing",
+          "content": "This is where the magic happens. We roll up our sleeves and dive into coding, transforming the design into a fully functional product. We follow best coding practices, ensuring that the code is clean, efficient, and high-performing. We test rigorously, ironing out any bugs and making sure that the app is flawless before it sees the light of day. And we do it all with a sense of urgency, pushing ourselves to deliver faster and better."
+        },
+        "delivery": {
+          "heading": "Launch & Support",
+          "content": "The big day. We launch your web application, but our work doesn't end there. We stick around to ensure that everything runs smoothly, providing support and making any necessary tweaks. We're not just here to launch a web app – we're here to ensure its success. And even after the launch, we remain a part of your team, ready to help with updates, upgrades, or new features."
+        }
+      }
+    },
     "cta": "Get in touch"
   }
 }

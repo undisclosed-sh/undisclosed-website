@@ -51,7 +51,8 @@ const GlobalStyle = createGlobalStyle<{ themeMode: ThemeMode }>`
   body {
     padding: 0;
     margin: 0;
-    font-family: ${defaultFontFamily};
+    font-family: var(--font-inter), ${defaultFontFamily};
+    line-height: 1.5;
     color: ${colorPalette.text.main};
     min-height: 100vh;
   }

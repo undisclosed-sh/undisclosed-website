@@ -9,6 +9,12 @@ export const navigation: Record<
     hidden?: boolean
   }
 > = {
+  aboutUs: {
+    route: '/about',
+    label: 'aboutUs',
+    disabled: true,
+    hidden: false,
+  },
   services: {
     route: '/services',
     label: 'services',
@@ -21,12 +27,6 @@ export const navigation: Record<
     disabled: true,
     hidden: true,
   },
-  aboutUs: {
-    route: '/about',
-    label: 'aboutUs',
-    disabled: true,
-    hidden: false,
-  },
   blog: {
     route: '/blog',
     label: 'blog',
@@ -37,7 +37,7 @@ export const navigation: Record<
     route: '/contact',
     label: 'contact',
     disabled: false,
-    hidden: false,
+    hidden: true,
   },
   newsletter: {
     route: '/newsletter',
