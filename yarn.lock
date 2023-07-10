@@ -2873,14 +2873,14 @@ negotiator@^0.6.3:
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.3.tgz#58e323a72fedc0d6f9cd4d31fe49f51479590ccd"
   integrity sha512-+EUsqGPLsM+j/zdChZjsnX51g4XrHFOIXwfnCVPGlQk/k5giakcKsuxCObBRu6DSm9opw/O6slWbJdghQM4bBg==
 
-next-intl@^2.14.6:
-  version "2.14.6"
-  resolved "https://registry.yarnpkg.com/next-intl/-/next-intl-2.14.6.tgz#c636ba6fc9b8900fa659a6c9d00d6e2c94f41271"
-  integrity sha512-RZgQQMAUlGWmPx6gequHRCZf7NKD6ixCskyovRd1AMx0UeNqAZggbL7nFsGA8M7mZbE0twv3+4JLrPse8xbwsg==
+next-intl@^2.17.5:
+  version "2.17.5"
+  resolved "https://registry.yarnpkg.com/next-intl/-/next-intl-2.17.5.tgz#1f53eef8ee986eb043d3c55959a004a1f85bf7f7"
+  integrity sha512-p/tit4/FN0eHLw6Mjwsx4ktiFZWq9VMcuY9hhkAlYWXCQgKq09PB0lZcMNw5xLvV9eor818BzXxdA+3bSvFMmw==
   dependencies:
     "@formatjs/intl-localematcher" "^0.2.32"
     negotiator "^0.6.3"
-    use-intl "^2.14.6"
+    use-intl "^2.17.5"
 
 next@13.4.4:
   version "13.4.4"
@@ -3756,10 +3756,10 @@ url-join@^4.0.1:
   resolved "https://registry.yarnpkg.com/url-join/-/url-join-4.0.1.tgz#b642e21a2646808ffa178c4c5fda39844e12cde7"
   integrity sha512-jk1+QP6ZJqyOiuEI9AEWQfju/nB2Pw466kbA0LEZljHwKeMgd9WrAEgEGxjPDD2+TNbbb37rTyhEfrCXfuKXnA==
 
-use-intl@^2.14.6:
-  version "2.14.6"
-  resolved "https://registry.yarnpkg.com/use-intl/-/use-intl-2.14.6.tgz#8e2cc64a58e3a46df928f37e29a377e4844c1e04"
-  integrity sha512-ehkW7/CpJkJQUbQZvtUvB+NukmlOS2FEj5rSRBnyRvV+GsbC+CKKDFcMLecyWA12s9wnqcAbEMQMfp3m1jcwPA==
+use-intl@^2.17.5:
+  version "2.17.5"
+  resolved "https://registry.yarnpkg.com/use-intl/-/use-intl-2.17.5.tgz#99b5fb375de9b841dad668edb48914cfe00236a4"
+  integrity sha512-pkTRoGZsOyHImBFgV23z7g/Hzt1auap+cWvsiWzHpc70NK7Rm9R3LNI3wm3FnYEWNF8N3+CZKV+SCTrHwcNK1w==
   dependencies:
     "@formatjs/ecma402-abstract" "^1.11.4"
     intl-messageformat "^9.3.18"
