@@ -31,7 +31,7 @@
     "@types/react-dom": "18.2.4",
     "@types/styled-components": "^5.1.26",
     "encoding": "^0.1.13",
-    "eslint": "8.41.0",
+    "eslint": "8.45.0",
     "eslint-config-next": "13.4.4",
     "typescript": "5.0.4"
   }
