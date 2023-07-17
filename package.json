@@ -32,7 +32,7 @@
     "@types/styled-components": "^5.1.26",
     "encoding": "^0.1.13",
     "eslint": "8.41.0",
-    "eslint-config-next": "13.4.4",
+    "eslint-config-next": "13.4.10",
     "typescript": "5.0.4"
   }
 }
