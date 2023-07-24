@@ -15,7 +15,7 @@
     "firebase": "^10.0.0",
     "i18next": "^23.2.11",
     "mongodb": "5.7.0",
-    "next": "13.4.10",
+    "next": "13.4.12",
     "next-intl": "^2.19.0",
     "nextjs-google-analytics": "2.3.3",
     "react": "18.2.0",
